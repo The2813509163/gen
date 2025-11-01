@@ -1,0 +1,9 @@
+dataset,version,metric,mode,Llama-3.2-1B-Instruct_hf
+gsm8k,17d799,accuracy,gen,61.26
+math,11c4b5,accuracy,gen,36.28
+svamp,fb25e4,accuracy,gen,64.50
+piqa,1194eb,accuracy,gen,56.47
+siqa,18632c,accuracy,gen,48.62
+squad2.0,1710bc,score,gen,3.24
+ARC-c,1e0de5,accuracy,gen,46.10
+ARC-e,1e0de5,accuracy,gen,62.79

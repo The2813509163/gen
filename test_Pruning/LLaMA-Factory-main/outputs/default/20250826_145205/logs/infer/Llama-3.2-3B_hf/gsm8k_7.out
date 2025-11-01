@@ -1,0 +1,31 @@
+08/26 14:54:36 - OpenCompass - INFO - Task [Llama-3.2-3B_hf/gsm8k_7,Llama-3.2-3B_hf/math_7,Llama-3.2-3B_hf/svamp_7,Llama-3.2-3B_hf/piqa_7,Llama-3.2-3B_hf/siqa_7,Llama-3.2-3B_hf/squad2.0_7,Llama-3.2-3B_hf/ARC-c_7,Llama-3.2-3B_hf/ARC-e_7,Llama-3.2-3B_hf/lambada_7]
+08/26 14:54:38 - OpenCompass - WARNING - pad_token_id is not set for the tokenizer.
+08/26 14:54:38 - OpenCompass - WARNING - Using eos_token_id 128001 as pad_token_id.
+Traceback (most recent call last):
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/openicl_infer.py", line 161, in <module>
+    inferencer.run()
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/openicl_infer.py", line 73, in run
+    self.model = build_model_from_cfg(model_cfg)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/utils/build.py", line 24, in build_model_from_cfg
+    return MODELS.build(model_cfg)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/mmengine/registry/registry.py", line 570, in build
+    return self.build_func(cfg, *args, **kwargs, registry=self)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/mmengine/registry/build_functions.py", line 121, in build_from_cfg
+    obj = obj_cls(**args)  # type: ignore
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/models/huggingface_above_v4_33.py", line 534, in __init__
+    self._load_model(path=path, kwargs=model_kwargs, peft_path=peft_path, peft_kwargs=peft_kwargs)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/models/huggingface_above_v4_33.py", line 232, in _load_model
+    self.model = AutoModelForCausalLM.from_pretrained(path, **model_kwargs)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 571, in from_pretrained
+    return model_class.from_pretrained(
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/transformers/modeling_utils.py", line 279, in _wrapper
+    return func(*args, **kwargs)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4380, in from_pretrained
+    device_map = _get_device_map(model, device_map, max_memory, hf_quantizer, torch_dtype, keep_in_fp32_regex)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1288, in _get_device_map
+    max_memory = get_balanced_memory(
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/accelerate/utils/modeling.py", line 960, in get_balanced_memory
+    max_memory = get_max_memory(max_memory)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/accelerate/utils/modeling.py", line 808, in get_max_memory
+    _ = torch.tensor([0], device=i)
+KeyboardInterrupt

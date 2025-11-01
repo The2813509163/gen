@@ -1,0 +1,54 @@
+### model
+# model_name_or_path: /gammadisk/shared_data/models/Qwen__Qwen2.5-Math-7B-Instruct
+model_name_or_path: /root/autodl-tmp/checkpoints/Qwen/Qwen3-1.7B
+output_dir: saves/Qwen__Qwen3-1.7B-data2M-2epoch/lora/sft
+
+
+per_device_train_batch_size: 8
+gradient_accumulation_steps: 2
+# max_samples: 2000000
+num_train_epochs: 2.0
+
+
+trust_remote_code: true
+flash_attn: fa2
+# disable_gradient_checkpointing: true
+# use_unsloth: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 32
+lora_target: all
+
+### dataset
+dataset: nvidia__OpenMathInstruct-2
+template: llama3
+cutoff_len: 512
+# overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 8
+
+### output
+logging_steps: 10
+save_steps: 15000
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: tensorboard  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+learning_rate: 1.0e-4
+lr_scheduler_type: cosine
+warmup_ratio: 0.0
+bf16: true
+ddp_timeout: 180000000
+# resume_from_checkpoint: null
+
+### eval
+# eval_dataset: alpaca_en_demo
+# val_size: 0.1
+# per_device_eval_batch_size: 1
+# eval_strategy: steps
+# eval_steps: 500

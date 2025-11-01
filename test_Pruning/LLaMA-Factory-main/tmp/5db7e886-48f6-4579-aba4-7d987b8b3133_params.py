@@ -1,0 +1,62 @@
+datasets = [
+    [
+        dict(
+            abbr='siqa',
+            eval_cfg=dict(
+                evaluator=dict(
+                    type='opencompass.openicl.icl_evaluator.AccEvaluator'),
+                pred_postprocessor=dict(
+                    options='ABC',
+                    type=
+                    'opencompass.utils.text_postprocessors.first_option_postprocess'
+                )),
+            infer_cfg=dict(
+                inferencer=dict(
+                    type='opencompass.openicl.icl_inferencer.GenInferencer'),
+                prompt_template=dict(
+                    template=dict(round=[
+                        dict(
+                            prompt=
+                            '{context}\nQuestion: {question}\nA. {A}\nB. {B}\nC. {C}\nAnswer:',
+                            role='HUMAN'),
+                    ]),
+                    type=
+                    'opencompass.openicl.icl_prompt_template.PromptTemplate'),
+                retriever=dict(
+                    type='opencompass.openicl.icl_retriever.ZeroRetriever')),
+            path='opencompass/siqa',
+            reader_cfg=dict(
+                input_columns=[
+                    'context',
+                    'question',
+                    'A',
+                    'B',
+                    'C',
+                ],
+                output_column='answer',
+                test_split='validation'),
+            type='opencompass.datasets.SiqaDatasetV3'),
+    ],
+]
+eval = dict(runner=dict(task=dict()))
+models = [
+    dict(
+        abbr='Llama-3.2-3B_hf',
+        batch_size=16,
+        generation_kwargs=dict(),
+        max_out_len=512,
+        max_seq_len=None,
+        model_kwargs=dict(),
+        pad_token_id=None,
+        path='/data/kris/shared_data/models/Llama-3.2-3B',
+        peft_kwargs=dict(),
+        peft_path=
+        '/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory-main/saves/meta-llama__Llama-3.2-3B-base/max_samples_dummy_1M_alpha_0.01_T_4/checkpoint-10000',
+        run_cfg=dict(num_gpus=1),
+        stop_words=[],
+        tokenizer_kwargs=dict(),
+        tokenizer_path=None,
+        type='opencompass.models.huggingface_above_v4_33.HuggingFaceBaseModel'
+    ),
+]
+work_dir = 'outputs/default/20250826_145030'

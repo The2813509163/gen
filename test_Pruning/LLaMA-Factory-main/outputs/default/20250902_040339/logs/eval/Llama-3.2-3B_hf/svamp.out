@@ -1,0 +1,3 @@
+09/02 05:36:57 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/svamp/test.jsonl
+09/02 05:36:57 - OpenCompass - ERROR - /home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py - _score - 298 - Task [Llama-3.2-3B_hf/svamp]: No predictions found.
+09/02 05:36:57 - OpenCompass - INFO - time elapsed: 3.04s

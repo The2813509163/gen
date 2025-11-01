@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/openicl_infer.py", line 14, in <module>
+    from opencompass.tasks.base import BaseTask
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/__init__.py", line 1, in <module>
+    from .openicl_attack import *  # noqa: F401, F403
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/openicl_attack.py", line 12, in <module>
+    from opencompass.tasks.base import BaseTask
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/base.py", line 9, in <module>
+    from opencompass.utils import get_infer_output_path, task_abbr_from_cfg
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/utils/__init__.py", line 4, in <module>
+    from .collect_env import *  # noqa
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/utils/collect_env.py", line 2, in <module>
+    from mmengine.utils.dl_utils import collect_env as collect_base_env
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/mmengine/utils/dl_utils/__init__.py", line 3, in <module>
+    from .collect_env import collect_env
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/mmengine/utils/dl_utils/collect_env.py", line 10, in <module>
+    import torch
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/__init__.py", line 2604, in <module>
+    from torch import _meta_registrations
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_meta_registrations.py", line 11, in <module>
+    from torch._decomp import (
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_decomp/__init__.py", line 284, in <module>
+    import torch._decomp.decompositions
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_decomp/decompositions.py", line 15, in <module>
+    import torch._prims as prims
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_prims/__init__.py", line 779, in <module>
+    fill = _make_prim(
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_prims/__init__.py", line 320, in _make_prim
+    prim_def = torch.library.custom_op(
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_library/custom_ops.py", line 145, in custom_op
+    return inner(fn)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_library/custom_ops.py", line 126, in inner
+    result = CustomOpDef(namespace, opname, schema_str, fn)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_library/custom_ops.py", line 174, in __init__
+    self._register_to_dispatcher()
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_library/custom_ops.py", line 594, in _register_to_dispatcher
+    lib._register_fake(self._name, fake_impl, _stacklevel=4)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/library.py", line 198, in _register_fake
+    handle = entry.fake_impl.register(func_to_register, source)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_library/fake_impl.py", line 61, in register
+    self.lib = torch.library.Library(ns, "FRAGMENT")  # noqa: TOR901
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/library.py", line 106, in __init__
+    weakref.finalize(
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/weakref.py", line 569, in __init__
+    def __init__(self, obj, func, /, *args, **kwargs):
+KeyboardInterrupt

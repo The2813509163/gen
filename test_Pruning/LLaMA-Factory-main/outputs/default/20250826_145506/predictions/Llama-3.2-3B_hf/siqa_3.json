@@ -1,0 +1,1227 @@
+{
+    "0": {
+        "origin_prompt": "Robin finished the big group project and she thanked Tracy for her contributions.\nQuestion: What will happen to Tracy?\nA. get a promotion\nB. get nothing\nC. begin to study for the course final exam next\nAnswer:",
+        "prediction": " B\nExplanation: If someone is thanked for their contributions, it means that they have done something that is appreciated. In this case, Tracy has done something that is appreciated, but it is not a promotion. Therefore, Tracy will get nothing. The answer is B.",
+        "gold": "A"
+    },
+    "1": {
+        "origin_prompt": "Two people were showing off their dance moves. Tracy crowded around them so she could see.\nQuestion: How would Tracy feel afterwards?\nA. friendly\nB. nosey\nC. a person with lots of curiosity\nAnswer:",
+        "prediction": " C\nExplanation: This question is asking about Tracy's feelings after seeing two people showing off their dance moves. The answer is choice C, a person with lots of curiosity. This is because Tracy is showing a lot of interest in what the two people are doing, which is a characteristic of a person with curiosity.",
+        "gold": "C"
+    },
+    "2": {
+        "origin_prompt": "Lee sold things at the market because they were strapped for cash.\nQuestion: What will happen to Lee?\nA. not sell anything\nB. make a bit of money\nC. lee who has strappped cash from others\nAnswer:",
+        "prediction": " B\nExplanation: If someone is strapped for cash, they do not have enough money. This means they will not be able to buy the things they need. If Lee is strapped for cash, he will not be able to sell anything at the market.",
+        "gold": "B"
+    },
+    "3": {
+        "origin_prompt": "Jan gave the entire class an F on the assignment.\nQuestion: Why did Jan do this?\nA. make them fail\nB. catch them cheating\nC. hurt their grades\nAnswer:",
+        "prediction": " A\nExplanation: Jan gave the entire class an F on the assignment. This means that all of the students in the class received an F on the assignment. This is because Jan wanted to make them fail.",
+        "gold": "C"
+    },
+    "4": {
+        "origin_prompt": "Aubrey set the car on fire after she found out he was cheating.\nQuestion: Why did Aubrey do this?\nA. needed to accept the truth\nB. did this for heat\nC. did this for revenge\nAnswer:",
+        "prediction": " C\nExplanation: Aubrey set the car on fire after she found out he was cheating. This is because she did this for revenge.",
+        "gold": "C"
+    },
+    "5": {
+        "origin_prompt": "Quinn turned the scale on, then hesitated to get on, afraid of the results.\nQuestion: Why did Quinn do this?\nA. put off learning the language\nB. take a moment to prepare for disappointment\nC. turn the scale off\nAnswer:",
+        "prediction": " B\nExplanation: This question is about a character named Quinn. The question asks why Quinn turned the scale on, then hesitated to get on, afraid of the results. The answer choices are all possible reasons for this behavior. However, the only answer choice that makes sense in the context of the question is the one that describes Quinn's fear of the results. This is because Quinn is afraid of the results, not the process. Therefore, the correct answer is choice B.",
+        "gold": "B"
+    },
+    "6": {
+        "origin_prompt": "Quinn stole a phone from Casey and then showed it off to Casey's friends.\nQuestion: What will happen to Quinn?\nA. they will be thanked\nB. they will be rewarded\nC. they will get arrested\nAnswer:",
+        "prediction": " C\nExplanation: If someone steals something, they will usually get arrested. So, the answer is choice C.",
+        "gold": "C"
+    },
+    "7": {
+        "origin_prompt": "Cameron talked about Aubrey behind Carson's back all night at the Christmas party at Steve's.\nQuestion: What did others do about this?\nA. One of his friends went behind his back and squealed on him to Aubrey creating more strife\nB. One of his friends drew him into the bedroom and started screaming at him that he ruined the party\nC. One of his friends suggested this was not the time or the place to discuss Abrey negatively\nAnswer:",
+        "prediction": " C\nExplanation: The question asks what others did about this. The answer is that they did nothing. They did not go behind his back and squeal on him to Aubrey. They did not draw him into the bedroom and start screaming at him. They did not suggest this was not the time or the place to discuss Abrey negatively. They did not do anything. They did not do anything about it. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to help him. They did not do anything to",
+        "gold": "C"
+    },
+    "8": {
+        "origin_prompt": "taylor looked hotels up online for their friends so the trip could be planned in advance.\nQuestion: What will Others want to do next?\nA. let their friends know what the best hotel is\nB. find out which hotels have openings\nC. thank taylor\nAnswer:",
+        "prediction": " B\nExplanation: ",
+        "gold": "C"
+    },
+    "9": {
+        "origin_prompt": "Aubrey never told Riley the answer about the person who died in the lake last year.\nQuestion: Why did Aubrey do this?\nA. go research it\nB. bored\nC. hidden\nAnswer:",
+        "prediction": " A\nExplanation: Aubrey never told Riley the answer about the person who died in the lake last year. Aubrey did this because she wanted to go research it.",
+        "gold": "C"
+    },
+    "10": {
+        "origin_prompt": "Carson thought it was a bad idea to drink and drive, and Taylor proved Carson's point last night.\nQuestion: What will happen to Taylor?\nA. listen to Taylor's future advice\nB. avoid drinking and driving next time\nC. have their driver's license taken away\nAnswer:",
+        "prediction": " C\nExplanation: If Taylor had been drinking and driving, and then got into an accident, it would be a good idea for Taylor to avoid drinking and driving next time. But since Taylor was already in an accident, it would be a good idea for Taylor to have their driver's license taken away. So, the answer is C.",
+        "gold": "C"
+    },
+    "11": {
+        "origin_prompt": "Riley talked to their friends about the big dance this coming Friday evening.\nQuestion: How would you describe Riley?\nA. feeling bored\nB. feeling pretty\nC. joyful\nAnswer:",
+        "prediction": " C\nExplanation: The word choice you select can often provide insight into the meaning of the sentence. In this case, the word choice \"joyful\" is the best fit because it describes Riley's mood. The other options are not as appropriate. Riley is not feeling bored or pretty, and the word \"pretty\" would be more appropriate if Riley was describing herself, not her friends. So, the answer is ",
+        "gold": "C"
+    },
+    "12": {
+        "origin_prompt": "Austin predicted that the virus would be found in patients in the hospital where he worked.\nQuestion: What will Austin want to do next?\nA. test the patients\nB. let all the patients go home\nC. spread the virus\nAnswer:",
+        "prediction": " A\nExplanation: The virus is found in patients in the hospital where Austin works. Austin wants to test the patients to see if they have the virus.",
+        "gold": "A"
+    },
+    "13": {
+        "origin_prompt": "robin found the answer to her homework online.\nQuestion: What will Robin want to do next?\nA. turn on the computer\nB. fail the homework\nC. get a good grade\nAnswer:",
+        "prediction": " C\nExplanation: If Robin found the answer to her homework online, she will want to get a good grade. She will not want to fail the homework or turn on the computer. So, the answer is C.",
+        "gold": "C"
+    },
+    "14": {
+        "origin_prompt": "Sasha increased the pay rate of their employees.\nQuestion: How would you describe Sasha?\nA. a good boss\nB. satisfied\nC. proud\nAnswer:",
+        "prediction": " A\nExplanation: To describe someone, you can use action verbs, which are usually in the present tense. You can also use linking verbs, which are usually in the present tense. In this case, the verb is increased, which is a linking verb. The description of Sasha is a good boss.",
+        "gold": "A"
+    },
+    "15": {
+        "origin_prompt": "Riley regarded Jesse with observant eyes while he cheated on the test.\nQuestion: What will Riley want to do next?\nA. confront riley\nB. help Jesse with his test\nC. cover her answers\nAnswer:",
+        "prediction": " B\nExplanation: If Riley sees Jesse cheating, she will want to help him with his test. She will not want to confront him or cover her answers.",
+        "gold": "C"
+    },
+    "16": {
+        "origin_prompt": "Casey saved some money and eventually bought a new car.\nQuestion: What does Casey need to do before this?\nA. purchase a new car\nB. save before this\nC. enroll in college before this\nAnswer:",
+        "prediction": " B\nExplanation: To buy a new car, Casey needs to save some money. Before Casey can save money, she needs to do something else. That something else is to enroll in college. So, Casey needs to enroll in college before she can save some money. The answer is B. Casey needs to save before this.",
+        "gold": "B"
+    },
+    "17": {
+        "origin_prompt": "Alex owned a bookstore and had a lot of books, Alex also sold books on amazon.\nQuestion: Why did Alex do this?\nA. buy books from a wholesaler\nB. reduce inventory\nC. rent space for the bookstore\nAnswer:",
+        "prediction": " B\nExplanation: Alex owned a bookstore and had a lot of books. He also sold books on amazon. To reduce inventory, Alex sold some of his books on amazon. So, the answer is B.",
+        "gold": "B"
+    },
+    "18": {
+        "origin_prompt": "Jordan gave Casey the runaround so Jordan bought his movie tickets anyway and would see it alone if Casey did not show up.\nQuestion: What will Jordan want to do next?\nA. Go home if Casey was a no show\nB. Go into the theater\nC. wanted to see the movie anyways and didn't matter if Casey went as well\nAnswer:",
+        "prediction": " B\nExplanation: If Jordan bought his movie tickets anyway and would see it alone if Casey did not show up, then Jordan will want to go into the theater.",
+        "gold": "B"
+    },
+    "19": {
+        "origin_prompt": "Carson grew dark after his parents died in an accident.\nQuestion: How would you describe Carson?\nA. unphased\nB. emotional\nC. happy\nAnswer:",
+        "prediction": " B\nExplanation: To describe Carson, we need to know more about his personality and how he reacts to different situations. Since his parents died in an accident, he is likely to be emotional. This is because he has experienced a traumatic event that has affected his life. Therefore, I would describe Carson as emotional. The answer is B.",
+        "gold": "B"
+    },
+    "20": {
+        "origin_prompt": "Lee tried to remain calm when nobody answered the phone call.\nQuestion: What does Lee need to do before this?\nA. pick up the phone\nB. send a text\nC. try again\nAnswer:",
+        "prediction": " A\nExplanation: If you need to call someone and you don't get an answer, you can try again. You can also try to send a text message or email. But if you really need to talk to someone right away, you can try to call them again. You can also try to call them at a different time. If you still can't get through, you can try to call them at a different number. But if you really need to talk to someone right away, you can try to call them again. So, Lee needs to try again.",
+        "gold": "A"
+    },
+    "21": {
+        "origin_prompt": "Cameron got out of their way when they were walking by.\nQuestion: How would Others feel as a result?\nA. fearful and paranoid\nB. quite respected\nC. very lonely\nAnswer:",
+        "prediction": " B\nExplanation: The best way to predict how others will feel as a result of a behavior is to consider how they would feel if they were in the same situation. In this case, if Cameron got out of their way when they were walking by, they would feel quite respected.",
+        "gold": "B"
+    },
+    "22": {
+        "origin_prompt": "Taylor was a math wiz who had just gotten a job in the city school.\nQuestion: What will happen to Others?\nA. solve problems\nB. learn but refuse to take exams\nC. not listen to Taylor and fail\nAnswer:",
+        "prediction": " C\nExplanation: Taylor was a math wiz who had just gotten a job in the city school. He was very excited about his new job and was eager to help his new colleagues. However, he was not very popular with his colleagues. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work. They were not very happy with his attitude and his constant criticism of their work",
+        "gold": "A"
+    },
+    "23": {
+        "origin_prompt": "Jordan talked behind Ash's back with his coworkers.\nQuestion: Why did Jordan do this?\nA. wanted to be nice to Ash\nB. wanted to impress them\nC. turn them against Ash\nAnswer:",
+        "prediction": " C\nExplanation: This question is about a conversation between two people, Jordan and Ash. The question asks why Jordan did something that he did behind Ash's back. The answer choices are all possible reasons why Jordan might have done this. However, the best answer is the one that is most likely to be true. In this case, the answer is choice C, which is that Jordan wanted to turn his coworkers against Ash. This is the most likely reason, because it is the only answer choice that is not a positive reason. It is also the only answer choice that is not a reason that Jordan would have had for being nice to Ash. Therefore, the best answer is choice C.",
+        "gold": "C"
+    },
+    "24": {
+        "origin_prompt": "Lee challenged her to a fight after she kept on making rude comments.\nQuestion: How would you describe Lee?\nA. very aggressive\nB. bullied\nC. a pacifist\nAnswer:",
+        "prediction": " A\nExplanation: The answer is A, very aggressive. The question asks how you would describe Lee. We can see that Lee is very aggressive, and she challenged her friend to a fight after she kept on making rude comments. This means that Lee is very likely to be described as aggressive. So, the answer is A.",
+        "gold": "A"
+    },
+    "25": {
+        "origin_prompt": "Carson angrily turned Sydney's music down without their permission in protest of the noise.\nQuestion: What will Sydney want to do next?\nA. ask Carson why\nB. have some quiet\nC. buy a new stereo\nAnswer:",
+        "prediction": " B\nExplanation:  The question is asking what Sydney will want to do next. The answer is that Sydney will want to have some quiet. This is because Carson angrily turned Sydney's music down without their permission in protest of the noise.",
+        "gold": "A"
+    },
+    "26": {
+        "origin_prompt": "Riley and their neighbor were the best of friends.\nQuestion: How would Riley feel afterwards?\nA. happy\nB. be overjoyed\nC. Good for having a friend that lived close\nAnswer:",
+        "prediction": " B\nExplanation: The answer is B because Riley would be overjoyed to have a friend that lived close to them. Overjoyed means that someone is very happy.",
+        "gold": "C"
+    },
+    "27": {
+        "origin_prompt": "Jan went to work on the morning of the party because she was called in.\nQuestion: How would Jan feel afterwards?\nA. tired\nB. happy\nC. loyal to work\nAnswer:",
+        "prediction": " B\nExplanation: If Jan went to work on the morning of the party, she would have been happy to see her friends and family. She would have been happy to see her friends and family. So, the answer is B.",
+        "gold": "C"
+    },
+    "28": {
+        "origin_prompt": "Robin was on a diet.\nQuestion: How would Robin feel afterwards?\nA. remorse\nB. happy\nC. Someone with good self control\nAnswer:",
+        "prediction": " B\nExplanation: Robin was on a diet. After the diet, Robin would feel happy. This is because Robin would have lost weight and felt better about herself. Robin would not feel remorse, because she would not have done anything wrong. Robin would not feel sad, because she would have lost weight and felt better about herself. Robin would not feel guilty, because she would not have done anything wrong. Robin would feel happy. Robin would not feel someone with good self control, because she would not have done anything wrong. Robin would feel happy. Robin would not feel remorse, because she would not have done anything wrong. Robin would not feel sad, because she would not have done anything wrong. Robin would not feel guilty, because she would not have done anything wrong. Robin would feel happy. Robin would not feel someone with good self control, because she would not have done anything wrong. Robin would feel happy. Robin would not feel remorse, because she would not have done anything wrong. Robin would not feel sad, because she would not have done anything wrong. Robin would not feel guilty, because she would not have done anything wrong. Robin would feel happy. Robin would not feel someone with good self control, because she would not have done anything wrong. Robin would feel happy. Robin would not feel remorse, because she would not have done anything wrong. Robin would not feel sad, because she would not have done anything wrong. Robin would not feel guilty, because she would not have done anything wrong. Robin would feel happy. Robin would not feel someone with good self control, because she would not have done anything wrong. Robin would feel happy. Robin would not feel remorse, because she would not have done anything wrong. Robin would not feel sad, because she would not have done anything wrong. Robin would not feel guilty, because she would not have done anything wrong. Robin would feel happy. Robin would not feel someone with good self control, because she would not have done anything wrong. Robin would feel happy. Robin would not feel remorse, because she would not have done anything wrong. Robin would not feel sad, because she would not have done anything wrong. Robin would not feel guilty, because she would not have done anything wrong. Robin would feel happy. Robin would not feel someone with good self control, because she would not have done anything wrong. Robin would feel happy. Robin would not feel remorse, because she would not have done anything wrong. Robin would not feel sad, because she would not have done anything wrong. Robin would",
+        "gold": "C"
+    },
+    "29": {
+        "origin_prompt": "Carson could not open the jar and began to become frustrated.\nQuestion: What will Carson want to do next?\nA. Continue trying\nB. Kick the jar\nC. Throw the jar\nAnswer:",
+        "prediction": " A\nExplanation: Carson could not open the jar and began to become frustrated. He will continue trying to open the jar.",
+        "gold": "A"
+    },
+    "30": {
+        "origin_prompt": "Robin made Taylor comment about the news because they wanted to know the truth about what they think.\nQuestion: How would Taylor feel as a result?\nA. great\nB. terrible\nC. bad\nAnswer:",
+        "prediction": " B\nExplanation: The answer is B because Taylor would feel terrible as a result of Robin making the comment. The comment would make Taylor feel bad about herself.",
+        "gold": "A"
+    },
+    "31": {
+        "origin_prompt": "Robin wanted to learn to swim and went to the pool and practiced.\nQuestion: What will Robin want to do next?\nA. fit\nB. learn to swim better\nC. lazy\nAnswer:",
+        "prediction": " B\nExplanation: To find out what Robin will want to do next, we need to look at the information given in the question. Robin went to the pool and practiced. This means she wants to learn to swim. Since she has already practiced, she will want to learn to swim better. So, Robin will want to do \\boxed{B}.",
+        "gold": "B"
+    },
+    "32": {
+        "origin_prompt": "Remy at some ice cream while watching their favorite show and relaxing on the couch.\nQuestion: How would you describe Remy?\nA. someone who enjoys creature hunting\nB. someone who likes feeling good\nC. satisfied\nAnswer:",
+        "prediction": " B\nExplanation:  To describe Remy, we need to look at the details of the picture. We can see that Remy is lying on the couch, watching their favorite show, and eating ice cream. We can also see that Remy is feeling good, as they are smiling and relaxed. Therefore, we can describe Remy as someone who likes feeling good. The answer is choice B.",
+        "gold": "C"
+    },
+    "33": {
+        "origin_prompt": "Bailey drank milk every morning, and ended up having way too much calcium in their system.\nQuestion: What will Bailey want to do next?\nA. she didn't mean to\nB. cut back on drinking milk\nC. cut back on drinking beer\nAnswer:",
+        "prediction": " B\nExplanation: The answer is B because Bailey drank milk every morning, and ended up having way too much calcium in their system. This will make Bailey want to cut back on drinking milk.",
+        "gold": "B"
+    },
+    "34": {
+        "origin_prompt": "Ash had sandwiches to eat every day and he started to feel sick and bloated, and also feel tired.\nQuestion: How would Ash feel afterwards?\nA. energized\nB. healthy and lean\nC. sick and bloated\nAnswer:",
+        "prediction": " C\nExplanation: If Ash ate sandwiches every day, he would feel sick and bloated, and also feel tired. This is because sandwiches are high in fat and calories, and eating too many of them can lead to weight gain and health problems.",
+        "gold": "C"
+    },
+    "35": {
+        "origin_prompt": "Robin wanted to share the food with a friend, so they cut the sandwich in half.\nQuestion: What does Robin need to do before this?\nA. get a knife\nB. eat half of her own sandwich\nC. give half the sandwich to her friend\nAnswer:",
+        "prediction": " C\nExplanation: To share the food, Robin needs to give half of it to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C. The answer is C. Robin needs to give half the sandwich to her friend. This means she needs to cut the sandwich in half. So, Robin needs to do step C",
+        "gold": "A"
+    },
+    "36": {
+        "origin_prompt": "carson was bored so he went to a friend's house and played video games.\nQuestion: What will Others want to do next?\nA. great\nB. kick carson out the house\nC. ask carson questions\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "C"
+    },
+    "37": {
+        "origin_prompt": "Jordan was mentioned in Casey's chapter because they were with Casey during the adventure.\nQuestion: What will Casey want to do next?\nA. celebrate with friends after finishing the book\nB. encourage Jordan to buy a copy\nC. be part of the adventure\nAnswer:",
+        "prediction": " C\nExplanation: To determine the next step in the story, look at the last page of the book. The last page of the book is blank, so Casey will be part of the adventure.",
+        "gold": "A"
+    },
+    "38": {
+        "origin_prompt": "Taylor proved Carson's point last night by showing that what he said was correct after all.\nQuestion: How would Carson feel as a result?\nA. thankful of Taylor\nB. jealous of Taylor\nC. vindicated\nAnswer:",
+        "prediction": " C\nExplanation: Carson was wrong, and Taylor proved him wrong. Taylor's point was correct, and Carson was wrong. So, Carson would feel vindicated.",
+        "gold": "C"
+    },
+    "39": {
+        "origin_prompt": "Addison prepared the paper for publication. She had been working on it for a long time.\nQuestion: What will Others want to do next?\nA. publish the paper\nB. start over\nC. edit it\nAnswer:",
+        "prediction": " A\nExplanation: The correct answer is A. The question asks what Others will want to do next. Since Addison has been working on the paper for a long time, it is likely that she will want to publish it. Therefore, the answer is A. publish the paper. The other answer choices are not possible in this context.",
+        "gold": "A"
+    },
+    "40": {
+        "origin_prompt": "riley was a distrustful person so he regarded jesse with suspicious eyes.\nQuestion: What will happen to Jesse?\nA. he will ignore riley\nB. call Jesse out\nC. he will question riley\nAnswer:",
+        "prediction": " C\nExplanation: The question is asking what will happen to Jesse. The answer is Jesse will question riley. This is because riley was a distrustful person so he regarded jesse with suspicious eyes. This means that he will question riley. So, the answer is Jesse will question riley.",
+        "gold": "C"
+    },
+    "41": {
+        "origin_prompt": "Cameron kept complaining so their friend told them they had to put up or shut up.\nQuestion: What will Cameron want to do next?\nA. keep their mouth closed\nB. yell at their friend\nC. wanted to tell friends they were feeling ill\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "A"
+    },
+    "42": {
+        "origin_prompt": "Riley fought Kendall in a battle after they had an argument.\nQuestion: What does Riley need to do before this?\nA. apologize to Kendall\nB. find some good weapons\nC. send Kendall flowers\nAnswer:",
+        "prediction": " A\nExplanation: To solve a problem, you need to understand the current situation and the actions that need to be taken to resolve it. This is called making a plan. In this case, Riley needs to apologize to Kendall. So, Riley needs to do the following before this: apologize to Kendall. The answer is: A. apologize to Kendall.",
+        "gold": "B"
+    },
+    "43": {
+        "origin_prompt": "Cameron gave Casey a pep talk and now has a sense of belonging in the group.\nQuestion: What will Casey want to do next?\nA. Leave the group\nB. Make a plan to attack the project\nC. be nice\nAnswer:",
+        "prediction": " B\nExplanation: Casey is a new member of the group and needs to make a plan to attack the project.",
+        "gold": "C"
+    },
+    "44": {
+        "origin_prompt": "Kai grabbed Carson's tools for him after he left it in the park.\nQuestion: What will Kai want to do next?\nA. Put them in the garage\nB. take them to Carson\nC. throw them away\nAnswer:",
+        "prediction": " B\nExplanation: If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to Carson. So, the answer is B. The answer is B. If Kai wants to give the tools to Carson, he will take them to",
+        "gold": "B"
+    },
+    "45": {
+        "origin_prompt": "Remy saw some people playing tennis at the park. They challenged them to a game.\nQuestion: What will Remy want to do next?\nA. lose\nB. be serious\nC. play tennis\nAnswer:",
+        "prediction": " C\nExplanation: The correct answer is choice C. Remy will want to play tennis next. The question asks what Remy will want to do next, and the answer is playing tennis. The other choices are not possible answers to the question. Remy will not want to lose or be serious. He will want to play tennis. So, the answer is choice C.",
+        "gold": "C"
+    },
+    "46": {
+        "origin_prompt": "Taylor was trying to talk to her brother but the music was too loud. Taylor got louder as they raised their voice over the music.\nQuestion: How would Taylor feel afterwards?\nA. annoyed\nB. happy\nC. quiet\nAnswer:",
+        "prediction": " A\nExplanation: If Taylor got louder as they raised their voice over the music, she would feel annoyed. This is because she would have to raise her voice to be heard over the loud music, which would make her feel frustrated.",
+        "gold": "A"
+    },
+    "47": {
+        "origin_prompt": "Skylar gave Austin some pills so he could get high too.\nQuestion: Why did Skylar do this?\nA. didn't care about Austin\nB. Purchase pills\nC. enable Austin to do great things\nAnswer:",
+        "prediction": " C\nExplanation: Skylar gave Austin some pills so he could get high too. This is because Skylar wanted to enable Austin to do great things.",
+        "gold": "A"
+    },
+    "48": {
+        "origin_prompt": "Sydney took a class on plants at the college she went to.\nQuestion: How would you describe Sydney?\nA. hard working\nB. learned\nC. educated\nAnswer:",
+        "prediction": " B\nExplanation: To describe someone, we need to know what kind of person they are. We can describe someone by using adjectives, which are words that describe people, places, things, and actions. We can also describe someone by using verbs, which are action words. In this case, we are describing Sydney, so we need to use an adjective. The sentence says that Sydney took a class on plants at the college she went to. This means that Sydney is a student, and she has taken a class on plants. So, we can describe Sydney as a student who has taken a class on plants. The answer is B, but the question is asking for a single word that describes Sydney. In this case, the word that describes Sydney is learned. So, the answer is B, but the correct answer is learned. The correct answer is learned. The sentence says that Sydney took a class on plants at the college she went to. This means that Sydney is a student, and she has taken a class on plants. So, we can describe Sydney as a student who has taken a class on plants. The word that describes Sydney is learned. So, the answer is B, but the correct answer is learned. The correct answer is learned. The sentence says that Sydney took a class on plants at the college she went to. This means that Sydney is a student, and she has taken a class on plants. So, we can describe Sydney as a student who has taken a class on plants. The word that describes Sydney is learned. So, the answer is B, but the correct answer is learned. The correct answer is learned. The sentence says that Sydney took a class on plants at the college she went to. This means that Sydney is a student, and she has taken a class on plants. So, we can describe Sydney as a student who has taken a class on plants. The word that describes Sydney is learned. So, the answer is B, but the correct answer is learned. The correct answer is learned. The sentence says that Sydney took a class on plants at the college she went to. This means that Sydney is a student, and she has taken a class on plants. So, we can describe Sydney as a student who has taken a class on plants. The word that describes Sydney is learned. So, the answer is B, but the correct answer is learned. The correct answer is learned. The sentence says that Sydney took a class on plants at the college she went to. This means that Sydney is",
+        "gold": "C"
+    },
+    "49": {
+        "origin_prompt": "Remy paid her taxes and her friend asked her why she did that.\nQuestion: Why did Remy do this?\nA. offer to do her friend's taxes\nB. explain to her friend how tax laws work\nC. do what she was told\nAnswer:",
+        "prediction": " B\nExplanation: This question is about a conversation between two friends. Remy paid her taxes and her friend asked her why she did that. To answer this question, we need to figure out why Remy did that. We can do this by looking at the answer choices. The answer choices are all different ways that Remy could have answered her friend's question. So, we need to find the answer that makes the most sense in the context of the conversation. Based on the information in the question, the best answer is B. This is because Remy explained to her friend how tax laws work. This is a logical answer because Remy is a tax professional, and she would know how tax laws work. Therefore, the best answer is B.",
+        "gold": "B"
+    },
+    "50": {
+        "origin_prompt": "Remy was working late in his office trying to catch up. He had a big stack of papers.\nQuestion: What does Remy need to do before this?\nA. needed to be behind\nB. be more efficient\nC. finish his work\nAnswer:",
+        "prediction": " C\nExplanation: To be more efficient means to work in a way that uses the least amount of time or effort. In this case, Remy needs to finish his work before he can be more efficient. So, the answer is C.",
+        "gold": "A"
+    },
+    "51": {
+        "origin_prompt": "Skylar was having a hard time eating food because of tooth pain. Skylar went to the dentist to find out what was wrong.\nQuestion: How would Skylar feel afterwards?\nA. painful afterwards\nB. relieved that it isn't anything major\nC. aggravated that it isn't anything major\nAnswer:",
+        "prediction": " B\nExplanation: If you have a toothache, you might feel pain when you eat. If you go to the dentist, you might feel relieved that it isn't anything major. You might also feel a little sore afterwards. But you won't feel any pain. So, the answer is B. Skylar will feel relieved that it isn't anything major.",
+        "gold": "B"
+    },
+    "52": {
+        "origin_prompt": "Kendall watched baseball every week to cheer for their favorite team.\nQuestion: How would you describe Kendall?\nA. Indifferent to watch\nB. Loyal to others\nC. excited\nAnswer:",
+        "prediction": " C\nExplanation: To describe someone, we need to know what kind of person they are. We can describe someone as friendly, serious, happy, sad, excited, bored, or many other ways. The words we use to describe people are often called adjectives. In this case, the word that describes Kendall is excited. So, we would say that Kendall is excited to watch baseball every week to cheer for their favorite team.",
+        "gold": "B"
+    },
+    "53": {
+        "origin_prompt": "Aubrey worked their best and never received a raise.\nQuestion: How would you describe Aubrey?\nA. underappreciated\nB. Feel cheated\nC. Someone who could be appreciated\nAnswer:",
+        "prediction": " A\nExplanation: To describe someone, look at the information given in the question. In this case, we're told that Aubrey worked their best and never received a raise. This means Aubrey was underappreciated. So, the answer is A.",
+        "gold": "A"
+    },
+    "54": {
+        "origin_prompt": "Riley was the best of friends with the boy with cancer.\nQuestion: What will Riley want to do next?\nA. visit the hospital\nB. shun the friend\nC. become friends with the boy with cancer too\nAnswer:",
+        "prediction": " C\nExplanation: The boy with cancer is Riley's best friend. Riley will want to become friends with the boy with cancer too.",
+        "gold": "A"
+    },
+    "55": {
+        "origin_prompt": "taylor just got hired but he was already best friends with a co-worker.\nQuestion: How would Others feel as a result?\nA. happy\nB. ready to work\nC. jealous\nAnswer:",
+        "prediction": " A\nExplanation: If Taylor is already best friends with a co-worker, then the co-worker will feel happy for Taylor.",
+        "gold": "C"
+    },
+    "56": {
+        "origin_prompt": "Remy gave Skylar's Netflix account password to one of Remy's other friends.\nQuestion: How would Skylar feel as a result?\nA. like a bad friend\nB. excited\nC. used\nAnswer:",
+        "prediction": " A\nExplanation: If someone gives you their password, it means they trust you. If you give someone else their password, it means you don't trust them. So, Remy giving Skylar's password to one of Remy's other friends means Remy doesn't trust that friend. This would make Skylar feel like a bad friend.",
+        "gold": "C"
+    },
+    "57": {
+        "origin_prompt": "Skylar played some soccer with their friend after school that day and had fun.\nQuestion: What will happen to Others?\nA. join the game\nB. go to a bakery\nC. be tired from playing soccer\nAnswer:",
+        "prediction": " C\nExplanation:  The question is asking about the future of Others. Since the question is asking about the future of Others, we can infer that Others will be tired from playing soccer. This is because the question states that Skylar played some soccer with their friend after school that day and had fun. This implies that Others will also be tired from playing soccer, as they had fun playing soccer with Skylar. Therefore, the correct answer is that Others will be tired from playing soccer. The correct answer is choice C.",
+        "gold": "C"
+    },
+    "58": {
+        "origin_prompt": "Addison was at the carnival and stopped at a game. Addison threw a pie on the character to win.\nQuestion: What does Addison need to do before this?\nA. win the game and collect a prize\nB. needed to eat a pie\nC. needed to pay money\nAnswer:",
+        "prediction": " A\nExplanation: To win the game, Addison needs to do something before throwing the pie. The answer is A. win the game and collect a prize.",
+        "gold": "C"
+    },
+    "59": {
+        "origin_prompt": "Remy was playing a video game in their spare time. They prevented the enemies from engaging.\nQuestion: How would you describe Remy?\nA. a technical person\nB. a hard worker\nC. a skilled laborer\nAnswer:",
+        "prediction": " B\nExplanation: To describe someone, you need to know more about their personality, interests, or skills. You can describe someone as being friendly, outgoing, shy, or reserved. You can describe someone as being hardworking, lazy, or a perfectionist. You can describe someone as being skilled at a particular activity or profession. The words that you use to describe someone will give the reader a sense of who that person is.",
+        "gold": "A"
+    },
+    "60": {
+        "origin_prompt": "Riley grew very suspicious of Jesse because they snuck out every night at 11 PM.\nQuestion: What will happen to Riley?\nA. lock all the doors and windows at night\nB. be punished\nC. be questioned\nAnswer:",
+        "prediction": " C\nExplanation: If someone is suspicious of you, they will question you. This means they will ask you questions to find out what is wrong.",
+        "gold": "A"
+    },
+    "61": {
+        "origin_prompt": "Sydney felt so bad about the poor people and gave them a ton of money right away.\nQuestion: What does Sydney need to do before this?\nA. would need cash\nB. visit the poor people\nC. sydney would need to be evil\nAnswer:",
+        "prediction": " B\nExplanation: When you read a story, you need to figure out what the characters in the story are feeling and thinking. You can figure this out by understanding the words in the story, the words and phrases in the story, and what the story is really about. Some of the words in the story are important, so you should highlight them and then figure out what they mean. After you read the story, look for the word that you highlighted. Then, you can use the context (the words and phrases around the highlighted word) and your understanding of the story to figure out what the highlighted word means. Finally, you can use your answers to ask yourself questions about the character's feelings and thoughts.",
+        "gold": "B"
+    },
+    "62": {
+        "origin_prompt": "Jesse walked Addison's dog because she was on vacation.\nQuestion: What will Addison want to do next?\nA. great\nB. going to the ocean to swim\nC. loved\nAnswer:",
+        "prediction": " B\nExplanation:  To find out what Addison wants to do next, we need to look at the answer choices.  The answer choices are: A. great B. going to the ocean to swim C. loved We can see that the answer choices are all about what Addison wants to do.  Since Addison is on vacation, she will want to go to the ocean to swim.  Therefore, the correct answer is B. going to the ocean to swim.  The answer choices are all about what Addison wants to do, so we can eliminate the other answer choices.  The only answer choice that is about what Addison wants to do is B. going to the ocean to swim.  Therefore, the correct answer is B. going to the ocean to swim.  The answer choices are all about what Addison wants to do, so we can eliminate the other answer choices.  The only answer choice that is about what Addison wants to do is B. going to the ocean to swim.  Therefore, the correct answer is B. going to the ocean to swim.  The answer choices are all about what Addison wants to do, so we can eliminate the other answer choices.  The only answer choice that is about what Addison wants to do is B. going to the ocean to swim.  Therefore, the correct answer is B. going to the ocean to swim.  The answer choices are all about what Addison wants to do, so we can eliminate the other answer choices.  The only answer choice that is about what Addison wants to do is B. going to the ocean to swim.  Therefore, the correct answer is B. going to the ocean to swim.  The answer choices are all about what Addison wants to do, so we can eliminate the other answer choices.  The only answer choice that is about what Addison wants to do is B. going to the ocean to swim.  Therefore, the correct answer is B. going to the ocean to swim.  The answer choices are all about what Addison wants to do, so we can eliminate the other answer choices.  The only answer choice that is about what Addison wants to do is B. going to the ocean to swim.  Therefore, the correct answer is B. going to the ocean to swim.  The answer choices are all about what Addison wants to do, so we can eliminate the other answer choices.  The only answer choice that is about what Addison wants to do is B. going to the ocean to swim.  Therefore, the correct answer is",
+        "gold": "B"
+    },
+    "63": {
+        "origin_prompt": "Austin challenged Remy to a game of tennis at the city park on Saturday.\nQuestion: How would Remy feel as a result?\nA. mad to be invited\nB. happy to play tennis\nC. upset about the park\nAnswer:",
+        "prediction": " B\nExplanation: If someone invites you to do something, you feel happy about it. So, Remy would feel happy to play tennis. The answer is B. Remy would feel happy to play tennis.",
+        "gold": "B"
+    },
+    "64": {
+        "origin_prompt": "Remy was telling a story and told it like Casey does.\nQuestion: Why did Remy do this?\nA. learn casey\nB. tell Casey's story\nC. honor Casey\nAnswer:",
+        "prediction": " B\nExplanation: This story is told like Casey does, which means it's a story that Remy made up. Remy made up a story about Casey, so he was honoring Casey.",
+        "gold": "C"
+    },
+    "65": {
+        "origin_prompt": "Kendall snatched the toy away and the baby started crying.\nQuestion: What will happen to Kendall?\nA. become upset\nB. give it back\nC. become sad\nAnswer:",
+        "prediction": " B\nExplanation: If someone snatches something away from you, they are taking it away from you. This is usually a sign that they are angry or upset with you. However, in this case, Kendall is the one who snatched the toy away from the baby. This means that Kendall is the one who is upset, not the baby. So, Kendall will give the toy back to the baby.",
+        "gold": "B"
+    },
+    "66": {
+        "origin_prompt": "Quinn showed it off to Casey's friends in the birthday party.\nQuestion: What will happen to Casey?\nA. not humble\nB. like a bragger at the party\nC. be called a show off at the birthday party\nAnswer:",
+        "prediction": " C\nExplanation: If you show off, you try to impress other people by showing them something that you have or have done.",
+        "gold": "C"
+    },
+    "67": {
+        "origin_prompt": "Bailey told Alex to send the pdf because they didn't want to do it themselves.\nQuestion: How would Alex feel as a result?\nA. lazy about work\nB. happy\nC. angry\nAnswer:",
+        "prediction": " B\nExplanation: If someone does something for you, you feel happy. Alex sent the pdf to Bailey, so Alex would feel happy. The answer is B.",
+        "gold": "C"
+    },
+    "68": {
+        "origin_prompt": "Remy decided enough was enough after only attempting the challenge once.\nQuestion: How would you describe Remy?\nA. Satisfied\nB. resilient\nC. a failure\nAnswer:",
+        "prediction": " B\nExplanation: The word resilient describes someone who is able to bounce back from difficulties or setbacks. Remy was able to bounce back from the challenge after only attempting it once.",
+        "gold": "C"
+    },
+    "69": {
+        "origin_prompt": "Remy we out of her way to save the world from destruction.\nQuestion: How did everyone feel after her acts?\nA. all went home\nB. felt betrayed\nC. interested in saving others\nAnswer:",
+        "prediction": " C\nExplanation: Remy saves the world from destruction. Everyone feels interested in saving others.",
+        "gold": "C"
+    },
+    "70": {
+        "origin_prompt": "Robin asked Cameron if they had been out and Cameron shook their head no.\nQuestion: What does Carson need to do before this?\nA. not of been out\nB. think about going out\nC. know about Robin\nAnswer:",
+        "prediction": " B\nExplanation:  To find out what Carson needs to do before this, we need to figure out what the question is asking. The question is asking what Carson needs to do before this, which means before Robin and Cameron shake their heads no. Since Robin and Cameron are out, Carson needs to think about going out. So, the answer is B.",
+        "gold": "C"
+    },
+    "71": {
+        "origin_prompt": "riley came home and made some pie in the kitchen.\nQuestion: How would you describe Riley?\nA. as lazy\nB. as ambitious\nC. ready to eat the pie\nAnswer:",
+        "prediction": " C\nExplanation: The word \"ready\" means \"prepared to do something.\" So, if someone is ready to eat the pie, it means they are prepared to eat it. This is a good description of Riley.",
+        "gold": "B"
+    },
+    "72": {
+        "origin_prompt": "Skylar was about to go down the tall water slide but her arms needed to be on her chest.\nQuestion: What will Jesse want to do next?\nA. watch Taylor dance\nB. send Skylar down the slide\nC. cross her arms\nAnswer:",
+        "prediction": " B\nExplanation:  To solve this problem, we need to figure out what Jesse will want to do next. We can do this by thinking about what Jesse has already done and what he wants to do.  Jesse has already sent Skylar down the slide. Now he wants to send her down the slide again. So, the answer is \\boxed{B}.  Note that the problem does not say that Jesse wants to send Skylar down the slide again, but that is what the problem implies.  The problem does not say that Jesse wants to send Skylar down the slide again, but it does say that he wants to send her down the slide. This means that Jesse wants to send Skylar down the slide again.  So, the answer is \\boxed{B}.  Note that the problem does not say that Jesse wants to send Skylar down the slide again, but it does say that he wants to send her down the slide. This means that Jesse wants to send Skylar down the slide again.  So, the answer is \\boxed{B}.  Note that the problem does not say that Jesse wants to send Skylar down the slide again, but it does say that he wants to send her down the slide. This means that Jesse wants to send Skylar down the slide again.  So, the answer is \\boxed{B}.  Note that the problem does not say that Jesse wants to send Skylar down the slide again, but it does say that he wants to send her down the slide. This means that Jesse wants to send Skylar down the slide again.  So, the answer is \\boxed{B}.  Note that the problem does not say that Jesse wants to send Skylar down the slide again, but it does say that he wants to send her down the slide. This means that Jesse wants to send Skylar down the slide again.  So, the answer is \\boxed{B}.  Note that the problem does not say that Jesse wants to send Skylar down the slide again, but it does say that he wants to send her down the slide. This means that Jesse wants to send Skylar down the slide again.  So, the answer is \\boxed{B}.  Note that the problem does not say that Jesse wants to send Skylar down the slide again, but it does say that he wants to send her down the slide. This means that Jesse wants to send Skylar down the slide again.  So, the answer is \\boxed{B",
+        "gold": "C"
+    },
+    "73": {
+        "origin_prompt": "Riley regarded Jesse with watchful eyes when she saw him steal from her store.\nQuestion: What will Riley want to do next?\nA. express regret next\nB. threaten Riley\nC. run\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "B"
+    },
+    "74": {
+        "origin_prompt": "Austin challenged Remy to a game of hide and seek outside in the woods.\nQuestion: What will happen to Austin?\nA. win and find Remy\nB. get lost in the woods\nC. trip and fall on his face\nAnswer:",
+        "prediction": " A\nExplanation: If Austin challenges Remy to a game of hide and seek, Remy will hide in the woods. Austin will then go looking for Remy. If he finds Remy, he will win. So, the answer is A. Austin will win and find Remy.",
+        "gold": "B"
+    },
+    "75": {
+        "origin_prompt": "Taylor got drunk at their friend's party and become louder.\nQuestion: What will Taylor want to do next?\nA. better\nB. say nothing because he did not remember\nC. make others laugh\nAnswer:",
+        "prediction": " C\nExplanation: When Taylor got drunk, he became louder. He will want to make others laugh. So, the answer is C. Taylor will want to make others laugh.",
+        "gold": "C"
+    },
+    "76": {
+        "origin_prompt": "Carson looked into Robin's eyes and shook her head no after asking Carson out.\nQuestion: What will Robin want to do next?\nA. spank Carson hard\nB. laugh in Carson's face\nC. slap Carson across the face\nAnswer:",
+        "prediction": " B\nExplanation: ",
+        "gold": "C"
+    },
+    "77": {
+        "origin_prompt": "Aubrey and her friends stayed up all night having a slumber party, the house is now a wreck.\nQuestion: What will Aubrey do when they leave?\nA. Go to sleep\nB. Clean the bedroom\nC. Clean the living room\nAnswer:",
+        "prediction": " B\nExplanation:  The correct answer is B. Aubrey will clean the bedroom. The other answers are not possible in this context.",
+        "gold": "B"
+    },
+    "78": {
+        "origin_prompt": "Quinn was worried about what the group was saying behind her back.  She depended on Taylor to tell her the truth.\nQuestion: How would Quinn feel as a result?\nA. a good friend to Quinn\nB. on her side\nC. getting in the way\nAnswer:",
+        "prediction": " B\nExplanation: Quinn was worried about what the group was saying behind her back.  She depended on Taylor to tell her the truth.  So, Quinn would feel on her side.  The answer is B.  Choices: A, B, C.  Answer: B.  Explanation: Quinn was worried about what the group was saying behind her back.  She depended on Taylor to tell her the truth.  So, Quinn would feel on her side.  The answer is B.  Choices: A, B, C.  Answer: B.  Explanation: Quinn was worried about what the group was saying behind her back.  She depended on Taylor to tell her the truth.  So, Quinn would feel on her side.  The answer is B.  Choices: A, B, C.  Answer: B.  Explanation: Quinn was worried about what the group was saying behind her back.  She depended on Taylor to tell her the truth.  So, Quinn would feel on her side.  The answer is B.  Choices: A, B, C.  Answer: B.  Explanation: Quinn was worried about what the group was saying behind her back.  She depended on Taylor to tell her the truth.  So, Quinn would feel on her side.  The answer is B.  Choices: A, B, C.  Answer: B.  Explanation: Quinn was worried about what the group was saying behind her back.  She depended on Taylor to tell her the truth.  So, Quinn would feel on her side.  The answer is B.  Choices: A, B, C.  Answer: B.  Explanation: Quinn was worried about what the group was saying behind her back.  She depended on Taylor to tell her the truth.  So, Quinn would feel on her side.  The answer is B.  Choices: A, B, C.  Answer: B.  Explanation: Quinn was worried about what the group was saying behind her back.  She depended on Taylor to tell her the truth.  So, Quinn would feel on her side.  The answer is B.  Choices: A, B, C.  Answer: B.  Explanation: Quinn was worried about what the group was saying behind her back.  She depended on Taylor to tell her the truth.  So, Quinn would feel on her side.  The answer is B.  Choices: A, B, C.  Answer:",
+        "gold": "B"
+    },
+    "79": {
+        "origin_prompt": "Jesse went camping with Addison's friends.\nQuestion: Why did Jesse do this?\nA. get closer to Addison\nB. hates camping\nC. stay in touch with his new friends\nAnswer:",
+        "prediction": " C\nExplanation: To answer this question, we need to look at the answer choices and see which one makes sense in the context of the story. In this case, the answer choice that makes the most sense is choice C, which is \"stay in touch with his new friends.\" This is because Jesse went camping with Addison's friends, which means he was staying in touch with his new friends. So, the answer is choice C.",
+        "gold": "C"
+    },
+    "80": {
+        "origin_prompt": "Jesse was involved in a drug deal in a bad part of town.\nQuestion: How would you describe Jesse?\nA. conventional\nB. nervous\nC. a risk taker\nAnswer:",
+        "prediction": " C\nExplanation: To describe someone, you need to know more about them. You can find this information in the text of the sentence. In this case, the sentence is \"Jesse was involved in a drug deal in a bad part of town.\" This sentence tells us that Jesse was a risk taker.",
+        "gold": "C"
+    },
+    "81": {
+        "origin_prompt": "Remy carried their plan of egging and toilet papering the girls fraternity house into execution.\nQuestion: What will the girls want to do next?\nA. gather eggs\nB. gather toilet paper\nC. Since the girls were college girls they were smart enough to find out who did it and turn him in\nAnswer:",
+        "prediction": " C\nExplanation: The girls will want to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are smart enough to find out who did it and turn him in. This is because they are college girls and they are",
+        "gold": "C"
+    },
+    "82": {
+        "origin_prompt": "Robin went with Jan's friends to the play and it was a big hoot.\nQuestion: What will happen to Jan?\nA. she will have fun\nB. she will enjoy it\nC. shocked\nAnswer:",
+        "prediction": " A\nExplanation: ",
+        "gold": "B"
+    },
+    "83": {
+        "origin_prompt": "Kendall said that nobody was to use their phone. Jesse used Kendall's phone anyway.\nQuestion: What will Kendall want to do next?\nA. steal Kendall's phone\nB. compliment Jesse\nC. lock their phone\nAnswer:",
+        "prediction": " A\nExplanation: If Jesse used Kendall's phone, then Kendall will want to do something about it. Kendall will want to steal Kendall's phone back. So, the answer is A.",
+        "gold": "C"
+    },
+    "84": {
+        "origin_prompt": "Carson's friend wanted something sweet to drink. Carson gave their friend some milk.\nQuestion: What will happen to Carson?\nA. talk to the friend\nB. ask for milk\nC. milk a cow\nAnswer:",
+        "prediction": " B\nExplanation: Carson gave their friend some milk. This means Carson will have to ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask for milk. Carson will not talk to the friend, milk a cow, or do anything else. They will only ask for milk. So, the answer is B. Carson will ask",
+        "gold": "A"
+    },
+    "85": {
+        "origin_prompt": "Robin went to Jan's friend's school when she was being bullied at her school.\nQuestion: How would you describe Robin?\nA. glad her friend could help\nB. a student\nC. sad Robin had to change schools\nAnswer:",
+        "prediction": " C\nExplanation: To find the meaning of a word in context, we need to understand the situation that the speaker describes. This situation should give us enough information to work out the meaning of the word.\n\nHere, the situation is that Robin had to change schools because she was being bullied at her school. This means that Robin was unhappy about having to change schools, so she must be feeling sad.\n\nThe word that describes this feeling is'sad'. Therefore, the answer is:\n\\[ \\boxed{\\text{sad}} \\]",
+        "gold": "A"
+    },
+    "86": {
+        "origin_prompt": "Kai has to give a presentation in their class but Kai was not prepared.  Therefore, Kai makes things up as they go along.\nQuestion: What does Kai need to do before this?\nA. be well received\nB. use her imagination\nC. ask other people for ideas\nAnswer:",
+        "prediction": " B\nExplanation:  To be well received, you need to have something to say.  If you don't have anything to say, you need to come up with something to say.  You can't come up with something to say if you haven't thought about what you're going to say.  So, you need to think about what you're going to say before you give a presentation.  You can't think about what you're going to say if you haven't thought about what you're going to say.  So, you need to think about what you're going to say before you give a presentation.  You can't think about what you're going to say if you haven't thought about what you're going to say.  So, you need to think about what you're going to say before you give a presentation.  You can't think about what you're going to say if you haven't thought about what you're going to say.  So, you need to think about what you're going to say before you give a presentation.  You can't think about what you're going to say if you haven't thought about what you're going to say.  So, you need to think about what you're going to say before you give a presentation.  You can't think about what you're going to say if you haven't thought about what you're going to say.  So, you need to think about what you're going to say before you give a presentation.  You can't think about what you're going to say if you haven't thought about what you're going to say.  So, you need to think about what you're going to say before you give a presentation.  You can't think about what you're going to say if you haven't thought about what you're going to say.  So, you need to think about what you're going to say before you give a presentation.  You can't think about what you're going to say if you haven't thought about what you're going to say.  So, you need to think about what you're going to say before you give a presentation.  You can't think about what you're going to say if you haven't thought about what you're going to say.  So, you need to think about what you're going to say before you give a presentation.  You can't think about what you're going to say if you haven't thought about what you're going to say. ",
+        "gold": "B"
+    },
+    "87": {
+        "origin_prompt": "Skylar and a friend played together. Skylar kept cheating to win no matter what.\nQuestion: How would the friend feel as a result?\nA. annoyed Skylar ruined the game\nB. happy that Skylar won the game\nC. happy they cheated\nAnswer:",
+        "prediction": " A\nExplanation: If someone cheats to win, they are not playing fairly. This means that the other person will not be happy with the result. Instead, they will feel annoyed or angry. So, the answer is A.",
+        "gold": "A"
+    },
+    "88": {
+        "origin_prompt": "riley was happy to socialize with others so she talked to her friends.\nQuestion: How would Others feel as a result?\nA. as calm\nB. a sociable person\nC. as angry\nAnswer:",
+        "prediction": " B\nExplanation: The best way to determine how others would feel as a result of a situation is to think about how you would feel in the same situation. If you would feel happy, others would probably feel happy too. If you would feel angry, others would probably feel angry too. If you would feel calm, others would probably feel calm too. So, the answer is B. Others would feel as a sociable person.",
+        "gold": "B"
+    },
+    "89": {
+        "origin_prompt": "Jesse set Robin's suitcase on fire after their fight and messy breakup.\nQuestion: What will Jesse want to do next?\nA. get a bucket of cool water\nB. decide not to reconcile\nC. get a bucket of cold beer\nAnswer:",
+        "prediction": " B\nExplanation: ",
+        "gold": "B"
+    },
+    "90": {
+        "origin_prompt": "Ash was finally able to redeem himself after the belly flop at the swimming pool last weekend.\nQuestion: What will Ash want to do next?\nA. make sure he never does that again\nB. remind everyone about what happened last weekend\nC. needed to go to the pool\nAnswer:",
+        "prediction": " A\nExplanation:  Ash was finally able to redeem himself after the belly flop at the swimming pool last weekend. He will want to make sure he never does that again. So, the answer is A. Ash will want to do A. make sure he never does that again.",
+        "gold": "A"
+    },
+    "91": {
+        "origin_prompt": "Alex answered Riley's question because he knew the answer.\nQuestion: What will happen to Alex?\nA. talk more\nB. meet to knew the Alex\nC. ignore Riley\nAnswer:",
+        "prediction": " A\nExplanation: Alex answered Riley's question because he knew the answer. This means that Alex will talk more. So, the answer is A.",
+        "gold": "A"
+    },
+    "92": {
+        "origin_prompt": "Remy said he was the best chess player in the city, but Austin knew he was better.\nQuestion: What will happen to Austin?\nA. lose to Jose\nB. enjoy playing chess\nC. enjoy playing checkers\nAnswer:",
+        "prediction": " B\nExplanation: Remy said he was the best chess player in the city, but Austin knew he was better. This means that Austin will enjoy playing chess.",
+        "gold": "B"
+    },
+    "93": {
+        "origin_prompt": "Sasha's sister had a headache.  Therefore, they gave their sister some pills.\nQuestion: Why did Sasha do this?\nA. be a responsible big sister\nB. they need to know something about it\nC. make sure they themselves would be better\nAnswer:",
+        "prediction": " A\nExplanation: This question is asking for the reason why Sasha gave her sister some pills. The answer is that Sasha did this to be a responsible big sister. This is because she wanted to make sure that her sister would be better.",
+        "gold": "A"
+    },
+    "94": {
+        "origin_prompt": "Jesse set Robin's case on fire. Robin was very angry and called the cops on her.\nQuestion: What will happen to Jesse?\nA. go to heaven\nB. get revenge\nC. go to jail\nAnswer:",
+        "prediction": " C\nExplanation: Robin was very angry and called the cops on her. Jesse set Robin's case on fire. This means that Jesse will go to jail.",
+        "gold": "C"
+    },
+    "95": {
+        "origin_prompt": "Aubrey had been sick for a long time and took medication for years.\nQuestion: What does Aubrey need to do before this?\nA. pick up the medicene\nB. wanted to get better\nC. go to the bank\nAnswer:",
+        "prediction": " B\nExplanation: Aubrey had been sick for a long time and took medication for years. Aubrey needed to do something before she took the medication. The answer is that Aubrey needed to get better. So, the answer is choice B.",
+        "gold": "A"
+    },
+    "96": {
+        "origin_prompt": "Aubrey was a mess so Robin knew that the clothes need changed before the event.\nQuestion: How would you describe Robin?\nA. responsible\nB. aware afterwards\nC. inconsiderate\nAnswer:",
+        "prediction": " A\nExplanation: To determine the meaning of a word, you can use the context of a sentence in which the word appears. In this case, the sentence is \"Aubrey was a mess so Robin knew that the clothes need changed before the event.\" Since Robin knew that the clothes needed to be changed before the event, it means that Robin was responsible for changing the clothes. Therefore, you can describe Robin as responsible. The answer is A.",
+        "gold": "A"
+    },
+    "97": {
+        "origin_prompt": "Aubrey sounded good talking so they asked her to speak on behalf of the group.\nQuestion: What will Aubrey want to do next?\nA. conduct speaking exercises\nB. practice the speech several times\nC. represent them next\nAnswer:",
+        "prediction": " C\nExplanation: The question is asking what Aubrey will want to do next. The answer is that she will want to represent the group. This is because Aubrey sounded good talking so they asked her to speak on behalf of the group. So, the answer is that Aubrey will want to conduct speaking exercises, practice the speech several times, or represent them next. But the question is asking what Aubrey will want to do next. So, the answer is that Aubrey will want to represent them next. This is because Aubrey sounded good talking so they asked her to speak on behalf of the group. So, the answer is that Aubrey will want to represent them next. The answer is that Aubrey will want to represent them next. This is because Aubrey sounded good talking so they asked her to speak on behalf of the group. So, the answer is that Aubrey will want to represent them next. The answer is that Aubrey will want to represent them next. This is because Aubrey sounded good talking so they asked her to speak on behalf of the group. So, the answer is that Aubrey will want to represent them next. The answer is that Aubrey will want to represent them next. This is because Aubrey sounded good talking so they asked her to speak on behalf of the group. So, the answer is that Aubrey will want to represent them next. The answer is that Aubrey will want to represent them next. This is because Aubrey sounded good talking so they asked her to speak on behalf of the group. So, the answer is that Aubrey will want to represent them next. The answer is that Aubrey will want to represent them next. This is because Aubrey sounded good talking so they asked her to speak on behalf of the group. So, the answer is that Aubrey will want to represent them next. The answer is that Aubrey will want to represent them next. This is because Aubrey sounded good talking so they asked her to speak on behalf of the group. So, the answer is that Aubrey will want to represent them next. The answer is that Aubrey will want to represent them next. This is because Aubrey sounded good talking so they asked her to speak on behalf of the group. So, the answer is that Aubrey will want to represent them next. The answer is that Aubrey will want to represent them next. This is because Aubrey sounded good talking so they asked her to speak on behalf of the group. So, the answer",
+        "gold": "B"
+    },
+    "98": {
+        "origin_prompt": "Alex is a firefighter. He helped Casey to escape the fire.\nQuestion: What will happen to Casey?\nA. be angry\nB. escape the fire\nC. cry\nAnswer:",
+        "prediction": " B\nExplanation: ",
+        "gold": "B"
+    },
+    "99": {
+        "origin_prompt": "Taylor pissed on Jesse's bonfire to put it out before it became out of control.\nQuestion: What will Taylor want to do next?\nA. get help from others\nB. Use gasoline to put it out\nC. Put his clothes back on\nAnswer:",
+        "prediction": " A\nExplanation: Taylor wants to get help from others because he wants to make sure that the fire is out and that no one is hurt. He doesn't want to put gasoline on the fire because that would make it worse. He also doesn't want to put his clothes back on because he wants to make sure that the fire is out.",
+        "gold": "A"
+    },
+    "100": {
+        "origin_prompt": "Jan came out at night to check the very loud noise from the street.\nQuestion: How would you describe Jan?\nA. had felt passive\nB. be scared\nC. had felt scared\nAnswer:",
+        "prediction": " C\nExplanation: The answer is choice C because it describes Jan as feeling scared. The sentence states that Jan came out at night to check the very loud noise from the street, which suggests that Jan was scared by the noise. The word passive is not used in the sentence, and the word scared is used. Therefore, the correct answer is choice C.",
+        "gold": "C"
+    },
+    "101": {
+        "origin_prompt": "Remy watched a sad film then cried their eyes out afterwards.\nQuestion: How would you describe Remy?\nA. despondent\nB. soft\nC. upset\nAnswer:",
+        "prediction": " C\nExplanation: The word despondent means feeling very sad or hopeless. The word soft means gentle or kind. The word upset means feeling very sad or angry. So, the answer is C.",
+        "gold": "B"
+    },
+    "102": {
+        "origin_prompt": "Kai was a great improvisational guitar player; Kai made it up as Kai goes along.\nQuestion: What will Kai want to do next?\nA. record their improvised music\nB. have the genes to be a great improvisational guitar player\nC. learn a cover song\nAnswer:",
+        "prediction": " A\nExplanation: ",
+        "gold": "A"
+    },
+    "103": {
+        "origin_prompt": "Ash threw up their arms and just finally gave up on Sasha and her attitude.\nQuestion: What will happen to Sasha?\nA. abandoned\nB. look to spend time with Ash\nC. get away from Sasha\nAnswer:",
+        "prediction": " C\nExplanation: If someone gives up on you, they stop trying to do something or spend time with you. This usually happens because they are angry or frustrated with you.",
+        "gold": "A"
+    },
+    "104": {
+        "origin_prompt": "Lee gave birth to many babies after a pregnancy that was long and hard.\nQuestion: What will Lee want to do next?\nA. Browse Instagram and ignore her babies\nB. be a mother\nC. Relax and post pictures of her babies on Instagram\nAnswer:",
+        "prediction": " B\nExplanation: If a baby is born, the mother will want to be a mother. So, the answer is choice B.",
+        "gold": "B"
+    },
+    "105": {
+        "origin_prompt": "Aubrey kept her friends up all night telling stories and having snacks.\nQuestion: How would Others feel as a result?\nA. Like they could of had fun that night\nB. Like they had a fun night\nC. Glad they didn't sleep\nAnswer:",
+        "prediction": " B\nExplanation: ",
+        "gold": "B"
+    },
+    "106": {
+        "origin_prompt": "Aubrey took many medications during the years and they had taken a huge toll on her body.\nQuestion: What did Aubrey need to do next?\nA. make the decision to take lots of pills\nB. be unconcerned with their long term health\nC. was on the brink of death and decided to fast and pray and seek God for a miraculous healing miracle\nAnswer:",
+        "prediction": " C\nExplanation: Aubrey was on the brink of death and decided to fast and pray and seek God for a miraculous healing miracle.",
+        "gold": "A"
+    },
+    "107": {
+        "origin_prompt": "Quinn's friend got dumped by their partner but Quinn was not sympathetic infact they rubbed salt in the would.\nQuestion: How would you describe Quinn?\nA. cruel\nB. kind\nC. wonderful\nAnswer:",
+        "prediction": " A\nExplanation: The word \"cruel\" describes someone who is unkind and heartless. This is because cruelty is often associated with a lack of compassion and a desire to cause pain. In this case, Quinn is described as being cruel to their friend after their partner dumped them. This is a clear indication that Quinn is not kind or wonderful, but rather unkind and heartless. Therefore, the best answer is A.",
+        "gold": "A"
+    },
+    "108": {
+        "origin_prompt": "Quinn got a new job in a different town so they moved to a new house.\nQuestion: What will Quinn want to do next?\nA. welcome\nB. unpack his things\nC. reload his things\nAnswer:",
+        "prediction": " B\nExplanation:  When you move to a new house, you need to unpack your things. This means you need to take the things out of the boxes and put them in their proper places. So, Quinn will want to do something else after he moves to the new house. He will want to unpack his things. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer",
+        "gold": "B"
+    },
+    "109": {
+        "origin_prompt": "Kai did not want to tell Kendall what the boys had said to spare her feelings but eventually he fessed up about the lies.\nQuestion: How would you describe Kai?\nA. right\nB. betrayed\nC. trying to be a good neighbor\nAnswer:",
+        "prediction": " B\nExplanation: The question is asking for the best word to describe Kai. The answer is \"betrayed\" because Kai did not want to tell Kendall what the boys had said to spare her feelings but eventually he fessed up about the lies.",
+        "gold": "C"
+    },
+    "110": {
+        "origin_prompt": "Robin was mad at someone from work, and she lost her cool.\nQuestion: What will happen to Robin?\nA. Others will be scared of Robin\nB. Others will avoid Robin\nC. be fired\nAnswer:",
+        "prediction": " C\nExplanation: If someone loses their cool, they become very angry and start to act in a way that is not normal for them. This is usually because they are very upset about something. If someone loses their cool, they will often be fired from their job.",
+        "gold": "B"
+    },
+    "111": {
+        "origin_prompt": "Alex couldn't make up their mind one way or another about the important matter.\nQuestion: What will Alex want to do next?\nA. issue a ruling\nB. ignore the question at hand\nC. a indecisive person\nAnswer:",
+        "prediction": " A\nExplanation: Alex couldn't make up their mind one way or another about the important matter. This means that Alex will want to issue a ruling. The ruling will be the answer to the question. So, the answer is A. Alex will want to issue a ruling.",
+        "gold": "A"
+    },
+    "112": {
+        "origin_prompt": "Aubrey poured the boiling water over the rice inside the bowl.\nQuestion: What will Aubrey want to do next?\nA. cook the rice\nB. rehydrate the rice\nC. mix the rice\nAnswer:",
+        "prediction": " B\nExplanation: To cook rice, you need to rehydrate it. This means you need to add water to it. So, Aubrey will want to rehydrate the rice. The answer is B. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B. Aubrey will want to rehydrate the rice. The answer is B.",
+        "gold": "A"
+    },
+    "113": {
+        "origin_prompt": "Aubrey had been the one to convince Riley's ex to break up with her, but never told for the truth about it.\nQuestion: How would you describe Aubrey?\nA. a bad friend\nB. a loyal friend\nC. a trustworthy person\nAnswer:",
+        "prediction": " B\nExplanation: Aubrey is a loyal friend. She would do anything for Riley, even if it means breaking up with her ex. This is a good example of a loyal friend.",
+        "gold": "A"
+    },
+    "114": {
+        "origin_prompt": "In fit of rage, Quinn murdered Remy's wife who accused Quinn of stealing.\nQuestion: How would Remy feel as a result?\nA. devastated for losing wife\nB. psychotic\nC. devastated for losing home\nAnswer:",
+        "prediction": " A\nExplanation: Remy's wife was murdered by Quinn in a fit of rage. Remy would feel devastated for losing his wife.",
+        "gold": "A"
+    },
+    "115": {
+        "origin_prompt": "Aubrey is babysitting for her sister who has been exhausted lately because the baby stays up all night.\nQuestion: How would Aubrey feel after staying up all night?\nA. feed the baby\nB. Tired\nC. go home and rest\nAnswer:",
+        "prediction": " B\nExplanation: If Aubrey stays up all night, she will be tired. This is because she will have been awake for a long time, and she will need to rest. So, Aubrey will feel tired after staying up all night. The answer is B.",
+        "gold": "B"
+    },
+    "116": {
+        "origin_prompt": "Jesse and Robin had been fighting so Jesse set Robin's hair on fire.\nQuestion: Why did Jesse do this?\nA. they were happy with them\nB. they were mad at them\nC. good\nAnswer:",
+        "prediction": " B\nExplanation: This question is asking why Jesse set Robin's hair on fire. The answer is that Jesse did this because he was mad at Robin. This is because the question states that Jesse set Robin's hair on fire when they were fighting. So, the answer is that Jesse did this because he was mad at Robin. The answer is B. Jesse set Robin's hair on fire because he was mad at her. This is because the question states that Jesse set Robin's hair on fire when they were fighting. So, the answer is that Jesse did this because he was mad at Robin. The answer is B. Jesse set Robin's hair on fire because he was mad at her. This is because the question states that Jesse set Robin's hair on fire when they were fighting. So, the answer is that Jesse did this because he was mad at Robin. The answer is B. Jesse set Robin's hair on fire because he was mad at her. This is because the question states that Jesse set Robin's hair on fire when they were fighting. So, the answer is that Jesse did this because he was mad at Robin. The answer is B. Jesse set Robin's hair on fire because he was mad at her. This is because the question states that Jesse set Robin's hair on fire when they were fighting. So, the answer is that Jesse did this because he was mad at Robin. The answer is B. Jesse set Robin's hair on fire because he was mad at her. This is because the question states that Jesse set Robin's hair on fire when they were fighting. So, the answer is that Jesse did this because he was mad at Robin. The answer is B. Jesse set Robin's hair on fire because he was mad at her. This is because the question states that Jesse set Robin's hair on fire when they were fighting. So, the answer is that Jesse did this because he was mad at Robin. The answer is B. Jesse set Robin's hair on fire because he was mad at her. This is because the question states that Jesse set Robin's hair on fire when they were fighting. So, the answer is that Jesse did this because he was mad at Robin. The answer is B. Jesse set Robin's hair on fire because he was mad at her. This is because the question states that Jesse set Robin's hair on fire when they were fighting. So, the answer is that Jesse did this because he was mad at Robin. The answer is B. Jesse set Robin's hair on fire because he",
+        "gold": "B"
+    },
+    "117": {
+        "origin_prompt": "Lee reached his destination but had to make sure he locked up his bike before entering.\nQuestion: What does Lee need to do before this?\nA. Secure his bike with the lock\nB. Leave his bike on the curb\nC. Bring his bike wherever he goes\nAnswer:",
+        "prediction": " A\nExplanation: To secure his bike with the lock, Lee needs to make sure that his bike is locked up before he enters his destination. This is because if he leaves his bike unlocked, someone could steal it. So, Lee needs to lock up his bike with the lock before entering. The answer is A.",
+        "gold": "C"
+    },
+    "118": {
+        "origin_prompt": "Casey told Addison's dad about the car. She felt he needed to know how the fender got damaged.\nQuestion: How would you describe Casey?\nA. relieved\nB. worried about the consequences to Addison\nC. a snitch\nAnswer:",
+        "prediction": " B\nExplanation: To describe someone, you can use action verbs, which are usually in the present tense. You can also use linking verbs, which are usually in the present tense. In this case, the verb is \"feel.\"",
+        "gold": "C"
+    },
+    "119": {
+        "origin_prompt": "Casey wrapped her hands around Sasha and they hugged goodbye before leaving.\nQuestion: How would Sasha feel as a result?\nA. sorry to be leaving\nB. warm and affectionate\nC. sad to say goodbye\nAnswer:",
+        "prediction": " B\nExplanation: When people feel warm and affectionate, it means they feel close to someone and like that person. This is a positive feeling.",
+        "gold": "B"
+    },
+    "120": {
+        "origin_prompt": "Sydney was sleeping at Sasha's house but Sasha kept snoring. Sydney reached over and closed Sasha's mouth.\nQuestion: What will Sydney want to do next?\nA. get fed up with the snoring\nB. go to sleep\nC. hear the snoring\nAnswer:",
+        "prediction": " A\nExplanation: ",
+        "gold": "B"
+    },
+    "121": {
+        "origin_prompt": "Riley's brother was a gambler and petty thief. Riley went the way of her brother.\nQuestion: How would you describe Riley?\nA. Admirable\nB. Reckless\nC. Smart\nAnswer:",
+        "prediction": " B\nExplanation: The answer is B, reckless. The word reckless means acting in a way that is very dangerous or foolish. Riley's brother was a gambler and petty thief. Riley went the way of her brother, which means she also became a gambler and petty thief. So, Riley is reckless.",
+        "gold": "B"
+    },
+    "122": {
+        "origin_prompt": "Lee made copies of the their poster before starting his mayoral campaign.\nQuestion: What does Lee need to do before this?\nA. needed to design the poster for his campaign\nB. has the funds\nC. needed to drop out of the campaign\nAnswer:",
+        "prediction": " A\nExplanation: If Lee made copies of the poster before starting his mayoral campaign, he needs to do something before starting his mayoral campaign. The only thing that makes sense is that he needs to design the poster for his campaign. So, the answer is A.",
+        "gold": "A"
+    },
+    "123": {
+        "origin_prompt": "Jan was having guests from another country so Jan took them to NYC.\nQuestion: What does Jan need to do before this?\nA. jan who has take them NYC\nB. leave without them\nC. Plan the trip\nAnswer:",
+        "prediction": " C\nExplanation: To plan a trip, you need to do a lot of things before you actually go. You need to book a hotel, make reservations for restaurants, and figure out how to get to the city. You also need to make sure that you have enough money to pay for the trip. So, the answer is C.",
+        "gold": "C"
+    },
+    "124": {
+        "origin_prompt": "austin just got a new computer so the first thing he did was make an email.\nQuestion: How would Others feel as a result?\nA. uptight\nB. nervous\nC. content\nAnswer:",
+        "prediction": " A\nExplanation: When someone does something that makes others feel uncomfortable, they might feel uptight. This is because they are worried or anxious about the situation. For example, if someone is late for a meeting, others might feel uptight because they are worried that the meeting will be over and they won't be able to finish their work.",
+        "gold": "C"
+    },
+    "125": {
+        "origin_prompt": "Lee was being waited on my Taylors friend and tipped them well.\nQuestion: Why did Lee do this?\nA. good\nB. pay them for what they did\nC. proud\nAnswer:",
+        "prediction": " B\nExplanation: If you tip someone, you give them money as a reward for good service. So, if Lee tipped Taylors friend well, it means he was happy with the service they provided. This is because Lee was being waited on by Taylors friend and was happy with the service they provided.",
+        "gold": "B"
+    },
+    "126": {
+        "origin_prompt": "Alex helped Casey escape but they both got caught later.\nQuestion: What will happen to Alex?\nA. be punished\nB. sad\nC. be rewarded\nAnswer:",
+        "prediction": " A\nExplanation: If Alex helped Casey escape but they both got caught later, then Alex will be punished. This is because Alex helped Casey escape, but they both got caught, which means Alex will be punished for helping Casey escape.",
+        "gold": "A"
+    },
+    "127": {
+        "origin_prompt": "Their friend asked them to take a look at the engine, so Taylor studied the car carefully.\nQuestion: What does Taylor need to do before this?\nA. open the hood\nB. be a mechanic\nC. buy a car\nAnswer:",
+        "prediction": " A\nExplanation: To study the car carefully, Taylor needs to open the hood. This is because the hood is the top of the car's engine, and it needs to be opened to see the engine.",
+        "gold": "B"
+    },
+    "128": {
+        "origin_prompt": "Robin usually got the pizza because she was always ordered it.\nQuestion: What does Robin need to do before this?\nA. go to the grocery store\nB. call the pizza place\nC. buy chinese food\nAnswer:",
+        "prediction": " B\nExplanation: To make a request, you need to use the verb \"to want\" or \"to need\" and the person or thing you want or need. The person or thing you want or need is the object of the sentence. The subject of the sentence is the person making the request. The verb \"to be\" is usually used to make the subject the subject of the sentence. The rest of the sentence is the object of the sentence. In this case, the object of the sentence is \"the pizza.\" So, the answer is: I need the pizza.",
+        "gold": "B"
+    },
+    "129": {
+        "origin_prompt": "Jesse was out sick for the day so Tracy was covering his class. She took his student's to the playground for recess.\nQuestion: What will Jesse want to do next?\nA. get better\nB. review their homework\nC. cover the next lesson\nAnswer:",
+        "prediction": " A\nExplanation: ",
+        "gold": "A"
+    },
+    "130": {
+        "origin_prompt": "Taylor gave help to a friend who was having trouble keeping up with their bills.\nQuestion: What will their friend want to do next?\nA. help the friend find a higher paying job\nB. thank Taylor for the generosity\nC. pay some of their late employees\nAnswer:",
+        "prediction": " B\nExplanation:  The friend will want to thank Taylor for the generosity. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So, the answer is B. The answer is B. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So, the answer is B. The answer is B. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So, the answer is B. The answer is B. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So, the answer is B. The answer is B. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So, the answer is B. The answer is B. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So, the answer is B. The answer is B. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So, the answer is B. The answer is B. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So, the answer is B. The answer is B. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So, the answer is B. The answer is B. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So, the answer is B. The answer is B. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So, the answer is B. The answer is B. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So, the answer is B. The answer is B. Taylor gave help to a friend who was having trouble keeping up with their bills. The friend will want to thank Taylor for the generosity. So",
+        "gold": "B"
+    },
+    "131": {
+        "origin_prompt": "Taylor decided to host a game night at their house for everyone.\nQuestion: What will Others want to do next?\nA. buy some board games\nB. clean up their house\nC. engage in conversation\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "A"
+    },
+    "132": {
+        "origin_prompt": "Taylor answered the door and saw the mailman with a box in his hand.\nQuestion: What will Taylor want to do next?\nA. order a package\nB. close the door\nC. thanks the mailman\nAnswer:",
+        "prediction": " A\nExplanation:  The mailman has a box in his hand, so Taylor will want to order a package.",
+        "gold": "C"
+    },
+    "133": {
+        "origin_prompt": "Tracy was driving to school and then decided not to go.\nQuestion: Why did Tracy do this?\nA. they will head back home\nB. skip a test\nC. hand in her homework\nAnswer:",
+        "prediction": " A\nExplanation: Tracy was driving to school and then decided not to go. This means that she will head back home. So, the answer is A.",
+        "gold": "B"
+    },
+    "134": {
+        "origin_prompt": "Alex left after he spilled some cream soda on the ground in the kitchen area.\nQuestion: Why did Alex do this?\nA. escape trouble\nB. Get some cream soda\nC. Be careless with soda\nAnswer:",
+        "prediction": " C\nExplanation: The answer is C because Alex was careless with soda. He spilled some cream soda on the ground in the kitchen area. This means he was not careful with the soda. He was careless with the soda. So, the answer is C.",
+        "gold": "A"
+    },
+    "135": {
+        "origin_prompt": "Skylar was so excited that her mother bought her a new dress.\nQuestion: How would you describe Skylar?\nA. elated\nB. very happy\nC. a person who likes fashion\nAnswer:",
+        "prediction": " B\nExplanation: To describe a person, you can use adjectives. Adjectives are words that describe a person, place, thing, or event. The words in the answer choices are all adjectives. To determine the correct answer, you need to find the adjective that describes the person in the sentence. The sentence states that Skylar was very happy. This means that Skylar was in a very good mood. Therefore, the correct answer is B.",
+        "gold": "A"
+    },
+    "136": {
+        "origin_prompt": "Alex paid the part time actor to go over the details of the play they were in.\nQuestion: How would you describe Alex?\nA. someone who wants all the answers\nB. very excited\nC. someone who prefers to have no clue\nAnswer:",
+        "prediction": " B\nExplanation: If you describe someone as excited, you mean that they are very happy and enthusiastic about something. The word \"excited\" is often used to describe people who are looking forward to something, such as a party or a holiday. The word \"excited\" is also often used to describe animals, such as dogs, who are looking forward to something.",
+        "gold": "A"
+    },
+    "137": {
+        "origin_prompt": "Kendall was searching for ring with their eyes closed. They hit something.\nQuestion: Why did Kendall do this?\nA. kendall who has searching his ring\nB. kendall who has wanted to closed their eyes\nC. find the rings\nAnswer:",
+        "prediction": " C\nExplanation: This question is asking why Kendall was searching for a ring with his eyes closed. The answer is that he was trying to find the ring, not that he was searching for a ring. This is because the question states that he was searching for the ring with his eyes closed, which means that he was trying to find the ring, not that he was looking for a ring. Therefore, the answer is that Kendall was trying to find the ring.",
+        "gold": "C"
+    },
+    "138": {
+        "origin_prompt": "Kendall was being careless and accidentally set fire to Sydney. Sydney had to go to the hospital because of the burns.\nQuestion: How would Kendall feel afterwards?\nA. remorseful\nB. dangerous to be around\nC. reckless\nAnswer:",
+        "prediction": " A\nExplanation: If someone accidentally hurts someone else, they feel remorseful. This is because they realize that they were careless and caused harm to another person. So, Kendall would feel remorseful afterwards. The answer is A.",
+        "gold": "A"
+    },
+    "139": {
+        "origin_prompt": "Ryan asked Casey to join Sasha's band after hearing him play his guitar.\nQuestion: What will Sasha want to do next?\nA. meet him and make sure he fits in with the other members\nB. ignore him and refuse to let him play with them\nC. let him take the lead at the concert that night\nAnswer:",
+        "prediction": " A\nExplanation: ",
+        "gold": "A"
+    },
+    "140": {
+        "origin_prompt": "casey was advised to murder his friend and he kept the possibility in mind.\nQuestion: What does Casey need to do before this?\nA. hated his friend\nB. gather materials\nC. watch television\nAnswer:",
+        "prediction": " B\nExplanation: Casey was advised to murder his friend and he kept the possibility in mind. Casey needs to gather materials before he can murder his friend. So, the answer is B.",
+        "gold": "A"
+    },
+    "141": {
+        "origin_prompt": "Kendall opened her mouth to speak but realized she lost her voice.\nQuestion: How would Kendall feel as a result?\nA. embarrassed that they did that\nB. angry at themselves\nC. as angry\nAnswer:",
+        "prediction": " B\nExplanation: If you lose your voice, you will feel embarrassed, angry, or frustrated. You will feel as if you have lost control of a situation. You will feel as if you have failed. You will feel as if you have been humiliated. You will feel as if you have been embarrassed. You will feel as if you have been angry. You will feel as if you have been frustrated. You will feel as if you have been disappointed. You will feel as if you have been upset. You will feel as if you have been angry. You will feel as if you have been embarrassed. You will feel as if you have been frustrated. You will feel as if you have been disappointed. You will feel as if you have been upset. You will feel as if you have been angry. You will feel as if you have been embarrassed. You will feel as if you have been frustrated. You will feel as if you have been disappointed. You will feel as if you have been upset. You will feel as if you have been angry. You will feel as if you have been embarrassed. You will feel as if you have been frustrated. You will feel as if you have been disappointed. You will feel as if you have been upset. You will feel as if you have been angry. You will feel as if you have been embarrassed. You will feel as if you have been frustrated. You will feel as if you have been disappointed. You will feel as if you have been upset. You will feel as if you have been angry. You will feel as if you have been embarrassed. You will feel as if you have been frustrated. You will feel as if you have been disappointed. You will feel as if you have been upset. You will feel as if you have been angry. You will feel as if you have been embarrassed. You will feel as if you have been frustrated. You will feel as if you have been disappointed. You will feel as if you have been upset. You will feel as if you have been angry. You will feel as if you have been embarrassed. You will feel as if you have been frustrated. You will feel as if you have been disappointed. You will feel as if you have been upset. You will feel as if you have been angry. You will feel as if you have been embarrassed. You will feel as if you have been frustrated. You will feel as if you have been disappointed. You will feel as if you have been upset. You will feel as if you have been angry",
+        "gold": "A"
+    },
+    "142": {
+        "origin_prompt": "Riley wanted to see her friend but couldn't and she began to hurt so bad.\nQuestion: What will Riley want to do next?\nA. call her friend\nB. call her friend\nC. find out why she couldn't go see her friend\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "C"
+    },
+    "143": {
+        "origin_prompt": "Jan was nine months pregnant late in August of  the last year.\nQuestion: What will happen to Jan?\nA. see photos of a baby\nB. see her have a baby\nC. enjoy being a mother\nAnswer:",
+        "prediction": " C\nExplanation: When a woman is pregnant, she will see photos of a baby and enjoy being a mother. She will not see her have a baby.",
+        "gold": "C"
+    },
+    "144": {
+        "origin_prompt": "Jan saw that the road ended and all that remained was a cliff, she said turn back.\nQuestion: What will Jan want to do next?\nA. Look for signs with correct directions\nB. Let the driver go to the cliff\nC. Stop the car and inspect the cliff\nAnswer:",
+        "prediction": " A\nExplanation: Jan saw that the road ended and all that remained was a cliff, she said turn back. So Jan will want to do next is to look for signs with correct directions.",
+        "gold": "A"
+    },
+    "145": {
+        "origin_prompt": "The kids were playing video games and were so close to beating the entire game so Jordan kept Carson up all night.\nQuestion: What will Jordan want to do next?\nA. had played the game before\nB. go for a run\nC. sleep in his bed\nAnswer:",
+        "prediction": " B\nExplanation:  The correct answer is B. Jordan will want to go for a run. The question states that the kids were playing video games and were so close to beating the entire game so Jordan kept Carson up all night. This means that Jordan will want to go for a run to burn off some of the energy he has from keeping Carson up all night. The other answers are not correct because they are not the actions that Jordan will want to do next.",
+        "gold": "C"
+    },
+    "146": {
+        "origin_prompt": "Ash was having a hard time setting up his tent in the woods. Remy helped set up Ash's tent for him.\nQuestion: What will happen to Ash?\nA. be covered from the rain\nB. be admired by Ash for setting up the tent\nC. be thanked by Ash for setting up the tent\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "A"
+    },
+    "147": {
+        "origin_prompt": "Robin went with Jan's friends to rob a convenience store.\nQuestion: Why did Robin do this?\nA. was motivated by kleptomania\nB. wants them to go to the police and confess their crime\nC. was motivated by frugality\nAnswer:",
+        "prediction": " A\nExplanation: Robin was motivated by kleptomania. Kleptomania is a mental disorder characterized by recurrent, impulsive, and irresistible urges to steal. People with kleptomania often feel guilty after stealing, and they may try to steal to relieve their feelings of guilt. Kleptomania is not a common disorder, and it is not well understood. However, it is thought to be caused by a combination of genetic and environmental factors.",
+        "gold": "A"
+    },
+    "148": {
+        "origin_prompt": "Taylor gave a book to a friend since they were done with it.\nQuestion: What will happen to Taylor?\nA. be thanked\nB. bad\nC. share the book\nAnswer:",
+        "prediction": " C\nExplanation: If you give a book to a friend, you will share the book with them. So, Taylor will share the book.",
+        "gold": "A"
+    },
+    "149": {
+        "origin_prompt": "Cameron is very strong but loyal to friends.\nQuestion: How would you describe Cameron?\nA. proud\nB. concerned\nC. excited\nAnswer:",
+        "prediction": " A\nExplanation: To describe a character, you can use the following words:\n\nstrong\nloyal\nfriendly\ncaring\nhonest\nbrave\nclever\nhelpful\nnice\nsmart\nfunny\nbeautiful\ngood\nbad\nugly\nhappy\nsad\nangry\nscared\nconfused\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nashamed\nash",
+        "gold": "A"
+    },
+    "150": {
+        "origin_prompt": "Bailey asked Tracy to make it since she couldn't do it herself.\nQuestion: How would you describe Bailey?\nA. confident\nB. incompetent\nC. reliable\nAnswer:",
+        "prediction": " A\nExplanation: The word \"confident\" describes someone who is sure of themselves and their abilities.",
+        "gold": "B"
+    },
+    "151": {
+        "origin_prompt": "Remy decided enough was enough at her job that day.\nQuestion: How would Remy feel afterwards?\nA. Relieved\nB. feeling proud\nC. Like a pushover\nAnswer:",
+        "prediction": " A\nExplanation:  Remy decided enough was enough at her job that day. She quit her job. She felt relieved.",
+        "gold": "A"
+    },
+    "152": {
+        "origin_prompt": "Kai told Kendall the reason that Kai wanted to break up with them for.\nQuestion: What will happen to Kendall?\nA. go on his home\nB. want to accept the break up\nC. want to get Kai's affection back\nAnswer:",
+        "prediction": " C\nExplanation: The answer is C because Kendall will want to get Kai's affection back.",
+        "gold": "C"
+    },
+    "153": {
+        "origin_prompt": "Carson played a role in the war despite not agreeing with the reason.\nQuestion: What will Others want to do next?\nA. have a war with Carson\nB. be as determined as Carson\nC. fight against Carson\nAnswer:",
+        "prediction": " C\nExplanation: Carson played a role in the war despite not agreeing with the reason. This means that he was determined to fight against the war. So, Others will want to do next is to fight against Carson. The answer is C.",
+        "gold": "B"
+    },
+    "154": {
+        "origin_prompt": "aubrey was a naturally sick person and therefore she took many medications during the years.\nQuestion: How would you describe Aubrey?\nA. normal\nB. weird\nC. stupid\nAnswer:",
+        "prediction": " A\nExplanation: Aubrey was a naturally sick person and therefore she took many medications during the years. She was also a very intelligent person and she was able to get good grades in school. Aubrey was a very nice person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she was always willing to help others. Aubrey was a very good person and she",
+        "gold": "A"
+    },
+    "155": {
+        "origin_prompt": "Tracy ran for his life after trying to steal money from a bank that happened to have a police officer inside.\nQuestion: How would you describe Tracy?\nA. anxious\nB. fearful\nC. doesn't treat others well\nAnswer:",
+        "prediction": " B\nExplanation: The answer is B, because Tracy was fearful of the police officer. The word fearful means that Tracy was afraid of the police officer.",
+        "gold": "B"
+    },
+    "156": {
+        "origin_prompt": "Casey told Addison's dad because they were annoyed and angry.\nQuestion: What will Casey want to do next?\nA. say more\nB. say nothing\nC. get Addison in trouble\nAnswer:",
+        "prediction": " A\nExplanation: Casey was annoyed and angry, so she told Addison's dad. This means that Casey wants to say more. She wants to tell her dad more about what happened.",
+        "gold": "C"
+    },
+    "157": {
+        "origin_prompt": "Kai gave Sydney a small push while they were playing at school and accidentally sent them falling into an abandoned well.\nQuestion: What will Kai want to do next?\nA. call their teacher for help\nB. play somewhere else\nC. avoid wells\nAnswer:",
+        "prediction": " A\nExplanation: ",
+        "gold": "A"
+    },
+    "158": {
+        "origin_prompt": "Riley began to hurt inside and decided to call the doctor.\nQuestion: What will Riley want to do next?\nA. get medical advice\nB. eat something\nC. go swimming\nAnswer:",
+        "prediction": " A\nExplanation: If you are hurt, you will want to get medical advice.",
+        "gold": "A"
+    },
+    "159": {
+        "origin_prompt": "Cameron went out of their way to help a friend who was in need of help.\nQuestion: How would Cameron feel after helping?\nA. Frustrated\nB. Happy\nC. Annoyed\nAnswer:",
+        "prediction": " B\nExplanation: ",
+        "gold": "B"
+    },
+    "160": {
+        "origin_prompt": "There were not enough seats on the train for everyone, so Austin sat on Bailey's lap.\nQuestion: What does Austin need to do before this?\nA. see if Bailey was comfortable\nB. anger Bailey\nC. take off his pants\nAnswer:",
+        "prediction": " A\nExplanation: To make sure that Austin is comfortable, Bailey needs to be comfortable. So, Austin needs to see if Bailey was comfortable before this. This means that Austin needs to do something before this. The answer is A.",
+        "gold": "A"
+    },
+    "161": {
+        "origin_prompt": "Lee found his friends wallet on the ground and ended up keeping all the money.\nQuestion: How would his friend feel as a result?\nA. guilty about not turning the wallet in\nB. happy that he had more spending money\nC. like they can't trust Lee\nAnswer:",
+        "prediction": " B\nExplanation: If Lee found his friend's wallet on the ground and kept all the money, his friend would feel happy that he had more spending money. This is because the friend would be glad that Lee had found the wallet and kept the money, even though it was not his. So, the answer is B.",
+        "gold": "C"
+    },
+    "162": {
+        "origin_prompt": "Sydney rubbed Addison's head.  She loved the feel of his bald pate.\nQuestion: What will Sydney want to do next?\nA. ask out the next long-haired man\nB. offer Addison hair growth shampoo\nC. consider shaving her own head for fun\nAnswer:",
+        "prediction": " C\nExplanation:  Sydney will want to consider shaving her own head for fun.  She loves the feel of Addison's bald pate, and she will want to experience the same sensation on her own head.  She will not want to ask out the next long-haired man, and she will not want to offer Addison hair growth shampoo.  She will want to do something fun and different.  She will want to shave her head.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving her own head for fun.  She will want to consider shaving",
+        "gold": "C"
+    },
+    "163": {
+        "origin_prompt": "Taylor was behind Carson 100% and was easily able to prove his point.\nQuestion: What will Carson want to do next?\nA. speak about his beliefs\nB. avoid talking about his beliefs\nC. go against his beliefs\nAnswer:",
+        "prediction": " A\nExplanation: Carson was behind Taylor 100% and was easily able to prove his point. He will want to speak about his beliefs. The answer is A. Carson will want to speak about his beliefs.",
+        "gold": "A"
+    },
+    "164": {
+        "origin_prompt": "Cameron made a deal with the prosecutor for a lighter sentence if he informed on his fellow burglars.\nQuestion: How would the other burglars feel as a result?\nA. would be mad\nB. an informant\nC. happy\nAnswer:",
+        "prediction": " A\nExplanation: If Cameron made a deal with the prosecutor for a lighter sentence, he would have to inform on his fellow burglars. This means he would have to tell the prosecutor about the other burglars. The other burglars would feel mad because Cameron would have to tell on them.",
+        "gold": "A"
+    },
+    "165": {
+        "origin_prompt": "Kendall accidentally set her school on fire when she went in to change a test.\nQuestion: What will Kendall want to do next?\nA. find her old test to exchange\nB. put out the fire\nC. go to sleep\nAnswer:",
+        "prediction": " B\nExplanation: ",
+        "gold": "B"
+    },
+    "166": {
+        "origin_prompt": "Carson was at a friend's house when their parents were killed at their home.\nQuestion: How would Carson feel afterwards?\nA. sad about the parents\nB. Very excited\nC. Very upset\nAnswer:",
+        "prediction": " A\nExplanation: Carson was at a friend's house when their parents were killed at their home. Carson would feel sad about the parents. Carson would not feel excited or upset. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad about the parents. Carson would feel sad",
+        "gold": "A"
+    },
+    "167": {
+        "origin_prompt": "Jesse set Robin's house on fire after finding out that she had been cheating on him for years.\nQuestion: What will Robin want to do after?\nA. call the fire department\nB. stay in the house\nC. Run away from the crime scene\nAnswer:",
+        "prediction": " C\nExplanation: Robin will want to run away from the crime scene because she will be afraid of Jesse and what he will do to her. She will also be afraid of the police and what they will do to her. She will want to get away from the crime scene as soon as possible.",
+        "gold": "A"
+    },
+    "168": {
+        "origin_prompt": "Jordan took many public speaking classes, and as a result, Jordan was no longer nervous.\nQuestion: How would you describe Jordan?\nA. confident\nB. agitated\nC. felt better about doing public speaking\nAnswer:",
+        "prediction": " A\nExplanation: The word \"confident\" describes a person who feels good about themselves and their abilities.",
+        "gold": "A"
+    },
+    "169": {
+        "origin_prompt": "Addison ate their bread and drank a nice glass of water with the bread.\nQuestion: What will Addison want to do next?\nA. cook the food\nB. bored\nC. full\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "C"
+    },
+    "170": {
+        "origin_prompt": "Ash spent time making sure people understood his work. Ash used metaphors throughout the book to connect with others.\nQuestion: What will Ash want to do next?\nA. did this to help explain\nB. did this to be understood\nC. display his book\nAnswer:",
+        "prediction": " B\nExplanation: To determine the next step someone will take, look at the last action described in the passage.",
+        "gold": "C"
+    },
+    "171": {
+        "origin_prompt": "Remy joined a band and was so good that he was offered a solo contract and took it.\nQuestion: What will happen to Others?\nA. be resentful of Remy\nB. be thrilled to be rid of Remy\nC. look forward to possible fame\nAnswer:",
+        "prediction": " B\nExplanation: This question is about the band Remy joined and his solo contract. The question asks what will happen to the others in the band. The others will be thrilled to be rid of Remy. This is because Remy was so good that he was offered a solo contract and took it. This means that the others will be relieved that Remy is no longer in the band. So, the answer is B.",
+        "gold": "A"
+    },
+    "172": {
+        "origin_prompt": "On the occasion of their most recent birthday Taylor gave a book to a friend.\nQuestion: How would Others feel as a result?\nA. responsive\nB. bored\nC. jealous\nAnswer:",
+        "prediction": " A\nExplanation: The answer is A, because others would feel responsive. When Taylor gave a book to a friend, she was being responsive to her friend's needs. This means that she was being considerate and thoughtful, and she was trying to make her friend happy. This is a positive and caring action, and it would make others feel good about Taylor. So, the answer is A.",
+        "gold": "C"
+    },
+    "173": {
+        "origin_prompt": "Taylor made a poisonous bracelet. Taylor put it on Sasha's wrist.\nQuestion: What will happen to Taylor?\nA. take the bracelet off\nB. be convicted\nC. be poisoned\nAnswer:",
+        "prediction": " C\nExplanation: If Taylor made a poisonous bracelet, then she will be poisoned.",
+        "gold": "B"
+    },
+    "174": {
+        "origin_prompt": "Taylor was very drunk and, after a fight, decided to piss on Jesse's bonfire.\nQuestion: How would Jesse feel afterwards?\nA. like pissing on the bonfire with him\nB. funny and start laughing\nC. angry at him for being such a jerk\nAnswer:",
+        "prediction": " C\nExplanation: Taylor was very drunk and, after a fight, decided to piss on Jesse's bonfire. Jesse would feel angry at him for being such a jerk. This is because Jesse would be upset that Taylor ruined his bonfire. Taylor's action would make Jesse feel angry. So, the answer is C. Jesse would feel angry at him for being such a jerk.",
+        "gold": "C"
+    },
+    "175": {
+        "origin_prompt": "Sydney was going to work on Aubrey's roof, so Sydney provided an estimate to Aubrey.\nQuestion: What does Sydney need to do before this?\nA. get a leaf blower\nB. get their tools\nC. pay that much\nAnswer:",
+        "prediction": " B\nExplanation: Before you do something, you need to have the tools or the materials you need to do it. So, Sydney needs to get her tools before she starts working on Aubrey's roof. The answer is B.",
+        "gold": "B"
+    },
+    "176": {
+        "origin_prompt": "Austin stole the flag off the flagpole and wrapped it around his girlfriend's waist.\nQuestion: What will happen to Austin?\nA. The other children who respect the flag will tell Austin to put it back\nB. Other people would become angry at this desecration\nC. Other people would think Austin hates America\nAnswer:",
+        "prediction": " B\nExplanation: This is a trick question. The question is asking what will happen to Austin, but the answer choices are all about what will happen to other people. This is a trick question because it is not possible for Austin to do something that will happen to other people. The correct answer is that nothing will happen to Austin. He will just be standing there with the flag wrapped around his girlfriend's waist. The other children who respect the flag will not care about what Austin is doing. Other people will not become angry at this desecration. Other people will not think Austin hates America. The correct answer is that nothing will happen to Austin. The question is a trick question because it is not possible for Austin to do something that will happen to other people. The correct answer is that nothing will happen to Austin. He will just be standing there with the flag wrapped around his girlfriend's waist. The other children who respect the flag will not care about what Austin is doing. Other people will not become angry at this desecration. Other people will not think Austin hates America. The correct answer is that nothing will happen to Austin. The question is a trick question because it is not possible for Austin to do something that will happen to other people. The correct answer is that nothing will happen to Austin. He will just be standing there with the flag wrapped around his girlfriend's waist. The other children who respect the flag will not care about what Austin is doing. Other people will not become angry at this desecration. Other people will not think Austin hates America. The correct answer is that nothing will happen to Austin. The question is a trick question because it is not possible for Austin to do something that will happen to other people. The correct answer is that nothing will happen to Austin. He will just be standing there with the flag wrapped around his girlfriend's waist. The other children who respect the flag will not care about what Austin is doing. Other people will not become angry at this desecration. Other people will not think Austin hates America. The correct answer is that nothing will happen to Austin. The question is a trick question because it is not possible for Austin to do something that will happen to other people. The correct answer is that nothing will happen to Austin. He will just be standing there with the flag wrapped around his girlfriend's waist. The other children who respect the flag will not care about what Austin is doing. Other people will not become angry at this desecration. Other people will not think Austin hates America.",
+        "gold": "A"
+    },
+    "177": {
+        "origin_prompt": "Jan found new friends in the neighborhood because she was new there.\nQuestion: What will Others want to do next?\nA. not welcome her\nB. be mean\nC. be nice\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "C"
+    },
+    "178": {
+        "origin_prompt": "After a long night of drinking and partying, Sasha wetted the bed.\nQuestion: How would you describe Sasha?\nA. embarrassed\nB. not careful and sloppy\nC. the adult in the room\nAnswer:",
+        "prediction": " B\nExplanation: To describe someone, you need to know what kind of person they are. You can describe a person by using adjectives, which are words that describe a person's qualities or attributes. There are many different adjectives that can be used to describe people. Some adjectives describe personality, such as friendly, shy, and outgoing. Others describe appearance, such as tall, short, and handsome. Still others describe behavior, such as careless, sloppy, and neat. The correct answer is B, because Sasha was not careful and sloppy.",
+        "gold": "A"
+    },
+    "179": {
+        "origin_prompt": "Kai couldn't find an ingredient she really needed for a special dinner.\nQuestion: Why did Kai do this?\nA. go to the store\nB. Make the special dinner a certain way\nC. Stock up some groceries\nAnswer:",
+        "prediction": " A\nExplanation: If you need to buy an ingredient for a special dinner, you go to the store. So, the answer is A. go to the store.",
+        "gold": "B"
+    },
+    "180": {
+        "origin_prompt": "Riley bought a dog and he played with the dog for hours.\nQuestion: What will Riley want to do next?\nA. want a dog\nB. find a good dog\nC. joy\nAnswer:",
+        "prediction": " C\nExplanation:  To find out what Riley wants to do next, we need to look at the sentence. The sentence says that Riley played with the dog for hours. This means that Riley is done playing with the dog. So, Riley will want to do something else. The most likely thing he will want to do is to  joy. This is because he has just finished playing with the dog, and he will want to do something else. Therefore, the answer is  joy.",
+        "gold": "C"
+    },
+    "181": {
+        "origin_prompt": "Jesse wanted to flunk Bailey for her bad behavior, but Bailey passed Jesse's examination.\nQuestion: What will Bailey want to do next?\nA. complain\nB. celebrate\nC. Study for the test\nAnswer:",
+        "prediction": " B\nExplanation: Jesse wanted to flunk Bailey for her bad behavior, but Bailey passed Jesse's examination. Bailey will want to celebrate. So, the answer is B. Bailey will want to celebrate.",
+        "gold": "B"
+    },
+    "182": {
+        "origin_prompt": "Sydney had a christmas party at their house and everyone was going to exchange presents.\nQuestion: What will Others want to do next?\nA. invite everyone\nB. talk about the party\nC. see what they got\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "C"
+    },
+    "183": {
+        "origin_prompt": "Tracy went out with their friends and ended up going home with them.\nQuestion: What will Tracy want to do next?\nA. stay at their house\nB. meet their friends\nC. go back out\nAnswer:",
+        "prediction": " A\nExplanation:  The correct answer is A. Tracy went out with their friends and ended up going home with them. So, they will want to stay at their house. The other answers are incorrect because they are not the correct answer.",
+        "gold": "A"
+    },
+    "184": {
+        "origin_prompt": "Quinn turned the scale upside down at the market angrily because he thought he was being cheated.\nQuestion: What will the attendant want to do next?\nA. The attendant was quite shocked and and began throwing fruit furiously at Quinn\nB. The attendant was quite shocked and called for his boss to come quickly\nC. ask for his vegetables to be weighed\nAnswer:",
+        "prediction": " C\nExplanation: The attendant was quite shocked and called for his boss to come quickly.",
+        "gold": "B"
+    },
+    "185": {
+        "origin_prompt": "Ash always ate with her bed-bound mother.\nQuestion: What does Ash need to do before this?\nA. would clean up the breakfast dishes\nB. a tray for her mom\nC. would eat out then come home and nap\nAnswer:",
+        "prediction": " B\nExplanation: To make sure that Ash's mother gets the food she needs, Ash needs to bring her a tray. This is the only answer choice that makes sense in the context of the question. The other answer choices are not possible in this situation.",
+        "gold": "B"
+    },
+    "186": {
+        "origin_prompt": "Alex was ignoring Jordan yesterday, but Jordan demanded Alex's attention.\nQuestion: What will Alex want to do next?\nA. loved\nB. Respond to Jordan\nC. Continue to ignore Jordan\nAnswer:",
+        "prediction": " B\nExplanation: Alex is ignoring Jordan, but Jordan demands Alex's attention. So Alex will want to respond to Jordan. The answer is B.",
+        "gold": "C"
+    },
+    "187": {
+        "origin_prompt": "Kai told Kendall the reason so mad last night.\nQuestion: How would Kai feel afterwards?\nA. happening\nB. knowledgeable\nC. sorry\nAnswer:",
+        "prediction": " C\nExplanation: If someone is mad, they are angry. If someone is mad at you, they are angry with you. So, if Kai told Kendall the reason so mad last night, he would feel sorry afterwards. This is because he would be sorry that he made Kendall mad.",
+        "gold": "C"
+    },
+    "188": {
+        "origin_prompt": "Ash used logical thought throughout the writing of the fantasy book.\nQuestion: What will Ash want to do next?\nA. wait and worry about rejection\nB. So it'll be liked\nC. make it believable\nAnswer:",
+        "prediction": " C\nExplanation: To determine what will happen next in a story, you need to pay attention to the details of what happens in the last few chapters. This will give you a hint of what the characters will want to do next. It will also give you a hint of the problem that the characters will face next. This will give you a hint of what the characters will want to do to solve the problem. Finally, the solution to the problem will determine what will happen next in the story.",
+        "gold": "C"
+    },
+    "189": {
+        "origin_prompt": "Walking through the park, Bailey could hear the band that had trumpets.\nQuestion: What will Bailey want to do next?\nA. get further from the band\nB. go to the park before this\nC. cover her ears because it's too loud\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "C"
+    },
+    "190": {
+        "origin_prompt": "Alex and Aubrey love challenging each other.  This time it is arm wrestling.\nQuestion: What will Alex want to do next?\nA. congratulate Jason\nB. win the match against Alex\nC. arm wrestle again\nAnswer:",
+        "prediction": " C\nExplanation:  Alex and Aubrey love challenging each other.  This time it is arm wrestling.  Alex wins the match against Aubrey.  Alex will want to arm wrestle again.  The answer is C.  There is no other answer choice that makes sense in the context of the question.  The other answer choices are not possible in this situation.  Alex will not want to congratulate Jason or win the match against Alex.  Alex will want to arm wrestle again.  The answer is C.  There is no other answer choice that makes sense in the context of the question.  The other answer choices are not possible in this situation.  Alex will not want to congratulate Jason or win the match against Alex.  Alex will want to arm wrestle again.  The answer is C.  There is no other answer choice that makes sense in the context of the question.  The other answer choices are not possible in this situation.  Alex will not want to congratulate Jason or win the match against Alex.  Alex will want to arm wrestle again.  The answer is C.  There is no other answer choice that makes sense in the context of the question.  The other answer choices are not possible in this situation.  Alex will not want to congratulate Jason or win the match against Alex.  Alex will want to arm wrestle again.  The answer is C.  There is no other answer choice that makes sense in the context of the question.  The other answer choices are not possible in this situation.  Alex will not want to congratulate Jason or win the match against Alex.  Alex will want to arm wrestle again.  The answer is C.  There is no other answer choice that makes sense in the context of the question.  The other answer choices are not possible in this situation.  Alex will not want to congratulate Jason or win the match against Alex.  Alex will want to arm wrestle again.  The answer is C.  There is no other answer choice that makes sense in the context of the question.  The other answer choices are not possible in this situation.  Alex will not want to congratulate Jason or win the match against Alex.  Alex will want to arm wrestle again.  The answer is C.  There is no other answer choice that makes sense in the context of the question.  The other answer choices are not possible in this situation.  Alex will not want to congratulate Jason or win the match against Alex. ",
+        "gold": "C"
+    },
+    "191": {
+        "origin_prompt": "Cameron turned and looked at skylar in a way that was suggestive and not polite.\nQuestion: How would Skylar feel as a result?\nA. a predator\nB. like leaving\nC. happy about the look\nAnswer:",
+        "prediction": " C\nExplanation: The word \"suggestive\" means that the look was not polite, but it was suggestive. This means that the look was not friendly, but it was also not rude. It was a look that was not meant to be polite. So, the answer is not \"a predator\" or \"like leaving\" or \"happy about the look\". The answer is \"happy about the look\". This is because the look was not meant to be polite, but it was also not rude. It was a look that was not meant to be polite. So, the answer is \"happy about the look\". This is because the look was not meant to be polite, but it was also not rude. It was a look that was not meant to be polite. So, the answer is \"happy about the look\". This is because the look was not meant to be polite, but it was also not rude. It was a look that was not meant to be polite. So, the answer is \"happy about the look\". This is because the look was not meant to be polite, but it was also not rude. It was a look that was not meant to be polite. So, the answer is \"happy about the look\". This is because the look was not meant to be polite, but it was also not rude. It was a look that was not meant to be polite. So, the answer is \"happy about the look\". This is because the look was not meant to be polite, but it was also not rude. It was a look that was not meant to be polite. So, the answer is \"happy about the look\". This is because the look was not meant to be polite, but it was also not rude. It was a look that was not meant to be polite. So, the answer is \"happy about the look\". This is because the look was not meant to be polite, but it was also not rude. It was a look that was not meant to be polite. So, the answer is \"happy about the look\". This is because the look was not meant to be polite, but it was also not rude. It was a look that was not meant to be polite. So, the answer is \"happy about the look\". This is because the look was not meant to be polite, but it was also not rude. It was a look that was not meant to be polite. So, the answer is \"happy about the look\". This is because the look was not meant to be",
+        "gold": "B"
+    },
+    "192": {
+        "origin_prompt": "sasha was bored so she gave bob a haircut for free.\nQuestion: How would Others feel as a result?\nA. as unappreciative\nB. fulfilled\nC. as thankful\nAnswer:",
+        "prediction": " C\nExplanation: The best way to answer this question is to think about how you would feel if someone gave you a haircut for free. You would probably feel very thankful, because you would know that the person who gave you the haircut was being very nice to you. So, the answer is C.",
+        "gold": "C"
+    },
+    "193": {
+        "origin_prompt": "Sasha got revenge on the people by putting some sand in their food at lunch.\nQuestion: Why did Sasha do this?\nA. gather sand\nB. be mean\nC. make friends\nAnswer:",
+        "prediction": " B\nExplanation: This question is asking for the reason why Sasha put sand in her friends' food at lunch. The answer is that she did it to be mean. This is because she was angry at her friends for not inviting her to their party.",
+        "gold": "B"
+    },
+    "194": {
+        "origin_prompt": "Taylor taught math in the schools after studying to be a teacher for four years.\nQuestion: What does Taylor need to do before this?\nA. get a certificate\nB. teach small children\nC. work in a school\nAnswer:",
+        "prediction": " A\nExplanation: To become a teacher, you need to complete a teacher education program. This usually involves studying for 4 years, getting a bachelor's degree, and then completing a teacher education program. After completing the teacher education program, you need to get a certificate to teach. This certificate is usually issued by the state in which you will be teaching. Once you have the certificate, you can start teaching.",
+        "gold": "A"
+    },
+    "195": {
+        "origin_prompt": "Tracy gave birth to Addison in the hospital last week.\nQuestion: What does Tracy need to do before this?\nA. proud\nB. Get pregnant\nC. Eat unhealthily\nAnswer:",
+        "prediction": " B\nExplanation: Tracy needs to get pregnant before she gives birth to Addison. This is because pregnancy is the process of carrying a baby in the womb for 9 months. Giving birth is the process of delivering the baby from the womb. So Tracy needs to get pregnant before she gives birth to Addison.",
+        "gold": "B"
+    },
+    "196": {
+        "origin_prompt": "Cameron got to the yard and stopped the dog fight before someone else.\nQuestion: What will Cameron want to do next?\nA. wash his hands good\nB. laugh at the dogs\nC. save on vet bills\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "A"
+    },
+    "197": {
+        "origin_prompt": "Riley ate a fish burger from a street vendor and at the time was concerned it didnt smell right but decided to eat it anyway.  Later that day he started to feel unwell.\nQuestion: What does Riley need to do now?\nA. go for a run\nB. go to bed\nC. Go to the doctor\nAnswer:",
+        "prediction": " C\nExplanation: If Riley ate a fish burger and started to feel unwell, he should go to the doctor. This is because he may have eaten something that made him sick. The doctor can help him figure out what is wrong and treat it.",
+        "gold": "C"
+    },
+    "198": {
+        "origin_prompt": "Robin bought a new watch for Addison and put it on their wrist.\nQuestion: What will happen to Addison?\nA. pay Robin for the watch\nB. have Addison's gratitude\nC. wear a new watch\nAnswer:",
+        "prediction": " C\nExplanation: If someone gives you a gift, you will usually wear it or use it. So, if Robin gave Addison a new watch, Addison will wear it. The answer is choice C.",
+        "gold": "C"
+    },
+    "199": {
+        "origin_prompt": "jan went to the same school for years so she was best friends with a girl.\nQuestion: What will Others want to do next?\nA. appreciate jan\nB. make sure they kept up their relationship\nC. hate jan\nAnswer:",
+        "prediction": " B\nExplanation: ",
+        "gold": "B"
+    },
+    "200": {
+        "origin_prompt": "Jesse paid another bill for the others so they wouldn't get kicked out.\nQuestion: What will Others want to do next?\nA. pay jesse back later\nB. yell at jesse\nC. find out how much the bill was\nAnswer:",
+        "prediction": " C\nExplanation: Jesse paid another bill for the others so they wouldn't get kicked out.",
+        "gold": "A"
+    },
+    "201": {
+        "origin_prompt": "Jan came over one night. The house was messy and smelled.\nQuestion: What will Jan want to do next?\nA. was feeling ill and needed to rest\nB. go to sleep all day at the house\nC. not go back to the house\nAnswer:",
+        "prediction": " C\nExplanation: If Jan came over to the house and it was messy and smelled, she would want to clean it up. She would want to go back to the house. So, the answer is C.",
+        "gold": "C"
+    },
+    "202": {
+        "origin_prompt": "Remy was prepared for the test and they took it and got a very good grade on it.\nQuestion: What will Remy want to do next?\nA. take another test\nB. go to a movie\nC. shout out loud\nAnswer:",
+        "prediction": " B\nExplanation: If you are prepared for a test, you will want to do something else after you take it. So, Remy will want to go to a movie. The answer is B. Remy will want to go to a movie.",
+        "gold": "A"
+    },
+    "203": {
+        "origin_prompt": "Addison was at a party with friends but knew they had to get up early in the morning for work so Addison said their goodbyes then left for home.\nQuestion: What will Addison want to do next?\nA. go to work\nB. get ready for bed\nC. dance or fly home\nAnswer:",
+        "prediction": " A\nExplanation: ",
+        "gold": "B"
+    },
+    "204": {
+        "origin_prompt": "Skylar wore it to school to show his school spirit on game day.\nQuestion: Why did Skylar do this?\nA. did this to cause trouble\nB. did this to fit in\nC. cheer for his team\nAnswer:",
+        "prediction": " C\nExplanation:  To determine why Skylar wore his team jersey to school, we need to look at the context of the situation. Since Skylar wore his team jersey to school on game day, it is clear that he did this to cheer for his team. This is because wearing a team jersey is a common way for fans to show their support for their favorite team. Therefore, the correct answer is choice C.",
+        "gold": "C"
+    },
+    "205": {
+        "origin_prompt": "quinn was bored of wearing pants so she wore jeans to school the next day.\nQuestion: How would Quinn feel afterwards?\nA. calm\nB. The first pair of jeans were designed\nC. often baffling\nAnswer:",
+        "prediction": " A\nExplanation: This question is about how Quinn would feel after wearing jeans to school. The answer is that she would feel calm. This is because Quinn was bored of wearing pants so she wore jeans to school the next day. This means that she was not happy with her current outfit and wanted to try something different. After wearing jeans to school, she would feel calm because she would have tried something new and would not be worried about what other people thought of her outfit. So, the answer is that Quinn would feel calm.",
+        "gold": "A"
+    },
+    "206": {
+        "origin_prompt": "Alex walked Robin towards the execution chamber for her last meal.\nQuestion: Why did Alex do this?\nA. work at the jail\nB. So Robin can eat\nC. release her\nAnswer:",
+        "prediction": " B\nExplanation: Alex walked Robin towards the execution chamber for her last meal. The answer is B, because Alex wanted Robin to eat her last meal.",
+        "gold": "B"
+    },
+    "207": {
+        "origin_prompt": "Remy answered the silly question they were asked happily.\nQuestion: Why did Remy do this?\nA. know the answer\nB. think about fun\nC. have fun\nAnswer:",
+        "prediction": " C\nExplanation: Remy was asked a silly question. He answered it happily. The question was silly, but Remy had fun answering it. So, the answer is C.",
+        "gold": "C"
+    },
+    "208": {
+        "origin_prompt": "Kendall took Skylar's schedule into account when planning the trip for their summer vacation.\nQuestion: How would you describe Kendall?\nA. supported\nB. include Skylar\nC. pleased\nAnswer:",
+        "prediction": " C\nExplanation: To describe someone, you can use action verbs, which are usually in the present tense. You can also use linking verbs, which are usually in the present tense. The person or thing being described is the object of the verb or the word that follows the linking verb. The description usually follows the linking verb or action verb. The description can be one word, as in this case, or it can be a sentence. In this case, the description is a sentence. The sentence describes Kendall as pleased.",
+        "gold": "A"
+    },
+    "209": {
+        "origin_prompt": "jordan went to prison for 25 years for armed robbery and paid their debt to society.\nQuestion: Why did Jordan do this?\nA. he had no choice\nB. get a job\nC. pay his debt back to society\nAnswer:",
+        "prediction": " C\nExplanation: Jordan went to prison for 25 years for armed robbery. He paid his debt to society. This means he paid back the money he stole. So, the answer is choice C. Jordan paid his debt back to society.",
+        "gold": "A"
+    },
+    "210": {
+        "origin_prompt": "Addison had a day off work and decided to go to a theme park.\nQuestion: Why did Addison do this?\nA. wanted to be thrilled\nB. go on the rides\nC. have fun\nAnswer:",
+        "prediction": " B\nExplanation: To find the answer, we need to look at the question and choose the answer that best matches the reason Addison gave for going to the theme park. The question states that Addison had a day off work and decided to go to a theme park. The answer choices are: A. wanted to be thrilled B. go on the rides C. have fun We can see that the answer that matches the reason Addison gave is B. go on the rides. So, the answer is B.",
+        "gold": "C"
+    },
+    "211": {
+        "origin_prompt": "Alex went on a camping trip with their cousin. Alex grew closer to their cousin that weekend.\nQuestion: How would you describe Alex?\nA. happy\nB. a kind person\nC. a bad person\nAnswer:",
+        "prediction": " B\nExplanation:  To describe a person, look at the words in the sentence. In this case, the sentence says that Alex grew closer to their cousin that weekend. This means Alex is a kind person. So, the answer is:",
+        "gold": "A"
+    },
+    "212": {
+        "origin_prompt": "Remy took this job seriously and she was fired.\nQuestion: How would Remy feel afterwards?\nA. confused\nB. a jobless person\nC. happy\nAnswer:",
+        "prediction": " B\nExplanation: If you are fired from a job, it means that you were let go from your job. This usually happens because you did something wrong or didn't do something right. If you are fired, you will feel sad and disappointed. You will also feel a lot of stress and worry about how you will pay your bills. You will be a jobless person. So, Remy would feel a jobless person.",
+        "gold": "A"
+    },
+    "213": {
+        "origin_prompt": "Riley was really hungry so she ate Jordan's bread.\nQuestion: How would you describe Riley?\nA. Looking at some of the reasons to hungry\nB. Happy\nC. Uncaring\nAnswer:",
+        "prediction": " B\nExplanation: To describe someone, we need to know what they are like in some way. We can describe people by using adjectives, which are words that describe people, places, or things. We can also use adverbs, which are words that describe actions. In this case, the word is \"happy\".",
+        "gold": "C"
+    },
+    "214": {
+        "origin_prompt": "Jan started to put the moves on the new boy at school because they were wildly attracted to the boy.\nQuestion: What will the boy want to do next?\nA. respond to Jan\nB. make love to Jan\nC. like him\nAnswer:",
+        "prediction": " B\nExplanation: The boy will want to make love to Jan.",
+        "gold": "A"
+    },
+    "215": {
+        "origin_prompt": "Jan went out with Quinn's friends and told them a lot of negative rumors about Quinn.\nQuestion: What will happen to Quinn?\nA. become the leader of Quinn's friends\nB. be called a snitch\nC. defend themselves\nAnswer:",
+        "prediction": " B\nExplanation:  If Jan told Quinn's friends negative rumors about Quinn, then Quinn's friends will think that Quinn is a snitch.",
+        "gold": "C"
+    },
+    "216": {
+        "origin_prompt": "Austin interfered with Sydney by blocking her way to the teachers desk.\nQuestion: What will happen to Austin?\nA. be well liked\nB. stand still\nC. receive negative feedback\nAnswer:",
+        "prediction": " C\nExplanation: If someone interferes with someone else, it means they try to stop them from doing something. This is usually considered a negative action. Therefore, the answer is choice C.",
+        "gold": "C"
+    },
+    "217": {
+        "origin_prompt": "Skylar entered the principal's office at school to receive the appropriate discipline.\nQuestion: How would you describe Skylar?\nA. Respectful to authority\nB. Kindhearted\nC. Disobedient\nAnswer:",
+        "prediction": " C\nExplanation: The answer is C, because Skylar is described as being disobedient. The word disobedient means not following the rules. So, Skylar is described as being disobedient to authority.",
+        "gold": "C"
+    },
+    "218": {
+        "origin_prompt": "Taylor planned the trip on behalf of the entire group.\nQuestion: How would Others feel as a result?\nA. ungrateful\nB. like they are in good hands\nC. nervous\nAnswer:",
+        "prediction": " B\nExplanation: The best way to determine the answer is to think about how the person would feel as a result of the situation. In this case, the person would feel like they are in good hands. This is because Taylor planned the trip on behalf of the entire group, which means that they are taking care of the group's needs. This would make the person feel grateful and happy. So, the answer is B.",
+        "gold": "B"
+    },
+    "219": {
+        "origin_prompt": "Because he was very good at throwing galas, and his best friend asked him, Lee planned a wedding.\nQuestion: What does Lee need to do before this?\nA. buy a wedding ring\nB. arrange for flowers\nC. make hotel reservations\nAnswer:",
+        "prediction": " C\nExplanation: To plan a wedding, Lee needs to make hotel reservations. This is because he needs to arrange for the guests to stay at a hotel. He doesn't need to buy a wedding ring, arrange for flowers, or anything else. He just needs to make hotel reservations. So, the answer is C.",
+        "gold": "B"
+    },
+    "220": {
+        "origin_prompt": "Jordan loved photography and wanted to get a new equipment.\nQuestion: What will Jordan want to do next?\nA. buy a lens\nB. choose a new one\nC. buy a tape\nAnswer:",
+        "prediction": " A\nExplanation:  Jordan loved photography and wanted to get a new equipment. He will want to buy a lens.",
+        "gold": "A"
+    },
+    "221": {
+        "origin_prompt": "Kai lit a fire and it blew up.\nQuestion: What will Kai want to do next?\nA. put the fire out\nB. make the fire bigger\nC. Get a lighter\nAnswer:",
+        "prediction": " A\nExplanation: If something blows up, it explodes. This usually means that something is on fire. If something is on fire, you want to put it out. So, if Kai lit a fire and it blew up, he will want to put the fire out. The answer is A.",
+        "gold": "A"
+    },
+    "222": {
+        "origin_prompt": "Cameron picked Robin up from the airport, put her luggage in the trunk, and took her home.\nQuestion: What does Cameron need to do before this?\nA. drive to the airport before this\nB. get his pilot license before this\nC. talk with Robin\nAnswer:",
+        "prediction": " C\nExplanation: To find the answer, we need to determine what action Cameron needs to take before he picks up Robin from the airport. The correct answer is to talk with Robin. This is because the question asks what Cameron needs to do before this, and the correct answer is to talk with Robin. The other answers are not correct because they are not actions that Cameron needs to take before he picks up Robin from the airport. Therefore, the correct answer is C.",
+        "gold": "A"
+    },
+    "223": {
+        "origin_prompt": "Cameron took Kai's complaints of dangerous working conditions in the factory seriously.\nQuestion: What changes will Kai want to be made next?\nA. Sprinklers installed\nB. fired\nC. Close the factory\nAnswer:",
+        "prediction": " A\nExplanation: If Kai's complaints of dangerous working conditions in the factory are serious, he will want to see changes made. Installing sprinklers would be a good way to make the factory safer. If the sprinklers are installed, the factory will be safer, and Kai will be happy. If Kai is happy, he will not want to be fired. If Kai is not fired, he will not want to close the factory. So, the answer is A. Sprinklers installed.",
+        "gold": "A"
+    },
+    "224": {
+        "origin_prompt": "Remy took this story into account and typed it into the computer that night.\nQuestion: What will Others want to do next?\nA. passive\nB. lazy\nC. smart\nAnswer:",
+        "prediction": " A\nExplanation: The passive voice is used to emphasize who or what does the action. It is also used to avoid repeating the same person or thing in the sentence. The passive voice is formed by using the past participle of the verb (the -ed form of the verb) and the word \"by\" followed by the person or thing that does the action. The person or thing that does the action is called the object of the preposition \"by.\" The active sentence is: The computer typed the story into the computer that night. The passive sentence is: The story was typed into the computer that night by Remy. The object of the preposition \"by\" is the person or thing that does the action, which is Remy. The passive voice is used to emphasize who or what does the action. In this case, the action is \"typed the story into the computer that night.\" The person or thing that does the action is Remy. Therefore, the passive sentence is correct. The passive voice is used to emphasize who or what does the action. The passive voice is used to avoid repeating the same person or thing in the sentence. The passive voice is formed by using the past participle of the verb (the -ed form of the verb) and the word \"by\" followed by the person or thing that does the action. The person or thing that does the action is called the object of the preposition \"by.\" The active sentence is: The computer typed the story into the computer that night. The passive sentence is: The story was typed into the computer that night by Remy. The object of the preposition \"by\" is the person or thing that does the action, which is Remy. The passive voice is used to emphasize who or what does the action. In this case, the action is \"typed the story into the computer that night.\" The person or thing that does the action is Remy. Therefore, the passive sentence is correct. The passive voice is used to emphasize who or what does the action. The passive voice is used to avoid repeating the same person or thing in the sentence. The passive voice is formed by using the past participle of the verb (the -ed form of the verb) and the word \"by\" followed by the person or thing that does the action. The person or thing that does the action is called the object of the preposition \"by.\" The active sentence is: The computer typed the story into the computer that night. The passive sentence is:",
+        "gold": "C"
+    },
+    "225": {
+        "origin_prompt": "Kai was saving for a car because theirs broke down, so Kai saved all their money.\nQuestion: What does Kai need to do before this?\nA. have a broken car\nB. buy a new car\nC. have just bought a car\nAnswer:",
+        "prediction": " C\nExplanation: To be able to do something in the future, you need to do something in the present. This is because the present is the only time we can do something about the future. So, if Kai needs to have just bought a car, it means that Kai needs to do something in the present to be able to do something in the future. In this case, Kai needs to buy a new car. But the question asks what Kai needs to do before this, which means that Kai needs to do something before buying a new car. So, the answer is that Kai needs to have a broken car. But this is not the answer. The answer is that Kai needs to do something before buying a new car. So, the answer is that Kai needs to save for a car. But this is not the answer. The answer is that Kai needs to do something before buying a new car. So, the answer is that Kai needs to save all their money. But this is not the answer. The answer is that Kai needs to do something before buying a new car. So, the answer is that Kai needs to save for a car. But this is not the answer. The answer is that Kai needs to do something before buying a new car. So, the answer is that Kai needs to save all their money. But this is not the answer. The answer is that Kai needs to do something before buying a new car. So, the answer is that Kai needs to save for a car. But this is not the answer. The answer is that Kai needs to do something before buying a new car. So, the answer is that Kai needs to save all their money. But this is not the answer. The answer is that Kai needs to do something before buying a new car. So, the answer is that Kai needs to save for a car. But this is not the answer. The answer is that Kai needs to do something before buying a new car. So, the answer is that Kai needs to save all their money. But this is not the answer. The answer is that Kai needs to do something before buying a new car. So, the answer is that Kai needs to save for a car. But this is not the answer. The answer is that Kai needs to do something before buying a new car. So, the answer is that Kai needs to save all their money. But this is not the answer. The answer is that Kai needs to do something before buying a new car. So, the answer is",
+        "gold": "A"
+    },
+    "226": {
+        "origin_prompt": "Aubrey never told Riley the truth about what happened last night.\nQuestion: What will Riley want to do next?\nA. figure out the truth\nB. have a serious conversation\nC. sit Riley down\nAnswer:",
+        "prediction": " A\nExplanation: Riley is going to figure out the truth about what happened last night.",
+        "gold": "A"
+    },
+    "227": {
+        "origin_prompt": "Lee challenged Rob to a fight after school for hitting on his girlfriend.\nQuestion: What will Rob want to do next?\nA. injure Rob\nB. defend his girlfriend\nC. talk it over\nAnswer:",
+        "prediction": " B\nExplanation: ",
+        "gold": "C"
+    },
+    "228": {
+        "origin_prompt": "Taylor gave his friend a high five after his friend made a basket in their game.\nQuestion: What does Taylor need to do before this?\nA. go home with the ball\nB. run into position\nC. throw the ball to his friend\nAnswer:",
+        "prediction": " B\nExplanation: To play basketball, you need to be in position to catch the ball. If you are not in position, you will not be able to catch the ball. So, Taylor needs to run into position before the ball is thrown to him.",
+        "gold": "C"
+    },
+    "229": {
+        "origin_prompt": "austin was a attractive girl who had a crush on me, so she batted her eyelashes at me.\nQuestion: What does Austin need to do before this?\nA. show their crush\nB. know who i am\nC. avoid me\nAnswer:",
+        "prediction": " A\nExplanation: ",
+        "gold": "B"
+    },
+    "230": {
+        "origin_prompt": "alex saw taylor last night while they were on a date with someone who wasn't their spouse.\nQuestion: How would Taylor feel as a result?\nA. very guilty\nB. happy about the situation\nC. afraid alex will tell\nAnswer:",
+        "prediction": " A\nExplanation: If Taylor was on a date with someone who wasn't their spouse, it means they were cheating on their spouse. This would make Taylor feel very guilty.",
+        "gold": "C"
+    },
+    "231": {
+        "origin_prompt": "Riley wanted to stop by the lake to feed the ducks so she took the long way home.\nQuestion: Why did Riley take the long way home?\nA. take her time\nB. avoid traffic\nC. enjoys looking at ducks\nAnswer:",
+        "prediction": " C\nExplanation: This question is asking why Riley took the long way home. The answer is that she wanted to stop by the lake to feed the ducks. So, the answer is choice C.",
+        "gold": "C"
+    },
+    "232": {
+        "origin_prompt": "Jesse was teaching class and used the lessons through out the book.\nQuestion: How would Jesse feel afterwards?\nA. a good teacher\nB. Good for helping people learn\nC. Good they teach class\nAnswer:",
+        "prediction": " A\nExplanation: To determine how Jesse would feel afterwards, we need to look at the answer choices. The answer choices are: a good teacher, Good for helping people learn, and Good they teach class. Since Jesse is a good teacher, the answer is a good teacher. So, Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good teacher. Jesse would feel good. The answer is a good",
+        "gold": "B"
+    },
+    "233": {
+        "origin_prompt": "taylor knew kai was ignorant so he filled kai's mind with dangerous ideas.\nQuestion: What will happen to Kai?\nA. guilty\nB. indoctrinate a person\nC. kai will do something stupid\nAnswer:",
+        "prediction": " B\nExplanation: Taylor knew Kai was ignorant, so he filled Kai's mind with dangerous ideas. This is an example of indoctrination.",
+        "gold": "C"
+    },
+    "234": {
+        "origin_prompt": "Jan moved to a new town and found to friends.\nQuestion: What will Jan want to do next?\nA. talk to their friends\nB. find a job in their new town\nC. find a place to live in their new town\nAnswer:",
+        "prediction": " C\nExplanation: If Jan moved to a new town and found to friends, she will want to find a place to live in her new town.",
+        "gold": "A"
+    },
+    "235": {
+        "origin_prompt": "Kai sold his TV to the bidder on eBay after a month had passed.\nQuestion: What will Kai want to do next?\nA. keep the TV\nB. did this to get rid of it\nC. bank the money\nAnswer:",
+        "prediction": " C\nExplanation: If Kai sold his TV to the bidder on eBay after a month had passed, he banked the money. This means he put the money in a bank account. So, Kai will want to do next is bank the money. The answer is C.",
+        "gold": "C"
+    },
+    "236": {
+        "origin_prompt": "Lee had moved away from home a few months ago and he had the blues.\nQuestion: How would you describe Lee?\nA. Content\nB. Satisfied\nC. Sad\nAnswer:",
+        "prediction": " C\nExplanation: The word \"sad\" means \"feeling unhappy or depressed.\" So, if someone is sad, it means they are feeling unhappy or depressed.",
+        "gold": "C"
+    },
+    "237": {
+        "origin_prompt": "Jan gave birth to his first a daughter last Monday.\nQuestion: What will happen to Others?\nA. get a car for the baby\nB. be happy for Jan\nC. Doctors will be confused by Jan\nAnswer:",
+        "prediction": " B\nExplanation: Jan gave birth to his first daughter last Monday. This means that Jan is now a father. This is a very happy event for Jan. It is also a happy event for the others. They will be happy for Jan. So, the answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The answer is B. The",
+        "gold": "B"
+    },
+    "238": {
+        "origin_prompt": "Riley was the best of friends with his pals and had a good heart.\nQuestion: What will Riley want to do next?\nA. live poorly\nB. be compassionate\nC. spend time with friends\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "C"
+    },
+    "239": {
+        "origin_prompt": "Aubrey was making extra money by babysitting Tracey's kids for the summer.\nQuestion: What will Tracy want to do next?\nA. save up for a vacation\nB. let Aubrey know that they are appreciated\nC. pay off her college tuition\nAnswer:",
+        "prediction": " A\nExplanation: Tracy will want to save up for a vacation because she has been babysitting for the summer and has been making extra money. She will want to save up for a vacation because she has been working hard and deserves a break. She will want to save up for a vacation because she has been saving up for a vacation for a long time. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation. She will want to save up for a vacation because she has been working hard and deserves a vacation.",
+        "gold": "B"
+    },
+    "240": {
+        "origin_prompt": "Carson put food on the table for their family and children at dinnertime.\nQuestion: What does Carson need to do before this?\nA. buy the food\nB. not buy the food\nC. not cook the food\nAnswer:",
+        "prediction": " A\nExplanation: Carson needs to buy the food before dinner. This is because he needs to put food on the table for his family and children at dinnertime. If he buys the food, he will have food to cook. If he doesn't buy the food, he won't have food to cook. If he doesn't cook the food, he won't have food to put on the table. So, Carson needs to do something before dinner. The answer is to buy the food. The answer is choice A.",
+        "gold": "A"
+    },
+    "241": {
+        "origin_prompt": "Kai had got into bed and felt relaxed.\nQuestion: How would you describe Kai?\nA. feeling tired\nB. wanting to leave\nC. content\nAnswer:",
+        "prediction": " C\nExplanation: The word content means feeling relaxed or happy.",
+        "gold": "A"
+    },
+    "242": {
+        "origin_prompt": "Riley saw Jesse and regarded Jesse with hurtful eyes after what happened.\nQuestion: What will happen to Riley?\nA. go be alone\nB. cry\nC. cheer up Jesse\nAnswer:",
+        "prediction": " B\nExplanation: The answer is B, because Riley will cry after what happened.",
+        "gold": "B"
+    },
+    "243": {
+        "origin_prompt": "Cameron continued playing with the ball even after it became deflated.\nQuestion: What does Cameron need to do before this?\nA. get a stick\nB. run inside\nC. find a ball\nAnswer:",
+        "prediction": " A\nExplanation: If a ball is deflated, it is no longer safe to play with it. You need to get a new ball or a stick to play with. So, Cameron needs to get a stick before this.",
+        "gold": "C"
+    },
+    "244": {
+        "origin_prompt": "Cameron took Kai's complaints seriously after Kai came to her crying about the event.\nQuestion: What will Cameron want to do next?\nA. be kind\nB. put the matter off\nC. investigate the matter\nAnswer:",
+        "prediction": " C\nExplanation: ",
+        "gold": "C"
+    }
+}

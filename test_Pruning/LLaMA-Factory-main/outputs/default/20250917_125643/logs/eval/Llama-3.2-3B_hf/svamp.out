@@ -1,0 +1,3 @@
+09/17 14:56:54 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/svamp/test.jsonl
+09/17 14:56:54 - OpenCompass - INFO - Task [Llama-3.2-3B_hf/svamp]: {'accuracy': 74.5}
+09/17 14:56:54 - OpenCompass - INFO - time elapsed: 2.96s

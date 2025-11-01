@@ -1,0 +1,3 @@
+09/21 21:24:20 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/ARC/ARC-c/ARC-Challenge-Dev.jsonl
+09/21 21:24:20 - OpenCompass - INFO - Task [Llama-3.2-3B_hf/ARC-c]: {'accuracy': 68.47457627118644}
+09/21 21:24:20 - OpenCompass - INFO - time elapsed: 3.00s

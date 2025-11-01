@@ -1,0 +1,4 @@
+09/02 15:40:25 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/lambada/test.jsonl
+lambada test 5153
+09/02 15:40:25 - OpenCompass - INFO - Task [Llama-3.2-3B_hf/lambada]: {'accuracy': 71.22064816611683}
+09/02 15:40:25 - OpenCompass - INFO - time elapsed: 3.79s

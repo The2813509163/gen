@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/openicl_infer.py", line 14, in <module>
+    from opencompass.tasks.base import BaseTask
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/__init__.py", line 1, in <module>
+    from .openicl_attack import *  # noqa: F401, F403
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/openicl_attack.py", line 12, in <module>
+    from opencompass.tasks.base import BaseTask
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/base.py", line 9, in <module>
+    from opencompass.utils import get_infer_output_path, task_abbr_from_cfg
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/utils/__init__.py", line 4, in <module>
+    from .collect_env import *  # noqa
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/utils/collect_env.py", line 2, in <module>
+    from mmengine.utils.dl_utils import collect_env as collect_base_env
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/mmengine/utils/dl_utils/__init__.py", line 3, in <module>
+    from .collect_env import collect_env
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/mmengine/utils/dl_utils/collect_env.py", line 10, in <module>
+    import torch
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/__init__.py", line 2108, in <module>
+    from torch import _VF as _VF, functional as functional  # usort: skip
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/functional.py", line 1640, in <module>
+    def norm(  # noqa: F811
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_jit_internal.py", line 1026, in _overload
+    _check_overload_body(func)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_jit_internal.py", line 995, in _check_overload_body
+    parsed_def = parse_def(func)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/torch/_sources.py", line 127, in parse_def
+    py_ast = ast.parse(dedent_src)
+  File "/home/kris/miniconda3/envs/opencompass-official/lib/python3.10/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+KeyboardInterrupt

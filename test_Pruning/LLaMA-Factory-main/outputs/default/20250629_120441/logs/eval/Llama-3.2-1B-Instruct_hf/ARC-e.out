@@ -1,0 +1,5 @@
+INFO 06-29 12:44:27 [importing.py:53] Triton module has been replaced with a placeholder.
+INFO 06-29 12:44:27 [__init__.py:239] Automatically detected platform cuda.
+06/29 12:44:29 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/ARC/ARC-e/ARC-Easy-Dev.jsonl
+06/29 12:44:29 - OpenCompass - INFO - Task [Llama-3.2-1B-Instruct_hf/ARC-e]: {'accuracy': 62.78659611992945}
+06/29 12:44:29 - OpenCompass - INFO - time elapsed: 4.73s

@@ -1,0 +1,62 @@
+Traceback (most recent call last):
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py", line 481, in <module>
+    inferencer.run()
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py", line 86, in run
+    self._score()
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py", line 89, in _score
+    test_set = build_dataset_from_cfg(self.dataset_cfg).test
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/utils/build.py", line 12, in build_dataset_from_cfg
+    return LOAD_DATASET.build(dataset_cfg)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/mmengine/registry/registry.py", line 570, in build
+    return self.build_func(cfg, *args, **kwargs, registry=self)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/mmengine/registry/build_functions.py", line 98, in build_from_cfg
+    obj_cls = registry.get(obj_type)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/mmengine/registry/registry.py", line 451, in get
+    self.import_from_location()
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/mmengine/registry/registry.py", line 376, in import_from_location
+    import_module(loc)
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/datasets/__init__.py", line 1, in <module>
+    from .advglue import *  # noqa: F401, F403
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/datasets/advglue.py", line 6, in <module>
+    from opencompass.openicl.icl_evaluator import AccEvaluator
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/openicl/__init__.py", line 2, in <module>
+    from .icl_evaluator import *  # noqa
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/openicl/icl_evaluator/__init__.py", line 14, in <module>
+    from .lm_evaluator import LMEvaluator  # noqa
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/openicl/icl_evaluator/lm_evaluator.py", line 11, in <module>
+    from opencompass.openicl.icl_inferencer import GenInferencer
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/openicl/icl_inferencer/__init__.py", line 1, in <module>
+    from .icl_agent_inferencer import AgentInferencer  # noqa
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/openicl/icl_inferencer/icl_agent_inferencer.py", line 10, in <module>
+    from .icl_base_inferencer import dump_results_dict
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/openicl/icl_inferencer/icl_base_inferencer.py", line 12, in <module>
+    from ..icl_retriever import BaseRetriever
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/openicl/icl_retriever/__init__.py", line 2, in <module>
+    from .icl_bm25_retriever import BM25Retriever  # noqa
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/opencompass/openicl/icl_retriever/icl_bm25_retriever.py", line 6, in <module>
+    from nltk.tokenize import word_tokenize
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/nltk/__init__.py", line 146, in <module>
+    from nltk.chunk import *
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/nltk/chunk/__init__.py", line 155, in <module>
+    from nltk.chunk.api import ChunkParserI
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/nltk/chunk/api.py", line 13, in <module>
+    from nltk.chunk.util import ChunkScore
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/nltk/chunk/util.py", line 14, in <module>
+    from nltk.tree import Tree
+  File "/home/kris/miniconda3/envs/opencompass-pat/lib/python3.10/site-packages/nltk/tree/__init__.py", line 29, in <module>
+    from nltk.tree.probabilistic import ProbabilisticTree
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 674, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 577, in module_from_spec
+  File "<frozen importlib._bootstrap>", line 556, in _init_module_attrs
+  File "<frozen importlib._bootstrap>", line 391, in cached
+KeyboardInterrupt

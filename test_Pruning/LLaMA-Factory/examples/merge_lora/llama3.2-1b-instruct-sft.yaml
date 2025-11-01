@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: /deltadisk/shared_data/models/Llama-3.2-1B-Instruct
+adapter_name_or_path: /deltadisk/guestnju/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-1B-Instruct-tap0.5-learnable-interm/lora/sft/max_samples_10000
+template: llama3
+trust_remote_code: true
+
+### export
+export_dir: output_merge_models/llama3.2-1b-instruct-sft/max_samples_10000
+export_size: 5     
+export_device: cpu
+export_legacy_format: false 

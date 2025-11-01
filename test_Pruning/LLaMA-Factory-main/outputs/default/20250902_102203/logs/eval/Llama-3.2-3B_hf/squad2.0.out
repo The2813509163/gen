@@ -1,0 +1,3 @@
+09/02 15:40:25 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/SQuAD2.0/dev-v2.0.json
+09/02 15:40:26 - OpenCompass - INFO - Task [Llama-3.2-3B_hf/squad2.0]: {'score': 21.08144529604986}
+09/02 15:40:26 - OpenCompass - INFO - time elapsed: 5.03s

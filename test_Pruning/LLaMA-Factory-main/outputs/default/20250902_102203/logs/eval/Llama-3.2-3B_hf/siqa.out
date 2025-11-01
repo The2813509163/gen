@@ -1,0 +1,5 @@
+09/02 15:40:24 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/siqa
+siqa train 33410
+siqa validation 1954
+09/02 15:40:27 - OpenCompass - INFO - Task [Llama-3.2-3B_hf/siqa]: {'accuracy': 61.46366427840327}
+09/02 15:40:27 - OpenCompass - INFO - time elapsed: 5.73s

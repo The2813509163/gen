@@ -1,0 +1,7 @@
+09/02 15:40:21 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/gsm8k/
+Parameter 'function'=<function OpenICLEvalTask._score.<locals>.postprocess at 0x7698607631c0> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+gsm8k train 7473
+gsm8k test 1319
+Map:   0%|          | 0/1319 [00:00<?, ? examples/s]Map: 100%|██████████| 1319/1319 [00:00<00:00, 18941.26 examples/s]
+09/02 15:40:21 - OpenCompass - INFO - Task [Llama-3.2-3B_hf/gsm8k]: {'accuracy': 66.565579984837}
+09/02 15:40:21 - OpenCompass - INFO - time elapsed: 4.64s

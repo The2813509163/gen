@@ -1,0 +1,19 @@
+popenargs: (['uname', '-p'],)
+kwargs: {'stdout': -1, 'stderr': -3, 'text': True}
+06/10 22:26:57 - OpenCompass - INFO - Try to load the data from /deltadisk/shared_data/datasets/opencompass_evaluation/./data/game24/game24.csv
+Traceback (most recent call last):
+  File "/deltadisk/guestnju/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py", line 481, in <module>
+    inferencer.run()
+  File "/deltadisk/guestnju/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py", line 86, in run
+    self._score()
+  File "/deltadisk/guestnju/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py", line 245, in _score
+    result = icl_evaluator.evaluate(k, n, copy.deepcopy(test_set),
+  File "/deltadisk/guestnju/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/openicl/icl_evaluator/icl_base_evaluator.py", line 113, in evaluate
+    results = self.score(
+  File "/deltadisk/guestnju/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/datasets/game24.py", line 256, in score
+    if self.check_nums(prediction, reference):
+  File "/deltadisk/guestnju/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/datasets/game24.py", line 243, in check_nums
+    numbers = re.findall(r'\d+', prediction)
+  File "/deltadisk/guestnju/miniconda3/envs/opencompass-official/lib/python3.10/re.py", line 240, in findall
+    return _compile(pattern, flags).findall(string)
+TypeError: expected string or bytes-like object

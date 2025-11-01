@@ -1,0 +1,5 @@
+09/02 05:36:59 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/siqa
+siqa train 33410
+siqa validation 1954
+09/02 05:37:01 - OpenCompass - ERROR - /home/kris/miniconda3/envs/opencompass-official/lib/python3.10/site-packages/opencompass/tasks/openicl_eval.py - _score - 298 - Task [Llama-3.2-3B_hf/siqa]: No predictions found.
+09/02 05:37:01 - OpenCompass - INFO - time elapsed: 4.73s

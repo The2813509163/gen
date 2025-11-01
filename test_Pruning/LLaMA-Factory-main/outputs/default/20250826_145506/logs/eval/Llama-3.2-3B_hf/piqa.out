@@ -1,0 +1,5 @@
+08/26 17:04:52 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/piqa
+piqa train 16113
+piqa validation 1838
+08/26 17:04:53 - OpenCompass - INFO - Task [Llama-3.2-3B_hf/piqa]: {'accuracy': 70.4570184983678}
+08/26 17:04:53 - OpenCompass - INFO - time elapsed: 3.70s

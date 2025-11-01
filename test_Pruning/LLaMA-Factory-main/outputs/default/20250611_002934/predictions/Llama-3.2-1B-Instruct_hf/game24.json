@@ -1,0 +1,57 @@
+{
+    "0": {
+        "origin_prompt": "4 5 6 10",
+        "prediction": [
+            "To solve this problem, we need to follow the order of operations (PEMDAS):\n3. Multiplication and Division (from left to right)\n\\[ 24 \\div 2 = 12 \\]\n\n",
+            "To solve this problem, we need to follow the order of operations (PEMDAS):\n3. Multiplication and Division (from left to right)\n\\[ 24 \\div 2 = 12 \\]\n\\[ 24 \\div 2 = 12 \\]\n",
+            "To solve this problem, we need to follow the order of operations (PEMDAS):\n3. Multiplication and Division (from left to right)\n\\[ 24 \\div 2 = 12 \\]\nTo solve this problem, we need to follow the order of operations (PEMDAS):\n",
+            "To solve this problem, we need to follow the order of operations (PEMDAS):\n3. Multiplication and Division (from left to right)\n\\[ 24 \\div 2 = 12 \\]\n1. Divide 24 by 2:\n",
+            "To solve this problem, we need to follow the order of operations (PEMDAS):\n3. Multiplication and Division (from left to right)\n\\[ 24 \\div 2 = 12 \\]\n\n"
+        ],
+        "gold": "4 5 6 10"
+    },
+    "1": {
+        "origin_prompt": "1 2 4 7",
+        "prediction": [
+            "2. Add 2 and 4: 2 + 4 = 6\n\n\n\n",
+            "2. Add 2 and 4: 2 + 4 = 6\n\n\n1. Add 2 and 4: 2 + 4 = 6\n",
+            "2. Add 2 and 4: 2 + 4 = 6\n\n\n3. Add 14 and 16: 14 + 16 = 30\n",
+            "2. Add 2 and 4: 2 + 4 = 6\n\n1. Add 2 and 4: 2 + 4 = 6\n\n",
+            "2. Add 2 and 4: 2 + 4 = 6\n\n1. Add 2 and 4: 2 + 4 = 6\n1. Add 2 and 4: 2 + 4 = 6\n"
+        ],
+        "gold": "1 2 4 7"
+    },
+    "2": {
+        "origin_prompt": "2 5 8 11",
+        "prediction": [
+            "To solve this problem, we need to follow the order of operations (PEMDAS):\nTo solve this problem, we need to follow the order of operations (PEMDAS):\nTo solve this problem, we need to follow the order of operations (PEMDAS):\nTo solve this problem, we need to follow the order of operations (PEMDAS):\n",
+            "To solve this problem, we need to follow the order of operations (PEMDAS):\nTo solve this problem, we need to follow the order of operations (PEMDAS):\nTo solve this problem, we need to follow the order of operations (PEMDAS):\n\n",
+            "To solve this problem, we need to follow the order of operations (PEMDAS):\nTo solve this problem, we need to follow the order of operations (PEMDAS):\nTo solve this problem, we need to follow the order of operations (PEMDAS):\n1. Parentheses: None\n",
+            "To solve this problem, we need to follow the order of operations (PEMDAS):\nTo solve this problem, we need to follow the order of operations (PEMDAS):\nTo solve this problem, we need to follow the order of operations (PEMDAS):\n2. Exponents: None\n",
+            "To solve this problem, we need to follow the order of operations (PEMDAS):\nTo solve this problem, we need to follow the order of operations (PEMDAS):\nTo solve this problem, we need to follow the order of operations (PEMDAS):\n3. Multiplication and Division (from left to right)\n"
+        ],
+        "gold": "2 5 8 11"
+    },
+    "3": {
+        "origin_prompt": "3 4 4 13",
+        "prediction": [
+            "1. Multiply 3 and 4: 3 * 4 = 12\n\n\n\n",
+            "1. Multiply 3 and 4: 3 * 4 = 12\n\n\n1. Multiply 3 and 4: 3 * 4 = 12\n",
+            "1. Multiply 3 and 4: 3 * 4 = 12\n\n1. Multiply 3 and 4: 3 * 4 = 12\n\n",
+            "1. Multiply 3 and 4: 3 * 4 = 12\n\n1. Multiply 3 and 4: 3 * 4 = 12\n1. Multiply 3 and 4: 3 * 4 = 12\n",
+            "1. Multiply 3 and 4: 3 * 4 = 12\n1. Multiply 3 and 4: 3 * 4 = 12\n\n\n"
+        ],
+        "gold": "3 4 4 13"
+    },
+    "4": {
+        "origin_prompt": "6 7 8 9",
+        "prediction": [
+            "To solve this problem, we need to follow the order of operations (PEMDAS):\nGiven the input: 2 8 8 14\n\n\n",
+            "2. Add 8 and 9: 8 + 9 = 17 (left: 42 17)\n\\[ \\boxed{21} \\]\n\n\n",
+            "3. Divide 42 by 2: 42 / 2 = 21 (left: 42 17 21)\n2. Add 21 to the result:\n\\[ \\boxed{29} \\]\n\n",
+            "To solve this problem, we need to follow the order of operations (PEMDAS):\nTo solve this problem, we need to follow the order of operations (PEMDAS):\nGiven the input: 2 8 8 14\n\n",
+            "1. Multiply 6 and 7: 6 * 7 = 42 (left: 42 8 9)\n2. Add 9 to 336:\n\n\n"
+        ],
+        "gold": "6 7 8 9"
+    }
+}

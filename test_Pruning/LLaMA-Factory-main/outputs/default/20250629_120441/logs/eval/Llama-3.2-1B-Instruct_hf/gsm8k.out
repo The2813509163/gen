@@ -1,0 +1,9 @@
+INFO 06-29 12:44:20 [importing.py:53] Triton module has been replaced with a placeholder.
+INFO 06-29 12:44:20 [__init__.py:239] Automatically detected platform cuda.
+06/29 12:44:22 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/gsm8k/
+Parameter 'function'=<function OpenICLEvalTask._score.<locals>.postprocess at 0x7f11295bd6c0> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+gsm8k train 7473
+gsm8k test 1319
+Map:   0%|          | 0/1319 [00:00<?, ? examples/s]Map: 100%|██████████| 1319/1319 [00:00<00:00, 24142.33 examples/s]
+06/29 12:44:23 - OpenCompass - INFO - Task [Llama-3.2-1B-Instruct_hf/gsm8k]: {'accuracy': 61.25852918877938}
+06/29 12:44:23 - OpenCompass - INFO - time elapsed: 4.65s

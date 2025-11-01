@@ -1,0 +1,5 @@
+INFO 06-29 12:44:28 [importing.py:53] Triton module has been replaced with a placeholder.
+INFO 06-29 12:44:28 [__init__.py:239] Automatically detected platform cuda.
+06/29 12:44:30 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/svamp/test.jsonl
+06/29 12:44:30 - OpenCompass - INFO - Task [Llama-3.2-1B-Instruct_hf/svamp]: {'accuracy': 64.5}
+06/29 12:44:30 - OpenCompass - INFO - time elapsed: 4.66s

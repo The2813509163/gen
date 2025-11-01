@@ -1,0 +1,10 @@
+dataset,version,metric,mode,Llama-3.2-3B_hf
+gsm8k,1d7fe4,accuracy,gen,62.70
+math,db136b,accuracy,gen,23.26
+svamp,fb25e4,accuracy,gen,73.20
+piqa,1194eb,accuracy,gen,70.46
+siqa,18632c,accuracy,gen,61.67
+squad2.0,1710bc,score,gen,23.87
+ARC-c,1e0de5,accuracy,gen,67.80
+ARC-e,1e0de5,accuracy,gen,83.07
+lambada,217e11,accuracy,gen,71.30

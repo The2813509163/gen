@@ -1,0 +1,3 @@
+06/04 21:26:53 - OpenCompass - INFO - Try to load the data from /deltadisk/shared_data/datasets/opencompass_evaluation/./data/svamp/test.jsonl
+06/04 21:26:53 - OpenCompass - INFO - Task [Llama-3.2-1B-Instruct_hf/svamp]: {'accuracy': 57.1}
+06/04 21:26:53 - OpenCompass - INFO - time elapsed: 3.44s

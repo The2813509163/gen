@@ -1,0 +1,5 @@
+09/17 14:56:46 - OpenCompass - INFO - Try to load the data from /data/kris/shared_data/datasets/NLP/opencompass/./data/math/
+math test 5000
+math train 5000
+09/17 14:56:47 - OpenCompass - INFO - Task [Llama-3.2-3B_hf/math]: {'accuracy': 25.94}
+09/17 14:56:47 - OpenCompass - INFO - time elapsed: 3.97s
