@@ -38,7 +38,7 @@ pip install -e thirdparty/peft-0.15.1
 <img width="849" height="297" alt="屏幕截图 2025-11-01 212559" src="https://github.com/user-attachments/assets/308d63bc-f949-4309-9107-4a5268c94f16" />
 
 
-2.test_Pruning/thirdparty/transformers-4.51.1/src/transformers/trainer.py中的两个路径（红色下划线），一个是dummy数据集，另一个就是基础模型路径
+2.test_Pruning/thirdparty/transformers-4.51.1/src/transformers/trainer.py中的两个路径（红色下划线），一个是dummy数据集路径，另一个就是基础模型路径
 
 <img width="1312" height="896" alt="屏幕截图 2025-11-01 212040" src="https://github.com/user-attachments/assets/ca755d91-417b-4ed3-9ebc-199bd94499ca" />
 
