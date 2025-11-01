@@ -35,14 +35,17 @@ pip install -e thirdparty/peft-0.15.1
 
 1.test_Pruning/LLaMA-Factory/data/dataset_info.json文件中的修改nvidia__OpenMathInstruct中的hf_hub_url
 
+<img width="1312" height="896" alt="屏幕截图 2025-11-01 212040" src="https://github.com/user-attachments/assets/ca755d91-417b-4ed3-9ebc-199bd94499ca" />
 
 
 2.test_Pruning/thirdparty/transformers-4.51.1/src/transformers/trainer.py中的两个路径（红色下划线），一个是dummy数据集，另一个就是基础模型路径
 
+<img width="849" height="297" alt="屏幕截图 2025-11-01 212559" src="https://github.com/user-attachments/assets/308d63bc-f949-4309-9107-4a5268c94f16" />
 
 
 3.test_Pruning/LLaMA-Factory/test.yaml文件中的model_name_or_path , output_dir
 
+<img width="1671" height="119" alt="屏幕截图 2025-11-01 212727" src="https://github.com/user-attachments/assets/3a7d550f-7faa-4351-bf09-257900998d45" />
 
 
 
