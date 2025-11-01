@@ -1,7 +1,7 @@
 # 环境配置
 
 ## test-pat
-
+在./test_Pruning目录下配置环境
 ```
 conda create -n test-pat python=3.10 -y
 conda activate test-pat
@@ -15,7 +15,7 @@ pip install -e LLaMA-Factory
 ```
 
 ## opencompass-pat
-
+在./test_Pruning目录下配置环境
 ```
 conda create -n opencompass-pat python=3.10 -y
 conda activate opencompass-pat
