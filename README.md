@@ -52,6 +52,7 @@ pip install -e thirdparty/peft-0.15.1
 ## 训练命令
 
 ```
+conda activate test-pat
 cd test_Pruning/LLaMA-Factory
 ./train_pat.sh
 ```
