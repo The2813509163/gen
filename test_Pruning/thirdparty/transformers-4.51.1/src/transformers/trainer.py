@@ -5365,7 +5365,8 @@ from transformers.dummy import GaussianStratifiedSampler,ZipfSampler,PretrainDat
 from transformers.models.llama.base_llama import LlamaForCausalLM as BaseLlamaForCausalLM
 from transformers import AutoTokenizer
 import torch.nn.functional as F
-
+import os
+modelpath = os.getenv("MODELPATH")
 class CustomTrainer(Trainer):
     """
     一个自定义的Trainer，用于实现知识蒸馏。
@@ -5389,7 +5390,7 @@ class CustomTrainer(Trainer):
         """
         super().__init__(*args, **kwargs)
         
-        self.teacher_model = BaseLlamaForCausalLM.from_pretrained("/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B",
+        self.teacher_model = BaseLlamaForCausalLM.from_pretrained(modelpath,
                                                 torch_dtype=torch.float16,
                                                 device_map=self.args.device, 
                                                 attn_implementation="flash_attention_2"
@@ -5404,15 +5405,10 @@ class CustomTrainer(Trainer):
         # print("DEVICE:", self.args.device)
         self.teacher_model.eval()
 
-        tokenizer = AutoTokenizer.from_pretrained("/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B")
+        tokenizer = AutoTokenizer.from_pretrained(modelpath)
         vocab_size = tokenizer.vocab_size
         self.vocab_size = vocab_size
-        # 1. 定义高斯分布的参数
-        # mu = vocab_size / 4  # 采样中心倾向于常用词
-        # sigma = vocab_size   # 相对集中的采样
-        print("WWWWW",vocab_size)
-        # 2. 初始化采样器 (这一步会进行预计算)
-        # self.sampler = GaussianStratifiedSampler(tokenizer=tokenizer, mu=mu, sigma=sigma)
+     
         self.sampler = ZipfSampler(tokenizer=tokenizer)
         # 初始化损失函数
         self.loss_fn_distill = nn.KLDivLoss(reduction='batchmean')
@@ -5428,13 +5424,6 @@ class CustomTrainer(Trainer):
         finetune_batch_size = finetune_inputs["input_ids"].shape[0]
         finetune_labels = finetune_inputs["labels"]
         # === 第二部分：实时生成dummy数据并计算蒸馏损失 (L_distill) ===
-        # print("BBBBBBB",model.base_model.model.config.vocab_size)
-
-        # custom_weights = {
-        #     "control_and_common": 0.3,  # 30% 的token来自控制符和高频词
-        #     "mid_frequency": 0.6,       # 60% 的token来自中频词 (我们的主要探测区域)
-        #     "long_tail": 0.1          # 10% 的token来自长尾罕见词，用于探测知识边界
-        # }
 
         target_sequence_length = finetune_inputs["input_ids"].shape[1]
         # 4. 生成一个批次的dummy数据
@@ -5468,17 +5457,18 @@ class CustomTrainer(Trainer):
 
         # 结合loss
         loss = None
-        # print(model)
-        loss = model.module.base_model.model.loss_function(logits=logits_finetune, labels=finetune_labels, vocab_size=model.module.base_model.model.config.vocab_size)
+      
+        true_model = getattr(model, 'module', model)
+        loss = true_model.base_model.model.loss_function(logits=logits_finetune, labels=finetune_labels, vocab_size=true_model.base_model.model.config.vocab_size)
         loss_finetune = loss + pruning_loss
-        # print("LOSS:",loss)
+       
         loss_distill = self.loss_fn_distill(
             F.log_softmax(logits_student / self.temperature, dim=-1),
             F.softmax(logits_teacher / self.temperature, dim=-1)
         ) * (self.temperature ** 2)
 
-        update_step = model.module.base_model.model.model.layers[0].update_step
-        tap_stop_at_steps = model.module.base_model.model.model.layers[0].tap_stop_at_steps
+        update_step = true_model.base_model.model.model.layers[0].update_step
+        tap_stop_at_steps = true_model.base_model.model.model.layers[0].tap_stop_at_steps
         print("update_step:",update_step)
         print("tap_stop_at_steps:",tap_stop_at_steps)
         if update_step > 1.2 * tap_stop_at_steps:
@@ -5507,7 +5497,6 @@ class CustomTrainer(Trainer):
         
         # 注意：Hugging Face的`super().compute_loss`在return_outputs=True时会返回一个元组
         # 为了保持一致性，我们在这里不做特殊处理，因为这个方法的重点是计算损失值
-        # print("TTTTTTTT",total_loss)
         return (total_loss,outputs) if return_outputs else total_loss
     
 
@@ -5534,7 +5523,7 @@ class DummyTrainer(Trainer):
         """
         super().__init__(*args, **kwargs)
         
-        self.teacher_model = BaseLlamaForCausalLM.from_pretrained("/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B",
+        self.teacher_model = BaseLlamaForCausalLM.from_pretrained(modelpath,
                                                 torch_dtype=torch.float16,
                                                 device_map=self.args.device, 
                                                 attn_implementation="flash_attention_2"
@@ -5549,7 +5538,7 @@ class DummyTrainer(Trainer):
         # print("DEVICE:", self.args.device)
         self.teacher_model.eval()
     
-        tokenizer = AutoTokenizer.from_pretrained("/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B")
+        tokenizer = AutoTokenizer.from_pretrained(modelpath)
         vocab_size = tokenizer.vocab_size
         self.vocab_size = vocab_size
         # 1. 定义高斯分布的参数
@@ -5684,7 +5673,7 @@ class SuperTrainer(Trainer):
         super().__init__(*args, **kwargs)
 
         self.teacher_model = BaseLlamaForCausalLM.from_pretrained(
-            "/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B",
+            modelpath,
             torch_dtype=torch.float16,
             device_map=self.args.device,
             attn_implementation="flash_attention_2"
@@ -5731,7 +5720,6 @@ class SuperTrainer(Trainer):
         finetune_batch_size = finetune_inputs["input_ids"].shape[0]
         finetune_labels = finetune_inputs["labels"]
 
-        print("GGGGGGGGGGGGGG")
         # ### +++ ADDED +++ ###
         # 从迭代器中流式加载dummy数据，并动态调整其长度
         target_sequence_length = finetune_inputs["input_ids"].shape[1]
@@ -5831,7 +5819,7 @@ class Super2Trainer(Trainer):
         alpha=0.0001,
         temperature=4.0,
         # +++ 新增参数，用于指定dummy数据集路径 +++
-        dummy_dataset_path="/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq",
+        dummy_dataset_path="/data/kris/qianxuzhen/generative_dummy_dataset_real_freq",
         dummy_batch_size=2, # 您原来代码中使用的batch_size
         *args,
         **kwargs,
@@ -5842,7 +5830,7 @@ class Super2Trainer(Trainer):
         super().__init__(*args, **kwargs)
 
         self.teacher_model = BaseLlamaForCausalLM.from_pretrained(
-            "/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B",
+            modelpath,
             torch_dtype=torch.float16,
             device_map=self.args.device,
             attn_implementation="flash_attention_2"
@@ -5905,7 +5893,6 @@ class Super2Trainer(Trainer):
         finetune_batch_size = finetune_inputs["input_ids"].shape[0]
         finetune_labels = finetune_inputs["labels"]
 
-        print("GGGGGGGGGGGGGG")
         # ### +++ ADDED +++ ###
         # 从迭代器中流式加载dummy数据，并动态调整其长度
         target_sequence_length = finetune_inputs["input_ids"].shape[1]

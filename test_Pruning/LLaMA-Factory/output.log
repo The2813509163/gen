@@ -1,0 +1,2071 @@
+[INFO|2025-11-02 11:59:31] llamafactory.cli:143 >> Initializing 6 distributed tasks at: 127.0.0.1:33317
+[2025-11-02 11:59:32,759] torch.distributed.run: [WARNING] 
+[2025-11-02 11:59:32,759] torch.distributed.run: [WARNING] *****************************************
+[2025-11-02 11:59:32,759] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2025-11-02 11:59:32,759] torch.distributed.run: [WARNING] *****************************************
+[WARNING|2025-11-02 11:59:39] llamafactory.hparams.parser:148 >> `ddp_find_unused_parameters` needs to be set as False for LoRA in DDP training.
+[INFO|2025-11-02 11:59:39] llamafactory.hparams.parser:379 >> Process rank: 0, world size: 6, device: cuda:0, distributed training: True, compute dtype: torch.bfloat16
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 11:59:39,525 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 11:59:39,525 >> loading file tokenizer.model
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 11:59:39,525 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 11:59:39,525 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 11:59:39,525 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 11:59:39,525 >> loading file chat_template.jinja
+[INFO|2025-11-02 11:59:39] llamafactory.hparams.parser:379 >> Process rank: 4, world size: 6, device: cuda:4, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2025-11-02 11:59:39] llamafactory.hparams.parser:379 >> Process rank: 3, world size: 6, device: cuda:3, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2025-11-02 11:59:39] llamafactory.hparams.parser:379 >> Process rank: 5, world size: 6, device: cuda:5, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2025-11-02 11:59:39] llamafactory.hparams.parser:379 >> Process rank: 2, world size: 6, device: cuda:2, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2025-11-02 11:59:39] llamafactory.hparams.parser:379 >> Process rank: 1, world size: 6, device: cuda:1, distributed training: True, compute dtype: torch.bfloat16
+[INFO|tokenization_utils_base.py:2323] 2025-11-02 11:59:40,086 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|configuration_utils.py:691] 2025-11-02 11:59:40,087 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/config.json
+[INFO|configuration_utils.py:765] 2025-11-02 11:59:40,088 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 3072,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 32.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.1",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 11:59:40,089 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 11:59:40,089 >> loading file tokenizer.model
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 11:59:40,089 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 11:59:40,089 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 11:59:40,089 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 11:59:40,089 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2323] 2025-11-02 11:59:40,449 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|2025-11-02 11:59:40] llamafactory.data.template:143 >> Add pad token: <|end_of_text|>
+[INFO|2025-11-02 11:59:40] llamafactory.data.template:143 >> Add <|eot_id|>,<|eom_id|> to stop words.
+[INFO|2025-11-02 11:59:40] llamafactory.data.loader:143 >> Loading dataset /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/datasets/NLP/nvidia...
+Converting format of dataset (num_proc=16):   0%|          | 0/200 [00:00<?, ? examples/s]Converting format of dataset (num_proc=16):   6%|▋         | 13/200 [00:00<00:01, 111.49 examples/s]Converting format of dataset (num_proc=16): 100%|██████████| 200/200 [00:00<00:00, 797.98 examples/s]
+Running tokenizer on dataset (num_proc=16):   0%|          | 0/200 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=16):   6%|▋         | 13/200 [00:00<00:12, 15.00 examples/s]Running tokenizer on dataset (num_proc=16):  20%|█▉        | 39/200 [00:00<00:03, 49.57 examples/s]Running tokenizer on dataset (num_proc=16):  32%|███▎      | 65/200 [00:01<00:01, 71.08 examples/s]Running tokenizer on dataset (num_proc=16):  46%|████▌     | 91/200 [00:01<00:01, 79.35 examples/s]Running tokenizer on dataset (num_proc=16):  58%|█████▊    | 116/200 [00:01<00:00, 101.06 examples/s]Running tokenizer on dataset (num_proc=16):  70%|███████   | 140/200 [00:01<00:00, 104.91 examples/s]Running tokenizer on dataset (num_proc=16):  82%|████████▏ | 164/200 [00:01<00:00, 110.81 examples/s]Running tokenizer on dataset (num_proc=16):  94%|█████████▍| 188/200 [00:02<00:00, 102.01 examples/s]Running tokenizer on dataset (num_proc=16): 100%|██████████| 200/200 [00:02<00:00, 83.89 examples/s] 
+training example:
+input_ids:
+[128000, 128006, 882, 128007, 271, 28487, 6944, 311, 3780, 264, 502, 13260, 323, 706, 2380, 2671, 25, 38930, 10343, 11, 42392, 13020, 11, 323, 15535, 20381, 13, 9062, 3637, 706, 2204, 7729, 369, 279, 13260, 11, 32635, 11, 323, 5409, 13, 2468, 38930, 10343, 11, 279, 13260, 7194, 400, 5154, 11, 279, 32635, 374, 400, 914, 11, 323, 279, 5409, 374, 400, 972, 13, 2468, 42392, 13020, 11, 279, 13260, 374, 400, 8610, 11, 279, 32635, 374, 400, 966, 11, 323, 279, 5409, 374, 400, 508, 13, 2468, 15535, 20381, 11, 279, 13260, 374, 400, 9870, 11, 279, 32635, 374, 400, 1313, 11, 323, 279, 5409, 374, 400, 868, 13, 2650, 1790, 1053, 8683, 8493, 520, 279, 43149, 3637, 30, 128009, 128006, 78191, 128007, 271, 1271, 1505, 279, 43149, 3637, 11, 584, 1205, 311, 11294, 279, 2860, 2853, 315, 279, 13260, 11, 32635, 11, 323, 5409, 520, 1855, 3637, 382, 1688, 38930, 10343, 11, 279, 2860, 2853, 374, 400, 5154, 489, 400, 914, 489, 400, 972, 284, 400, 17313, 382, 1688, 42392, 13020, 11, 279, 2860, 2853, 374, 400, 8610, 489, 400, 966, 489, 400, 508, 284, 400, 10914, 382, 1688, 15535, 20381, 11, 279, 2860, 2853, 374, 400, 9870, 489, 400, 1313, 489, 400, 868, 284, 400, 16567, 382, 17561, 287, 279, 2860, 7194, 11, 584, 649, 1518, 430, 15535, 20381, 374, 279, 43149, 3637, 382, 4516, 11, 8683, 1053, 8493, 1144, 80175, 90, 16567, 92, 11441, 520, 279, 43149, 3637, 13, 128009]
+inputs:
+<|begin_of_text|><|start_header_id|>user<|end_header_id|>
+
+Alex wants to buy a new bike and has three options: BikeWorld, CycleCity, and SpeedShop. Each store has different prices for the bike, helmet, and lock. At BikeWorld, the bike costs $250, the helmet is $25, and the lock is $18. At CycleCity, the bike is $220, the helmet is $30, and the lock is $20. At SpeedShop, the bike is $230, the helmet is $22, and the lock is $15. How much would Alex spend at the cheapest store?<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+To find the cheapest store, we need to calculate the total cost of the bike, helmet, and lock at each store.
+
+At BikeWorld, the total cost is $250 + $25 + $18 = $293.
+
+At CycleCity, the total cost is $220 + $30 + $20 = $270.
+
+At SpeedShop, the total cost is $230 + $22 + $15 = $267.
+
+Comparing the total costs, we can see that SpeedShop is the cheapest store.
+
+So, Alex would spend \boxed{267} dollars at the cheapest store.<|eot_id|>
+label_ids:
+[-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 1271, 1505, 279, 43149, 3637, 11, 584, 1205, 311, 11294, 279, 2860, 2853, 315, 279, 13260, 11, 32635, 11, 323, 5409, 520, 1855, 3637, 382, 1688, 38930, 10343, 11, 279, 2860, 2853, 374, 400, 5154, 489, 400, 914, 489, 400, 972, 284, 400, 17313, 382, 1688, 42392, 13020, 11, 279, 2860, 2853, 374, 400, 8610, 489, 400, 966, 489, 400, 508, 284, 400, 10914, 382, 1688, 15535, 20381, 11, 279, 2860, 2853, 374, 400, 9870, 489, 400, 1313, 489, 400, 868, 284, 400, 16567, 382, 17561, 287, 279, 2860, 7194, 11, 584, 649, 1518, 430, 15535, 20381, 374, 279, 43149, 3637, 382, 4516, 11, 8683, 1053, 8493, 1144, 80175, 90, 16567, 92, 11441, 520, 279, 43149, 3637, 13, 128009]
+labels:
+To find the cheapest store, we need to calculate the total cost of the bike, helmet, and lock at each store.
+
+At BikeWorld, the total cost is $250 + $25 + $18 = $293.
+
+At CycleCity, the total cost is $220 + $30 + $20 = $270.
+
+At SpeedShop, the total cost is $230 + $22 + $15 = $267.
+
+Comparing the total costs, we can see that SpeedShop is the cheapest store.
+
+So, Alex would spend \boxed{267} dollars at the cheapest store.<|eot_id|>
+[INFO|configuration_utils.py:691] 2025-11-02 12:00:00,322 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/config.json
+[INFO|configuration_utils.py:765] 2025-11-02 12:00:00,323 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 3072,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 32.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.1",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+[INFO|2025-11-02 12:00:00] llamafactory.model.model_utils.kv_cache:143 >> KV cache is disabled during training.
+[INFO|modeling_utils.py:1121] 2025-11-02 12:00:02,696 >> loading weights file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/model.safetensors.index.json
+[INFO|modeling_utils.py:2167] 2025-11-02 12:00:02,716 >> Instantiating LlamaForCausalLM model under default dtype torch.bfloat16.
+[INFO|configuration_utils.py:1142] 2025-11-02 12:00:02,720 >> Generate config GenerationConfig {
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "use_cache": false
+}
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:18<01:18, 78.54s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:18<01:18, 78.90s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:18<01:18, 78.90s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:18<01:18, 78.90s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:18<01:18, 78.88s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:18<01:18, 78.90s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:31<00:00, 39.63s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:31<00:00, 45.52s/it]
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.16.HIO_A_Attn', 'model.layers.16.HIO_A_MLP', 'model.layers.16.HIO_B_Attn', 'model.layers.16.HIO_B_MLP', 'model.layers.16.mlp.HIO_A_down_proj', 'model.layers.16.mlp.HIO_B_down_proj', 'model.layers.16.mlp.HSM_mask_proxy', 'model.layers.17.HIO_A_Attn', 'model.layers.17.HIO_A_MLP', 'model.layers.17.HIO_B_Attn', 'model.layers.17.HIO_B_MLP', 'model.layers.17.mlp.HIO_A_down_proj', 'model.layers.17.mlp.HIO_B_down_proj', 'model.layers.17.mlp.HSM_mask_proxy', 'model.layers.18.HIO_A_Attn', 'model.layers.18.HIO_A_MLP', 'model.layers.18.HIO_B_Attn', 'model.layers.18.HIO_B_MLP', 'model.layers.18.mlp.HIO_A_down_proj', 'model.layers.18.mlp.HIO_B_down_proj', 'model.layers.18.mlp.HSM_mask_proxy', 'model.layers.19.HIO_A_Attn', 'model.layers.19.HIO_A_MLP', 'model.layers.19.HIO_B_Attn', 'model.layers.19.HIO_B_MLP', 'model.layers.19.mlp.HIO_A_down_proj', 'model.layers.19.mlp.HIO_B_down_proj', 'model.layers.19.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.20.HIO_A_Attn', 'model.layers.20.HIO_A_MLP', 'model.layers.20.HIO_B_Attn', 'model.layers.20.HIO_B_MLP', 'model.layers.20.mlp.HIO_A_down_proj', 'model.layers.20.mlp.HIO_B_down_proj', 'model.layers.20.mlp.HSM_mask_proxy', 'model.layers.21.HIO_A_Attn', 'model.layers.21.HIO_A_MLP', 'model.layers.21.HIO_B_Attn', 'model.layers.21.HIO_B_MLP', 'model.layers.21.mlp.HIO_A_down_proj', 'model.layers.21.mlp.HIO_B_down_proj', 'model.layers.21.mlp.HSM_mask_proxy', 'model.layers.22.HIO_A_Attn', 'model.layers.22.HIO_A_MLP', 'model.layers.22.HIO_B_Attn', 'model.layers.22.HIO_B_MLP', 'model.layers.22.mlp.HIO_A_down_proj', 'model.layers.22.mlp.HIO_B_down_proj', 'model.layers.22.mlp.HSM_mask_proxy', 'model.layers.23.HIO_A_Attn', 'model.layers.23.HIO_A_MLP', 'model.layers.23.HIO_B_Attn', 'model.layers.23.HIO_B_MLP', 'model.layers.23.mlp.HIO_A_down_proj', 'model.layers.23.mlp.HIO_B_down_proj', 'model.layers.23.mlp.HSM_mask_proxy', 'model.layers.24.HIO_A_Attn', 'model.layers.24.HIO_A_MLP', 'model.layers.24.HIO_B_Attn', 'model.layers.24.HIO_B_MLP', 'model.layers.24.mlp.HIO_A_down_proj', 'model.layers.24.mlp.HIO_B_down_proj', 'model.layers.24.mlp.HSM_mask_proxy', 'model.layers.25.HIO_A_Attn', 'model.layers.25.HIO_A_MLP', 'model.layers.25.HIO_B_Attn', 'model.layers.25.HIO_B_MLP', 'model.layers.25.mlp.HIO_A_down_proj', 'model.layers.25.mlp.HIO_B_down_proj', 'model.layers.25.mlp.HSM_mask_proxy', 'model.layers.26.HIO_A_Attn', 'model.layers.26.HIO_A_MLP', 'model.layers.26.HIO_B_Attn', 'model.layers.26.HIO_B_MLP', 'model.layers.26.mlp.HIO_A_down_proj', 'model.layers.26.mlp.HIO_B_down_proj', 'model.layers.26.mlp.HSM_mask_proxy', 'model.layers.27.HIO_A_Attn', 'model.layers.27.HIO_A_MLP', 'model.layers.27.HIO_B_Attn', 'model.layers.27.HIO_B_MLP', 'model.layers.27.mlp.HIO_A_down_proj', 'model.layers.27.mlp.HIO_B_down_proj', 'model.layers.27.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards: 100%|██████████| 2/2 [01:31<00:00, 39.67s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:31<00:00, 39.72s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:31<00:00, 39.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:31<00:00, 45.55s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:31<00:00, 45.55s/it]
+
+Loading checkpoint shards: 100%|██████████| 2/2 [01:31<00:00, 45.54s/it]
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.16.HIO_A_Attn', 'model.layers.16.HIO_A_MLP', 'model.layers.16.HIO_B_Attn', 'model.layers.16.HIO_B_MLP', 'model.layers.16.mlp.HIO_A_down_proj', 'model.layers.16.mlp.HIO_B_down_proj', 'model.layers.16.mlp.HSM_mask_proxy', 'model.layers.17.HIO_A_Attn', 'model.layers.17.HIO_A_MLP', 'model.layers.17.HIO_B_Attn', 'model.layers.17.HIO_B_MLP', 'model.layers.17.mlp.HIO_A_down_proj', 'model.layers.17.mlp.HIO_B_down_proj', 'model.layers.17.mlp.HSM_mask_proxy', 'model.layers.18.HIO_A_Attn', 'model.layers.18.HIO_A_MLP', 'model.layers.18.HIO_B_Attn', 'model.layers.18.HIO_B_MLP', 'model.layers.18.mlp.HIO_A_down_proj', 'model.layers.18.mlp.HIO_B_down_proj', 'model.layers.18.mlp.HSM_mask_proxy', 'model.layers.19.HIO_A_Attn', 'model.layers.19.HIO_A_MLP', 'model.layers.19.HIO_B_Attn', 'model.layers.19.HIO_B_MLP', 'model.layers.19.mlp.HIO_A_down_proj', 'model.layers.19.mlp.HIO_B_down_proj', 'model.layers.19.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.20.HIO_A_Attn', 'model.layers.20.HIO_A_MLP', 'model.layers.20.HIO_B_Attn', 'model.layers.20.HIO_B_MLP', 'model.layers.20.mlp.HIO_A_down_proj', 'model.layers.20.mlp.HIO_B_down_proj', 'model.layers.20.mlp.HSM_mask_proxy', 'model.layers.21.HIO_A_Attn', 'model.layers.21.HIO_A_MLP', 'model.layers.21.HIO_B_Attn', 'model.layers.21.HIO_B_MLP', 'model.layers.21.mlp.HIO_A_down_proj', 'model.layers.21.mlp.HIO_B_down_proj', 'model.layers.21.mlp.HSM_mask_proxy', 'model.layers.22.HIO_A_Attn', 'model.layers.22.HIO_A_MLP', 'model.layers.22.HIO_B_Attn', 'model.layers.22.HIO_B_MLP', 'model.layers.22.mlp.HIO_A_down_proj', 'model.layers.22.mlp.HIO_B_down_proj', 'model.layers.22.mlp.HSM_mask_proxy', 'model.layers.23.HIO_A_Attn', 'model.layers.23.HIO_A_MLP', 'model.layers.23.HIO_B_Attn', 'model.layers.23.HIO_B_MLP', 'model.layers.23.mlp.HIO_A_down_proj', 'model.layers.23.mlp.HIO_B_down_proj', 'model.layers.23.mlp.HSM_mask_proxy', 'model.layers.24.HIO_A_Attn', 'model.layers.24.HIO_A_MLP', 'model.layers.24.HIO_B_Attn', 'model.layers.24.HIO_B_MLP', 'model.layers.24.mlp.HIO_A_down_proj', 'model.layers.24.mlp.HIO_B_down_proj', 'model.layers.24.mlp.HSM_mask_proxy', 'model.layers.25.HIO_A_Attn', 'model.layers.25.HIO_A_MLP', 'model.layers.25.HIO_B_Attn', 'model.layers.25.HIO_B_MLP', 'model.layers.25.mlp.HIO_A_down_proj', 'model.layers.25.mlp.HIO_B_down_proj', 'model.layers.25.mlp.HSM_mask_proxy', 'model.layers.26.HIO_A_Attn', 'model.layers.26.HIO_A_MLP', 'model.layers.26.HIO_B_Attn', 'model.layers.26.HIO_B_MLP', 'model.layers.26.mlp.HIO_A_down_proj', 'model.layers.26.mlp.HIO_B_down_proj', 'model.layers.26.mlp.HSM_mask_proxy', 'model.layers.27.HIO_A_Attn', 'model.layers.27.HIO_A_MLP', 'model.layers.27.HIO_B_Attn', 'model.layers.27.HIO_B_MLP', 'model.layers.27.mlp.HIO_A_down_proj', 'model.layers.27.mlp.HIO_B_down_proj', 'model.layers.27.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.16.HIO_A_Attn', 'model.layers.16.HIO_A_MLP', 'model.layers.16.HIO_B_Attn', 'model.layers.16.HIO_B_MLP', 'model.layers.16.mlp.HIO_A_down_proj', 'model.layers.16.mlp.HIO_B_down_proj', 'model.layers.16.mlp.HSM_mask_proxy', 'model.layers.17.HIO_A_Attn', 'model.layers.17.HIO_A_MLP', 'model.layers.17.HIO_B_Attn', 'model.layers.17.HIO_B_MLP', 'model.layers.17.mlp.HIO_A_down_proj', 'model.layers.17.mlp.HIO_B_down_proj', 'model.layers.17.mlp.HSM_mask_proxy', 'model.layers.18.HIO_A_Attn', 'model.layers.18.HIO_A_MLP', 'model.layers.18.HIO_B_Attn', 'model.layers.18.HIO_B_MLP', 'model.layers.18.mlp.HIO_A_down_proj', 'model.layers.18.mlp.HIO_B_down_proj', 'model.layers.18.mlp.HSM_mask_proxy', 'model.layers.19.HIO_A_Attn', 'model.layers.19.HIO_A_MLP', 'model.layers.19.HIO_B_Attn', 'model.layers.19.HIO_B_MLP', 'model.layers.19.mlp.HIO_A_down_proj', 'model.layers.19.mlp.HIO_B_down_proj', 'model.layers.19.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.20.HIO_A_Attn', 'model.layers.20.HIO_A_MLP', 'model.layers.20.HIO_B_Attn', 'model.layers.20.HIO_B_MLP', 'model.layers.20.mlp.HIO_A_down_proj', 'model.layers.20.mlp.HIO_B_down_proj', 'model.layers.20.mlp.HSM_mask_proxy', 'model.layers.21.HIO_A_Attn', 'model.layers.21.HIO_A_MLP', 'model.layers.21.HIO_B_Attn', 'model.layers.21.HIO_B_MLP', 'model.layers.21.mlp.HIO_A_down_proj', 'model.layers.21.mlp.HIO_B_down_proj', 'model.layers.21.mlp.HSM_mask_proxy', 'model.layers.22.HIO_A_Attn', 'model.layers.22.HIO_A_MLP', 'model.layers.22.HIO_B_Attn', 'model.layers.22.HIO_B_MLP', 'model.layers.22.mlp.HIO_A_down_proj', 'model.layers.22.mlp.HIO_B_down_proj', 'model.layers.22.mlp.HSM_mask_proxy', 'model.layers.23.HIO_A_Attn', 'model.layers.23.HIO_A_MLP', 'model.layers.23.HIO_B_Attn', 'model.layers.23.HIO_B_MLP', 'model.layers.23.mlp.HIO_A_down_proj', 'model.layers.23.mlp.HIO_B_down_proj', 'model.layers.23.mlp.HSM_mask_proxy', 'model.layers.24.HIO_A_Attn', 'model.layers.24.HIO_A_MLP', 'model.layers.24.HIO_B_Attn', 'model.layers.24.HIO_B_MLP', 'model.layers.24.mlp.HIO_A_down_proj', 'model.layers.24.mlp.HIO_B_down_proj', 'model.layers.24.mlp.HSM_mask_proxy', 'model.layers.25.HIO_A_Attn', 'model.layers.25.HIO_A_MLP', 'model.layers.25.HIO_B_Attn', 'model.layers.25.HIO_B_MLP', 'model.layers.25.mlp.HIO_A_down_proj', 'model.layers.25.mlp.HIO_B_down_proj', 'model.layers.25.mlp.HSM_mask_proxy', 'model.layers.26.HIO_A_Attn', 'model.layers.26.HIO_A_MLP', 'model.layers.26.HIO_B_Attn', 'model.layers.26.HIO_B_MLP', 'model.layers.26.mlp.HIO_A_down_proj', 'model.layers.26.mlp.HIO_B_down_proj', 'model.layers.26.mlp.HSM_mask_proxy', 'model.layers.27.HIO_A_Attn', 'model.layers.27.HIO_A_MLP', 'model.layers.27.HIO_B_Attn', 'model.layers.27.HIO_B_MLP', 'model.layers.27.mlp.HIO_A_down_proj', 'model.layers.27.mlp.HIO_B_down_proj', 'model.layers.27.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[INFO|modeling_utils.py:4930] 2025-11-02 12:01:35,492 >> All model checkpoint weights were used when initializing LlamaForCausalLM.
+
+[WARNING|modeling_utils.py:4932] 2025-11-02 12:01:35,492 >> Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.16.HIO_A_Attn', 'model.layers.16.HIO_A_MLP', 'model.layers.16.HIO_B_Attn', 'model.layers.16.HIO_B_MLP', 'model.layers.16.mlp.HIO_A_down_proj', 'model.layers.16.mlp.HIO_B_down_proj', 'model.layers.16.mlp.HSM_mask_proxy', 'model.layers.17.HIO_A_Attn', 'model.layers.17.HIO_A_MLP', 'model.layers.17.HIO_B_Attn', 'model.layers.17.HIO_B_MLP', 'model.layers.17.mlp.HIO_A_down_proj', 'model.layers.17.mlp.HIO_B_down_proj', 'model.layers.17.mlp.HSM_mask_proxy', 'model.layers.18.HIO_A_Attn', 'model.layers.18.HIO_A_MLP', 'model.layers.18.HIO_B_Attn', 'model.layers.18.HIO_B_MLP', 'model.layers.18.mlp.HIO_A_down_proj', 'model.layers.18.mlp.HIO_B_down_proj', 'model.layers.18.mlp.HSM_mask_proxy', 'model.layers.19.HIO_A_Attn', 'model.layers.19.HIO_A_MLP', 'model.layers.19.HIO_B_Attn', 'model.layers.19.HIO_B_MLP', 'model.layers.19.mlp.HIO_A_down_proj', 'model.layers.19.mlp.HIO_B_down_proj', 'model.layers.19.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.20.HIO_A_Attn', 'model.layers.20.HIO_A_MLP', 'model.layers.20.HIO_B_Attn', 'model.layers.20.HIO_B_MLP', 'model.layers.20.mlp.HIO_A_down_proj', 'model.layers.20.mlp.HIO_B_down_proj', 'model.layers.20.mlp.HSM_mask_proxy', 'model.layers.21.HIO_A_Attn', 'model.layers.21.HIO_A_MLP', 'model.layers.21.HIO_B_Attn', 'model.layers.21.HIO_B_MLP', 'model.layers.21.mlp.HIO_A_down_proj', 'model.layers.21.mlp.HIO_B_down_proj', 'model.layers.21.mlp.HSM_mask_proxy', 'model.layers.22.HIO_A_Attn', 'model.layers.22.HIO_A_MLP', 'model.layers.22.HIO_B_Attn', 'model.layers.22.HIO_B_MLP', 'model.layers.22.mlp.HIO_A_down_proj', 'model.layers.22.mlp.HIO_B_down_proj', 'model.layers.22.mlp.HSM_mask_proxy', 'model.layers.23.HIO_A_Attn', 'model.layers.23.HIO_A_MLP', 'model.layers.23.HIO_B_Attn', 'model.layers.23.HIO_B_MLP', 'model.layers.23.mlp.HIO_A_down_proj', 'model.layers.23.mlp.HIO_B_down_proj', 'model.layers.23.mlp.HSM_mask_proxy', 'model.layers.24.HIO_A_Attn', 'model.layers.24.HIO_A_MLP', 'model.layers.24.HIO_B_Attn', 'model.layers.24.HIO_B_MLP', 'model.layers.24.mlp.HIO_A_down_proj', 'model.layers.24.mlp.HIO_B_down_proj', 'model.layers.24.mlp.HSM_mask_proxy', 'model.layers.25.HIO_A_Attn', 'model.layers.25.HIO_A_MLP', 'model.layers.25.HIO_B_Attn', 'model.layers.25.HIO_B_MLP', 'model.layers.25.mlp.HIO_A_down_proj', 'model.layers.25.mlp.HIO_B_down_proj', 'model.layers.25.mlp.HSM_mask_proxy', 'model.layers.26.HIO_A_Attn', 'model.layers.26.HIO_A_MLP', 'model.layers.26.HIO_B_Attn', 'model.layers.26.HIO_B_MLP', 'model.layers.26.mlp.HIO_A_down_proj', 'model.layers.26.mlp.HIO_B_down_proj', 'model.layers.26.mlp.HSM_mask_proxy', 'model.layers.27.HIO_A_Attn', 'model.layers.27.HIO_A_MLP', 'model.layers.27.HIO_B_Attn', 'model.layers.27.HIO_B_MLP', 'model.layers.27.mlp.HIO_A_down_proj', 'model.layers.27.mlp.HIO_B_down_proj', 'model.layers.27.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards: 100%|██████████| 2/2 [01:31<00:00, 39.67s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:31<00:00, 45.55s/it]
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.16.HIO_A_Attn', 'model.layers.16.HIO_A_MLP', 'model.layers.16.HIO_B_Attn', 'model.layers.16.HIO_B_MLP', 'model.layers.16.mlp.HIO_A_down_proj', 'model.layers.16.mlp.HIO_B_down_proj', 'model.layers.16.mlp.HSM_mask_proxy', 'model.layers.17.HIO_A_Attn', 'model.layers.17.HIO_A_MLP', 'model.layers.17.HIO_B_Attn', 'model.layers.17.HIO_B_MLP', 'model.layers.17.mlp.HIO_A_down_proj', 'model.layers.17.mlp.HIO_B_down_proj', 'model.layers.17.mlp.HSM_mask_proxy', 'model.layers.18.HIO_A_Attn', 'model.layers.18.HIO_A_MLP', 'model.layers.18.HIO_B_Attn', 'model.layers.18.HIO_B_MLP', 'model.layers.18.mlp.HIO_A_down_proj', 'model.layers.18.mlp.HIO_B_down_proj', 'model.layers.18.mlp.HSM_mask_proxy', 'model.layers.19.HIO_A_Attn', 'model.layers.19.HIO_A_MLP', 'model.layers.19.HIO_B_Attn', 'model.layers.19.HIO_B_MLP', 'model.layers.19.mlp.HIO_A_down_proj', 'model.layers.19.mlp.HIO_B_down_proj', 'model.layers.19.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.20.HIO_A_Attn', 'model.layers.20.HIO_A_MLP', 'model.layers.20.HIO_B_Attn', 'model.layers.20.HIO_B_MLP', 'model.layers.20.mlp.HIO_A_down_proj', 'model.layers.20.mlp.HIO_B_down_proj', 'model.layers.20.mlp.HSM_mask_proxy', 'model.layers.21.HIO_A_Attn', 'model.layers.21.HIO_A_MLP', 'model.layers.21.HIO_B_Attn', 'model.layers.21.HIO_B_MLP', 'model.layers.21.mlp.HIO_A_down_proj', 'model.layers.21.mlp.HIO_B_down_proj', 'model.layers.21.mlp.HSM_mask_proxy', 'model.layers.22.HIO_A_Attn', 'model.layers.22.HIO_A_MLP', 'model.layers.22.HIO_B_Attn', 'model.layers.22.HIO_B_MLP', 'model.layers.22.mlp.HIO_A_down_proj', 'model.layers.22.mlp.HIO_B_down_proj', 'model.layers.22.mlp.HSM_mask_proxy', 'model.layers.23.HIO_A_Attn', 'model.layers.23.HIO_A_MLP', 'model.layers.23.HIO_B_Attn', 'model.layers.23.HIO_B_MLP', 'model.layers.23.mlp.HIO_A_down_proj', 'model.layers.23.mlp.HIO_B_down_proj', 'model.layers.23.mlp.HSM_mask_proxy', 'model.layers.24.HIO_A_Attn', 'model.layers.24.HIO_A_MLP', 'model.layers.24.HIO_B_Attn', 'model.layers.24.HIO_B_MLP', 'model.layers.24.mlp.HIO_A_down_proj', 'model.layers.24.mlp.HIO_B_down_proj', 'model.layers.24.mlp.HSM_mask_proxy', 'model.layers.25.HIO_A_Attn', 'model.layers.25.HIO_A_MLP', 'model.layers.25.HIO_B_Attn', 'model.layers.25.HIO_B_MLP', 'model.layers.25.mlp.HIO_A_down_proj', 'model.layers.25.mlp.HIO_B_down_proj', 'model.layers.25.mlp.HSM_mask_proxy', 'model.layers.26.HIO_A_Attn', 'model.layers.26.HIO_A_MLP', 'model.layers.26.HIO_B_Attn', 'model.layers.26.HIO_B_MLP', 'model.layers.26.mlp.HIO_A_down_proj', 'model.layers.26.mlp.HIO_B_down_proj', 'model.layers.26.mlp.HSM_mask_proxy', 'model.layers.27.HIO_A_Attn', 'model.layers.27.HIO_A_MLP', 'model.layers.27.HIO_B_Attn', 'model.layers.27.HIO_B_MLP', 'model.layers.27.mlp.HIO_A_down_proj', 'model.layers.27.mlp.HIO_B_down_proj', 'model.layers.27.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[INFO|configuration_utils.py:1095] 2025-11-02 12:01:35,495 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/generation_config.json
+Loading checkpoint shards: 100%|██████████| 2/2 [01:31<00:00, 39.67s/it][INFO|configuration_utils.py:1142] 2025-11-02 12:01:35,495 >> Generate config GenerationConfig {
+  "bos_token_id": 128000,
+  "do_sample": true,
+  "eos_token_id": 128001,
+  "temperature": 0.6,
+  "top_p": 0.9
+}
+
+Loading checkpoint shards: 100%|██████████| 2/2 [01:31<00:00, 45.56s/it]
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.16.HIO_A_Attn', 'model.layers.16.HIO_A_MLP', 'model.layers.16.HIO_B_Attn', 'model.layers.16.HIO_B_MLP', 'model.layers.16.mlp.HIO_A_down_proj', 'model.layers.16.mlp.HIO_B_down_proj', 'model.layers.16.mlp.HSM_mask_proxy', 'model.layers.17.HIO_A_Attn', 'model.layers.17.HIO_A_MLP', 'model.layers.17.HIO_B_Attn', 'model.layers.17.HIO_B_MLP', 'model.layers.17.mlp.HIO_A_down_proj', 'model.layers.17.mlp.HIO_B_down_proj', 'model.layers.17.mlp.HSM_mask_proxy', 'model.layers.18.HIO_A_Attn', 'model.layers.18.HIO_A_MLP', 'model.layers.18.HIO_B_Attn', 'model.layers.18.HIO_B_MLP', 'model.layers.18.mlp.HIO_A_down_proj', 'model.layers.18.mlp.HIO_B_down_proj', 'model.layers.18.mlp.HSM_mask_proxy', 'model.layers.19.HIO_A_Attn', 'model.layers.19.HIO_A_MLP', 'model.layers.19.HIO_B_Attn', 'model.layers.19.HIO_B_MLP', 'model.layers.19.mlp.HIO_A_down_proj', 'model.layers.19.mlp.HIO_B_down_proj', 'model.layers.19.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.20.HIO_A_Attn', 'model.layers.20.HIO_A_MLP', 'model.layers.20.HIO_B_Attn', 'model.layers.20.HIO_B_MLP', 'model.layers.20.mlp.HIO_A_down_proj', 'model.layers.20.mlp.HIO_B_down_proj', 'model.layers.20.mlp.HSM_mask_proxy', 'model.layers.21.HIO_A_Attn', 'model.layers.21.HIO_A_MLP', 'model.layers.21.HIO_B_Attn', 'model.layers.21.HIO_B_MLP', 'model.layers.21.mlp.HIO_A_down_proj', 'model.layers.21.mlp.HIO_B_down_proj', 'model.layers.21.mlp.HSM_mask_proxy', 'model.layers.22.HIO_A_Attn', 'model.layers.22.HIO_A_MLP', 'model.layers.22.HIO_B_Attn', 'model.layers.22.HIO_B_MLP', 'model.layers.22.mlp.HIO_A_down_proj', 'model.layers.22.mlp.HIO_B_down_proj', 'model.layers.22.mlp.HSM_mask_proxy', 'model.layers.23.HIO_A_Attn', 'model.layers.23.HIO_A_MLP', 'model.layers.23.HIO_B_Attn', 'model.layers.23.HIO_B_MLP', 'model.layers.23.mlp.HIO_A_down_proj', 'model.layers.23.mlp.HIO_B_down_proj', 'model.layers.23.mlp.HSM_mask_proxy', 'model.layers.24.HIO_A_Attn', 'model.layers.24.HIO_A_MLP', 'model.layers.24.HIO_B_Attn', 'model.layers.24.HIO_B_MLP', 'model.layers.24.mlp.HIO_A_down_proj', 'model.layers.24.mlp.HIO_B_down_proj', 'model.layers.24.mlp.HSM_mask_proxy', 'model.layers.25.HIO_A_Attn', 'model.layers.25.HIO_A_MLP', 'model.layers.25.HIO_B_Attn', 'model.layers.25.HIO_B_MLP', 'model.layers.25.mlp.HIO_A_down_proj', 'model.layers.25.mlp.HIO_B_down_proj', 'model.layers.25.mlp.HSM_mask_proxy', 'model.layers.26.HIO_A_Attn', 'model.layers.26.HIO_A_MLP', 'model.layers.26.HIO_B_Attn', 'model.layers.26.HIO_B_MLP', 'model.layers.26.mlp.HIO_A_down_proj', 'model.layers.26.mlp.HIO_B_down_proj', 'model.layers.26.mlp.HSM_mask_proxy', 'model.layers.27.HIO_A_Attn', 'model.layers.27.HIO_A_MLP', 'model.layers.27.HIO_B_Attn', 'model.layers.27.HIO_B_MLP', 'model.layers.27.mlp.HIO_A_down_proj', 'model.layers.27.mlp.HIO_B_down_proj', 'model.layers.27.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[INFO|2025-11-02 12:01:35] llamafactory.model.model_utils.checkpointing:143 >> Gradient checkpointing enabled.
+[INFO|2025-11-02 12:01:35] llamafactory.model.model_utils.attention:143 >> Using FlashAttention-2 for faster training and inference.
+[INFO|2025-11-02 12:01:35] llamafactory.model.adapter:143 >> Upcasting trainable params to float32.
+[INFO|2025-11-02 12:01:35] llamafactory.model.adapter:143 >> Fine-tuning method: LoRA
+[INFO|2025-11-02 12:01:35] llamafactory.model.model_utils.misc:143 >> Found linear modules: down_proj,q_proj,gate_proj,up_proj,k_proj,v_proj,o_proj
+[INFO|2025-11-02 12:01:36] llamafactory.model.loader:143 >> trainable params: 463,047,680 || all params: 3,675,797,504 || trainable%: 12.5972
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO|trainer.py:751] 2025-11-02 12:01:39,280 >> Using auto half precision backend
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+[WARNING|trainer.py:786] 2025-11-02 12:01:39,281 >> No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+[INFO|configuration_utils.py:691] 2025-11-02 12:01:39,282 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/config.json
+[INFO|configuration_utils.py:765] 2025-11-02 12:01:39,283 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 3072,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 32.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.1",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+[INFO|modeling_utils.py:1121] 2025-11-02 12:01:39,283 >> loading weights file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/model.safetensors.index.json
+[INFO|modeling_utils.py:2167] 2025-11-02 12:01:39,284 >> Instantiating LlamaForCausalLM model under default dtype torch.float16.
+[INFO|configuration_utils.py:1142] 2025-11-02 12:01:39,286 >> Generate config GenerationConfig {
+  "bos_token_id": 128000,
+  "eos_token_id": 128001
+}
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.53s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.53s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.55s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.65s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.84s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.94s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  3.94s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  4.48s/it]
+正在从 '/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq' 加载离线dummy数据集...
+Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  3.95s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  4.49s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  3.96s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  4.50s/it]
+正在从 '/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq' 加载离线dummy数据集...
+正在从 '/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq' 加载离线dummy数据集...
+Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.01s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.56s/it]
+正在从 '/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq' 加载离线dummy数据集...
+Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.64s/it]
+[INFO|modeling_utils.py:4930] 2025-11-02 12:01:48,616 >> All model checkpoint weights were used when initializing LlamaForCausalLM.
+
+[INFO|modeling_utils.py:4938] 2025-11-02 12:01:48,616 >> All the weights of LlamaForCausalLM were initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use LlamaForCausalLM for predictions without further training.
+[INFO|configuration_utils.py:1095] 2025-11-02 12:01:48,619 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/generation_config.json
+[INFO|configuration_utils.py:1142] 2025-11-02 12:01:48,620 >> Generate config GenerationConfig {
+  "bos_token_id": 128000,
+  "do_sample": true,
+  "eos_token_id": 128001,
+  "temperature": 0.6,
+  "top_p": 0.9
+}
+
+正在从 '/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq' 加载离线dummy数据集...
+Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.11s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.68s/it]
+正在从 '/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq' 加载离线dummy数据集...
+离线dummy数据集加载完成，包含 600000 条样本，已准备好流式加载。
+离线dummy数据集加载完成，包含 600000 条样本，已准备好流式加载。
+离线dummy数据集加载完成，包含 600000 条样本，已准备好流式加载。
+离线dummy数据集加载完成，包含 600000 条样本，已准备好流式加载。离线dummy数据集加载完成，包含 600000 条样本，已准备好流式加载。
+
+离线dummy数据集加载完成，包含 600000 条样本，已准备好流式加载。
+[INFO|trainer.py:2420] 2025-11-02 12:01:50,990 >> ***** Running training *****
+[INFO|trainer.py:2421] 2025-11-02 12:01:50,990 >>   Num examples = 200
+[INFO|trainer.py:2422] 2025-11-02 12:01:50,990 >>   Num Epochs = 2
+[INFO|trainer.py:2423] 2025-11-02 12:01:50,990 >>   Instantaneous batch size per device = 1
+[INFO|trainer.py:2426] 2025-11-02 12:01:50,990 >>   Total train batch size (w. parallel, distributed & accumulation) = 24
+[INFO|trainer.py:2427] 2025-11-02 12:01:50,990 >>   Gradient Accumulation steps = 4
+[INFO|trainer.py:2428] 2025-11-02 12:01:50,990 >>   Total optimization steps = 16
+[INFO|trainer.py:2429] 2025-11-02 12:01:50,994 >>   Number of trainable parameters = 463,047,680
+  0%|          | 0/16 [00:00<?, ?it/s]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+
+GGGGGGGGGGGGGG
+[INFO|logging.py:143] 2025-11-02 12:01:57,651 >> Step/Stop: 0 / 100, pruned_nums: 0, 
+sort: tensor([[[1., 1., 1.,  ..., 1., 1., 1.]]], device='cuda:0'),
+[WARNING|logging.py:328] 2025-11-02 12:01:57,665 >> The input hidden states seems to be silently casted in float32, this might be related to the fact you have upcasted embedding or layer norm layers in float32. We will cast back the input in torch.bfloat16.
+The input hidden states seems to be silently casted in float32, this might be related to the fact you have upcasted embedding or layer norm layers in float32. We will cast back the input in torch.bfloat16.
+The input hidden states seems to be silently casted in float32, this might be related to the fact you have upcasted embedding or layer norm layers in float32. We will cast back the input in torch.bfloat16.
+The input hidden states seems to be silently casted in float32, this might be related to the fact you have upcasted embedding or layer norm layers in float32. We will cast back the input in torch.bfloat16.
+The input hidden states seems to be silently casted in float32, this might be related to the fact you have upcasted embedding or layer norm layers in float32. We will cast back the input in torch.bfloat16.
+The input hidden states seems to be silently casted in float32, this might be related to the fact you have upcasted embedding or layer norm layers in float32. We will cast back the input in torch.bfloat16.
+alpha=alpha=alpha=alpha=alpha= alpha=   0.0001  0.00010.00010.0001
+0.00010.0001
+
+
+
+
+                                      {'loss_total': 0.49466854333877563, 'pure_loss': 0.49485355615615845, 'loss_finetune': 0.49485355615615845, 'loss_distill': -1.3552358150482178, 'epoch': 0}
+  0%|          | 0/16 [00:07<?, ?it/s]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+[INFO|logging.py:143] 2025-11-02 12:01:59,436 >> Step/Stop: 0 / 100, pruned_nums: 0, 
+sort: tensor([[[1., 1., 1.,  ..., 1., 1., 1.]]], device='cuda:0'),
+alpha= 0.0001
+alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+alpha= 0.0001
+                                      {'loss_total': 0.6641103625297546, 'pure_loss': 0.6642419099807739, 'loss_finetune': 0.6642419099807739, 'loss_distill': -0.6506223678588867, 'epoch': 0}
+  0%|          | 0/16 [00:08<?, ?it/s]alpha= 0.0001
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+[INFO|logging.py:143] 2025-11-02 12:01:59,881 >> Step/Stop: 0 / 100, pruned_nums: 0, 
+sort: tensor([[[1., 1., 1.,  ..., 1., 1., 1.]]], device='cuda:0'),
+alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+GGGGGGGGGGGGGG
+                                      {'loss_total': 0.6105397343635559, 'pure_loss': 0.6106501817703247, 'loss_finetune': 0.6106501817703247, 'loss_distill': -0.4937211871147156, 'epoch': 0}
+  0%|          | 0/16 [00:08<?, ?it/s]alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+alpha= 0.0001
+alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+[INFO|logging.py:143] 2025-11-02 12:02:00,246 >> Step/Stop: 0 / 100, pruned_nums: 0, 
+sort: tensor([[[1., 1., 1.,  ..., 1., 1., 1.]]], device='cuda:0'),
+GGGGGGGGGGGGGG
+alpha= 0.0001
+                                      {'loss_total': 0.671239972114563, 'pure_loss': 0.6713370084762573, 'loss_finetune': 0.6713370084762573, 'loss_distill': -0.29885542392730713, 'epoch': 0}
+  0%|          | 0/16 [00:09<?, ?it/s]alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+  6%|▋         | 1/16 [00:10<02:43, 10.88s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+
+GGGGGGGGGGGGGG
+alpha= 0.0001
+alpha= 0.0001
+                                              {'loss_total': 0.5003893375396729, 'pure_loss': 0.4973587393760681, 'loss_finetune': 0.4973587393760681, 'loss_distill': 30.803508758544922, 'epoch': 0.12}
+  6%|▋         | 1/16 [00:11<02:43, 10.88s/it]alpha= 0.0001
+alpha= 0.0001
+alpha= 0.0001
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+                                              {'loss_total': 0.6999323964118958, 'pure_loss': 0.6927076578140259, 'loss_finetune': 0.6927076578140259, 'loss_distill': 72.94019317626953, 'epoch': 0.12}
+  6%|▋         | 1/16 [00:11<02:43, 10.88s/it]alpha= 0.0001
+alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+alpha= 0.0001
+alpha= 0.0001
+                                              {'loss_total': 0.5687834024429321, 'pure_loss': 0.5595055222511292, 'loss_finetune': 0.5595055222511292, 'loss_distill': 93.3387451171875, 'epoch': 0.12}
+  6%|▋         | 1/16 [00:11<02:43, 10.88s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+alpha= 0.0001
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+alpha= 0.0001
+alpha= 0.0001
+                                              {'loss_total': 0.8101211190223694, 'pure_loss': 0.8047410845756531, 'loss_finetune': 0.8047410845756531, 'loss_distill': 54.60501480102539, 'epoch': 0.12}
+  6%|▋         | 1/16 [00:12<02:43, 10.88s/it]GGGGGGGGGGGGGG
+alpha= 0.0001
+ 12%|█▎        | 2/16 [00:13<01:20,  5.73s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+                                              {'loss_total': 0.5724179148674011, 'pure_loss': 0.5667797923088074, 'loss_finetune': 0.5667797923088074, 'loss_distill': 56.94783020019531, 'epoch': 0.24}
+ 12%|█▎        | 2/16 [00:13<01:20,  5.73s/it]alpha= 0.0001
+alpha= 0.0001
+alpha= 0.0001
+alpha= 0.0001
+alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+GGGGGGGGGGGGGG
+                                              {'loss_total': 1.339123249053955, 'pure_loss': 1.335876703262329, 'loss_finetune': 1.335876703262329, 'loss_distill': 33.80125427246094, 'epoch': 0.24}
+ 12%|█▎        | 2/16 [00:13<01:20,  5.73s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+alpha= 0.0001
+                                              {'loss_total': 0.5918582677841187, 'pure_loss': 0.5777106285095215, 'loss_finetune': 0.5777106285095215, 'loss_distill': 142.053955078125, 'epoch': 0.24}
+ 12%|█▎        | 2/16 [00:13<01:20,  5.73s/it]alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+alpha= 0.0001
+alpha= 0.0001
+alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+                                              {'loss_total': 0.36321622133255005, 'pure_loss': 0.3530195951461792, 'loss_finetune': 0.3530195951461792, 'loss_distill': 102.31932067871094, 'epoch': 0.24}
+ 12%|█▎        | 2/16 [00:14<01:20,  5.73s/it]alpha= 0.0001
+GGGGGGGGGGGGGG
+alpha= 0.0001
+ 19%|█▉        | 3/16 [00:15<00:52,  4.05s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': 132.89801025390625, 'pure_loss': 0.6205821633338928, 'loss_finetune': 132.90325927734375, 'loss_distill': 80.45360565185547, 'epoch': 0.35}
+ 19%|█▉        | 3/16 [00:15<00:52,  4.05s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': 132.9945526123047, 'pure_loss': 0.7151211500167847, 'loss_finetune': 132.997802734375, 'loss_distill': 100.48175048828125, 'epoch': 0.35}
+ 19%|█▉        | 3/16 [00:16<00:52,  4.05s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': 132.68336486816406, 'pure_loss': 0.3996112048625946, 'loss_finetune': 132.6822967529297, 'loss_distill': 143.37283325195312, 'epoch': 0.35}
+ 19%|█▉        | 3/16 [00:16<00:52,  4.05s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': 132.92745971679688, 'pure_loss': 0.6471426486968994, 'loss_finetune': 132.92982482910156, 'loss_distill': 109.19795227050781, 'epoch': 0.35}
+ 19%|█▉        | 3/16 [00:17<00:52,  4.05s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+ 25%|██▌       | 4/16 [00:17<00:42,  3.58s/it]GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': 95.25515747070312, 'pure_loss': 0.32650867104530334, 'loss_finetune': 95.24673461914062, 'loss_distill': 179.5487060546875, 'epoch': 0.47}
+ 25%|██▌       | 4/16 [00:18<00:42,  3.58s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': 95.67288970947266, 'pure_loss': 0.7585285902023315, 'loss_finetune': 95.67875671386719, 'loss_distill': 37.00608444213867, 'epoch': 0.47}
+ 25%|██▌       | 4/16 [00:18<00:42,  3.58s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': 95.23828887939453, 'pure_loss': 0.2979046702384949, 'loss_finetune': 95.21813201904297, 'loss_distill': 296.7645263671875, 'epoch': 0.47}
+ 25%|██▌       | 4/16 [00:19<00:42,  3.58s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': 95.30789184570312, 'pure_loss': 0.3907519280910492, 'loss_finetune': 95.31098175048828, 'loss_distill': 64.4013442993164, 'epoch': 0.47}
+ 25%|██▌       | 4/16 [00:19<00:42,  3.58s/it]GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+ 31%|███▏      | 5/16 [00:20<00:36,  3.30s/it][INFO|trainer.py:3999] 2025-11-02 12:02:11,747 >> Saving model checkpoint to /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-5
+[INFO|configuration_utils.py:691] 2025-11-02 12:02:11,779 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/config.json
+[INFO|configuration_utils.py:765] 2025-11-02 12:02:11,780 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 3072,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 32.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.1",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+[INFO|tokenization_utils_base.py:2510] 2025-11-02 12:02:15,580 >> tokenizer config file saved in /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-5/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2519] 2025-11-02 12:02:15,581 >> Special tokens file saved in /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-5/special_tokens_map.json
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+alpha= 0.0001
+                                              {'loss_total': 56.196598052978516, 'pure_loss': 0.5689331889152527, 'loss_finetune': 56.194637298583984, 'loss_distill': 75.81092071533203, 'epoch': 0.59}
+ 31%|███▏      | 5/16 [00:30<00:36,  3.30s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': 56.15547561645508, 'pure_loss': 0.524491548538208, 'loss_finetune': 56.15019607543945, 'loss_distill': 108.93830871582031, 'epoch': 0.59}
+ 31%|███▏      | 5/16 [00:30<00:36,  3.30s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': 56.23356628417969, 'pure_loss': 0.6052333116531372, 'loss_finetune': 56.23093795776367, 'loss_distill': 82.49617004394531, 'epoch': 0.59}
+ 31%|███▏      | 5/16 [00:31<00:36,  3.30s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': 56.054481506347656, 'pure_loss': 0.41715604066848755, 'loss_finetune': 56.04286193847656, 'loss_distill': 172.24984741210938, 'epoch': 0.59}
+ 31%|███▏      | 5/16 [00:31<00:36,  3.30s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+ 38%|███▊      | 6/16 [00:32<01:01,  6.11s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.7626233100891113, 'loss_finetune': nan, 'loss_distill': 58.74510192871094, 'epoch': 0.71}
+ 38%|███▊      | 6/16 [00:32<01:01,  6.11s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+
+alpha= 0.0001
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.2967003583908081, 'loss_finetune': nan, 'loss_distill': 218.96487426757812, 'epoch': 0.71}
+ 38%|███▊      | 6/16 [00:32<01:01,  6.11s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.6212618350982666, 'loss_finetune': nan, 'loss_distill': 79.25546264648438, 'epoch': 0.71}
+ 38%|███▊      | 6/16 [00:33<01:01,  6.11s/it]GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.58266282081604, 'loss_finetune': nan, 'loss_distill': 64.12628173828125, 'epoch': 0.71}
+ 38%|███▊      | 6/16 [00:33<01:01,  6.11s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+ 44%|████▍     | 7/16 [00:34<00:43,  4.86s/it]GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.3685658872127533, 'loss_finetune': nan, 'loss_distill': 38.71139144897461, 'epoch': 0.82}
+ 44%|████▍     | 7/16 [00:34<00:43,  4.86s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.4549816846847534, 'loss_finetune': nan, 'loss_distill': 50.960594177246094, 'epoch': 0.82}
+ 44%|████▍     | 7/16 [00:35<00:43,  4.86s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.5935733914375305, 'loss_finetune': nan, 'loss_distill': 65.4619140625, 'epoch': 0.82}
+ 44%|████▍     | 7/16 [00:35<00:43,  4.86s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.5370264053344727, 'loss_finetune': nan, 'loss_distill': 21.109346389770508, 'epoch': 0.82}
+ 44%|████▍     | 7/16 [00:35<00:43,  4.86s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+ 50%|█████     | 8/16 [00:36<00:31,  3.94s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.677131712436676, 'loss_finetune': nan, 'loss_distill': 41.03716278076172, 'epoch': 0.94}
+ 50%|█████     | 8/16 [00:36<00:31,  3.94s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.9919101595878601, 'loss_finetune': nan, 'loss_distill': 39.299869537353516, 'epoch': 0.94}
+ 50%|█████     | 8/16 [00:37<00:31,  3.94s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+ 56%|█████▋    | 9/16 [00:38<00:22,  3.17s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.33448150753974915, 'loss_finetune': nan, 'loss_distill': 43.6693229675293, 'epoch': 1.0}
+ 56%|█████▋    | 9/16 [00:38<00:22,  3.17s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.5910592675209045, 'loss_finetune': nan, 'loss_distill': 146.95538330078125, 'epoch': 1.0}
+ 56%|█████▋    | 9/16 [00:38<00:22,  3.17s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.28382036089897156, 'loss_finetune': nan, 'loss_distill': 39.326778411865234, 'epoch': 1.0}
+ 56%|█████▋    | 9/16 [00:39<00:22,  3.17s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                              {'loss_total': nan, 'pure_loss': 0.36268824338912964, 'loss_finetune': nan, 'loss_distill': 217.99044799804688, 'epoch': 1.0}
+ 56%|█████▋    | 9/16 [00:39<00:22,  3.17s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+ 62%|██████▎   | 10/16 [00:40<00:18,  3.02s/it]                                               {'loss': 566.8185, 'grad_norm': 17.769716262817383, 'learning_rate': 4.0245483899193595e-05, 'epoch': 1.12}
+ 62%|██████▎   | 10/16 [00:40<00:18,  3.02s/it][INFO|trainer.py:3999] 2025-11-02 12:02:31,769 >> Saving model checkpoint to /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-10
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+[INFO|configuration_utils.py:691] 2025-11-02 12:02:31,799 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/config.json
+[INFO|configuration_utils.py:765] 2025-11-02 12:02:31,800 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 3072,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 32.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.1",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+GGGGGGGGGGGGGG
+[INFO|tokenization_utils_base.py:2510] 2025-11-02 12:02:33,497 >> tokenizer config file saved in /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-10/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2519] 2025-11-02 12:02:33,498 >> Special tokens file saved in /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-10/special_tokens_map.json
+GGGGGGGGGGGGGG
+[INFO|logging.py:143] 2025-11-02 12:02:37,210 >> Step/Stop: 10 / 100, pruned_nums: 0, 
+sort: tensor([[[0.8999, 0.8999, 0.8999,  ..., 0.9003, 0.9003, 0.9003]]],
+       device='cuda:0'),
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+[INFO|logging.py:143] 2025-11-02 12:02:37,315 >> pruning_loss: nan, gt0: 3063/3072, pruning_l2_loss: 0.333, pruning_l1_loss: 0.067, pruning_interm_loss: nan
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.22905966639518738, 'loss_finetune': nan, 'loss_distill': 34.98578643798828, 'epoch': 1.12}
+ 62%|██████▎   | 10/16 [00:46<00:18,  3.02s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= alpha=0.0001 
+0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+[INFO|logging.py:143] 2025-11-02 12:02:37,598 >> Step/Stop: 10 / 100, pruned_nums: 0, 
+sort: tensor([[[0.8999, 0.8999, 0.8999,  ..., 0.9003, 0.9003, 0.9003]]],
+       device='cuda:0'),
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+[INFO|logging.py:143] 2025-11-02 12:02:37,711 >> pruning_loss: nan, gt0: 3063/3072, pruning_l2_loss: 0.333, pruning_l1_loss: 0.067, pruning_interm_loss: nan
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.3257877826690674, 'loss_finetune': nan, 'loss_distill': 65.132568359375, 'epoch': 1.12}
+ 62%|██████▎   | 10/16 [00:46<00:18,  3.02s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+[INFO|logging.py:143] 2025-11-02 12:02:38,002 >> Step/Stop: 10 / 100, pruned_nums: 0, 
+sort: tensor([[[0.8999, 0.8999, 0.8999,  ..., 0.9003, 0.9003, 0.9003]]],
+       device='cuda:0'),
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+[INFO|logging.py:143] 2025-11-02 12:02:38,092 >> pruning_loss: nan, gt0: 3063/3072, pruning_l2_loss: 0.333, pruning_l1_loss: 0.067, pruning_interm_loss: nan
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.4537298381328583, 'loss_finetune': nan, 'loss_distill': 35.08247756958008, 'epoch': 1.12}
+ 62%|██████▎   | 10/16 [00:47<00:18,  3.02s/it]GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+[INFO|logging.py:143] 2025-11-02 12:02:38,359 >> Step/Stop: 10 / 100, pruned_nums: 0, 
+sort: tensor([[[0.8999, 0.8999, 0.8999,  ..., 0.9003, 0.9003, 0.9003]]],
+       device='cuda:0'),
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+[INFO|logging.py:143] 2025-11-02 12:02:38,472 >> pruning_loss: nan, gt0: 3063/3072, pruning_l2_loss: 0.333, pruning_l1_loss: 0.067, pruning_interm_loss: nan
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.5272558927536011, 'loss_finetune': nan, 'loss_distill': 69.26876831054688, 'epoch': 1.12}
+ 62%|██████▎   | 10/16 [00:47<00:18,  3.02s/it]GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+ 69%|██████▉   | 11/16 [00:48<00:22,  4.46s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+                                               {'loss_total': nan, 'pure_loss': 0.7935283780097961, 'loss_finetune': nan, 'loss_distill': 78.63314819335938, 'epoch': 1.24}
+ 69%|██████▉   | 11/16 [00:48<00:22,  4.46s/it]alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.25605952739715576, 'loss_finetune': nan, 'loss_distill': 172.0605010986328, 'epoch': 1.24}
+ 69%|██████▉   | 11/16 [00:49<00:22,  4.46s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.3985334634780884, 'loss_finetune': nan, 'loss_distill': 55.69872283935547, 'epoch': 1.24}
+ 69%|██████▉   | 11/16 [00:49<00:22,  4.46s/it]GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.4146534502506256, 'loss_finetune': nan, 'loss_distill': 193.7101593017578, 'epoch': 1.24}
+ 69%|██████▉   | 11/16 [00:50<00:22,  4.46s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+ 75%|███████▌  | 12/16 [00:50<00:14,  3.71s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 1.6466723680496216, 'loss_finetune': nan, 'loss_distill': 224.94436645507812, 'epoch': 1.35}
+ 75%|███████▌  | 12/16 [00:50<00:14,  3.71s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.22832079231739044, 'loss_finetune': nan, 'loss_distill': 200.2080078125, 'epoch': 1.35}
+ 75%|███████▌  | 12/16 [00:51<00:14,  3.71s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.4569573700428009, 'loss_finetune': nan, 'loss_distill': 58.657264709472656, 'epoch': 1.35}
+ 75%|███████▌  | 12/16 [00:52<00:14,  3.71s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.7986155152320862, 'loss_finetune': nan, 'loss_distill': 127.70579528808594, 'epoch': 1.35}
+ 75%|███████▌  | 12/16 [00:52<00:14,  3.71s/it] 81%|████████▏ | 13/16 [00:52<00:10,  3.34s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+
+
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.7446874380111694, 'loss_finetune': nan, 'loss_distill': 36.09954833984375, 'epoch': 1.47}
+ 81%|████████▏ | 13/16 [00:53<00:10,  3.34s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+                                               {'loss_total': nan, 'pure_loss': 0.32155612111091614, 'loss_finetune': nan, 'loss_distill': 172.53851318359375, 'epoch': 1.47}
+ 81%|████████▏ | 13/16 [00:53<00:10,  3.34s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.23495973646640778, 'loss_finetune': nan, 'loss_distill': 135.92604064941406, 'epoch': 1.47}
+ 81%|████████▏ | 13/16 [00:54<00:10,  3.34s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.4554632604122162, 'loss_finetune': nan, 'loss_distill': 172.72857666015625, 'epoch': 1.47}
+ 81%|████████▏ | 13/16 [00:54<00:10,  3.34s/it] 88%|████████▊ | 14/16 [00:55<00:06,  3.01s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.6112798452377319, 'loss_finetune': nan, 'loss_distill': 265.85443115234375, 'epoch': 1.59}
+ 88%|████████▊ | 14/16 [00:55<00:06,  3.01s/it]GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+                                               {'loss_total': nan, 'pure_loss': 0.8782725930213928, 'loss_finetune': nan, 'loss_distill': 115.89836120605469, 'epoch': 1.59}
+ 88%|████████▊ | 14/16 [00:56<00:06,  3.01s/it]alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.3518608808517456, 'loss_finetune': nan, 'loss_distill': 231.8956298828125, 'epoch': 1.59}
+ 88%|████████▊ | 14/16 [00:56<00:06,  3.01s/it]GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.5007510781288147, 'loss_finetune': nan, 'loss_distill': 52.00373840332031, 'epoch': 1.59}
+ 88%|████████▊ | 14/16 [00:57<00:06,  3.01s/it] 94%|█████████▍| 15/16 [00:57<00:02,  2.76s/it][INFO|trainer.py:3999] 2025-11-02 12:02:48,366 >> Saving model checkpoint to /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-15
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+[INFO|configuration_utils.py:691] 2025-11-02 12:02:48,390 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/config.json
+[INFO|configuration_utils.py:765] 2025-11-02 12:02:48,390 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 3072,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 32.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.1",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+[INFO|tokenization_utils_base.py:2510] 2025-11-02 12:02:49,963 >> tokenizer config file saved in /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-15/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2519] 2025-11-02 12:02:49,990 >> Special tokens file saved in /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-15/special_tokens_map.json
+[INFO|trainer.py:4098] 2025-11-02 12:02:59,162 >> Deleting older checkpoint [/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-5] due to args.save_total_limit
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+alpha= 0.0001
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.29121002554893494, 'loss_finetune': nan, 'loss_distill': 179.44139099121094, 'epoch': 1.71}
+ 94%|█████████▍| 15/16 [01:09<00:02,  2.76s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.2381163239479065, 'loss_finetune': nan, 'loss_distill': 109.67958068847656, 'epoch': 1.71}
+ 94%|█████████▍| 15/16 [01:09<00:02,  2.76s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.7887662649154663, 'loss_finetune': nan, 'loss_distill': 204.05093383789062, 'epoch': 1.71}
+ 94%|█████████▍| 15/16 [01:10<00:02,  2.76s/it]QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha=GGGGGGGGGGGGGG 
+0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+GGGGGGGGGGGGGG
+GGGGGGGGGGGGGG
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+alpha= 0.0001
+                                               {'loss_total': nan, 'pure_loss': 0.3905228078365326, 'loss_finetune': nan, 'loss_distill': 257.0600891113281, 'epoch': 1.71}
+ 94%|█████████▍| 15/16 [01:10<00:02,  2.76s/it]100%|██████████| 16/16 [01:11<00:00,  6.19s/it][INFO|trainer.py:3999] 2025-11-02 12:03:02,502 >> Saving model checkpoint to /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-16
+[INFO|configuration_utils.py:691] 2025-11-02 12:03:02,526 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/config.json
+[INFO|configuration_utils.py:765] 2025-11-02 12:03:02,526 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 3072,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 32.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.1",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+[INFO|tokenization_utils_base.py:2510] 2025-11-02 12:03:05,732 >> tokenizer config file saved in /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-16/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2519] 2025-11-02 12:03:05,733 >> Special tokens file saved in /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-16/special_tokens_map.json
+[INFO|trainer.py:4098] 2025-11-02 12:03:10,912 >> Deleting older checkpoint [/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-10] due to args.save_total_limit
+[INFO|trainer.py:2697] 2025-11-02 12:03:11,768 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+                                               {'train_runtime': 80.7745, 'train_samples_per_second': 4.952, 'train_steps_per_second': 0.198, 'train_loss': 354.26153564453125, 'epoch': 1.82}
+100%|██████████| 16/16 [01:20<00:00,  6.19s/it]100%|██████████| 16/16 [01:20<00:00,  5.05s/it]
+[INFO|trainer.py:3999] 2025-11-02 12:03:11,817 >> Saving model checkpoint to /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test
+[INFO|configuration_utils.py:691] 2025-11-02 12:03:11,843 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/config.json
+[INFO|configuration_utils.py:765] 2025-11-02 12:03:11,844 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 3072,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 32.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.1",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+[INFO|tokenization_utils_base.py:2510] 2025-11-02 12:03:14,522 >> tokenizer config file saved in /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2519] 2025-11-02 12:03:14,523 >> Special tokens file saved in /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/special_tokens_map.json
+***** train metrics *****
+  epoch                    =     1.8235
+  total_flos               =  2843634GF
+  train_loss               =   354.2615
+  train_runtime            = 0:01:20.77
+  train_samples_per_second =      4.952
+  train_steps_per_second   =      0.198
+Figure saved at: /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/training_loss.png
+[WARNING|2025-11-02 12:03:15] llamafactory.extras.ploting:148 >> No metric eval_loss to plot.
+[WARNING|2025-11-02 12:03:15] llamafactory.extras.ploting:148 >> No metric eval_accuracy to plot.
+[INFO|modelcard.py:450] 2025-11-02 12:03:15,226 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Causal Language Modeling', 'type': 'text-generation'}}
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@gpu10>
+Subject: Job 4425: <test-pat> in cluster <lsf_cluster_0> Done
+
+Job <test-pat> was submitted from host <node01> by user <duyuanProfV2> in cluster <lsf_cluster_0> at Sun Nov  2 11:57:00 2025
+Job was executed on host(s) <6*gpu10>, in queue <GPU_A800>, as user <duyuanProfV2> in cluster <lsf_cluster_0> at Sun Nov  2 11:57:01 2025
+</data/home/duyuanProfV2> was used as the home directory.
+</data/home/duyuanProfV2/workspace/qianxuzhen/gen/test_Pruning/LLaMA-Factory> was used as the working directory.
+Started at Sun Nov  2 11:57:01 2025
+Terminated at Sun Nov  2 12:03:29 2025
+Results reported at Sun Nov  2 12:03:29 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -q "GPU_A800" 
+#BSUB -J "test-pat" 
+#BSUB -outdir /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/output_log
+#BSUB -o output.log 
+#BSUB -e output.log 
+#BSUB -cwd /data/home/duyuanProfV2/workspace/qianxuzhen/gen/test_Pruning/LLaMA-Factory
+#BSUB -n 6
+#BSUB -gpu "num=6"
+
+source ~/.bashrc
+setproxy
+
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate test-pat
+bash train_pat.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   721.01 sec.
+    Max Memory :                                 20945 MB
+    Average Memory :                             7120.72 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              60
+    Max Threads :                                501
+    Run time :                                   384 sec.
+    Turnaround time :                            389 sec.
+
+The output (if any) is above this job summary.
+
+[INFO|2025-11-02 22:23:38] llamafactory.cli:143 >> Initializing 6 distributed tasks at: 127.0.0.1:37805
+[2025-11-02 22:23:39,905] torch.distributed.run: [WARNING] 
+[2025-11-02 22:23:39,905] torch.distributed.run: [WARNING] *****************************************
+[2025-11-02 22:23:39,905] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2025-11-02 22:23:39,905] torch.distributed.run: [WARNING] *****************************************
+[WARNING|2025-11-02 22:23:46] llamafactory.hparams.parser:148 >> `ddp_find_unused_parameters` needs to be set as False for LoRA in DDP training.
+[INFO|2025-11-02 22:23:46] llamafactory.hparams.parser:379 >> Process rank: 0, world size: 6, device: cuda:0, distributed training: True, compute dtype: torch.bfloat16
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 22:23:46,672 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 22:23:46,672 >> loading file tokenizer.model
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 22:23:46,672 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 22:23:46,672 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 22:23:46,672 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 22:23:46,672 >> loading file chat_template.jinja
+[INFO|2025-11-02 22:23:46] llamafactory.hparams.parser:379 >> Process rank: 1, world size: 6, device: cuda:1, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2025-11-02 22:23:46] llamafactory.hparams.parser:379 >> Process rank: 5, world size: 6, device: cuda:5, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2025-11-02 22:23:46] llamafactory.hparams.parser:379 >> Process rank: 2, world size: 6, device: cuda:2, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2025-11-02 22:23:46] llamafactory.hparams.parser:379 >> Process rank: 3, world size: 6, device: cuda:3, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2025-11-02 22:23:46] llamafactory.hparams.parser:379 >> Process rank: 4, world size: 6, device: cuda:4, distributed training: True, compute dtype: torch.bfloat16
+[INFO|tokenization_utils_base.py:2323] 2025-11-02 22:23:47,251 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|configuration_utils.py:691] 2025-11-02 22:23:47,252 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/config.json
+[INFO|configuration_utils.py:765] 2025-11-02 22:23:47,269 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 3072,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 32.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.1",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 22:23:47,270 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 22:23:47,270 >> loading file tokenizer.model
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 22:23:47,270 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 22:23:47,270 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 22:23:47,270 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2058] 2025-11-02 22:23:47,270 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2323] 2025-11-02 22:23:47,668 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|2025-11-02 22:23:47] llamafactory.data.template:143 >> Add pad token: <|end_of_text|>
+[INFO|2025-11-02 22:23:47] llamafactory.data.template:143 >> Add <|eot_id|>,<|eom_id|> to stop words.
+[INFO|2025-11-02 22:23:47] llamafactory.data.loader:143 >> Loading dataset /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/datasets/NLP/nvidia...
+Converting format of dataset (num_proc=16):   0%|          | 0/200 [00:00<?, ? examples/s]Converting format of dataset (num_proc=16):   6%|▋         | 13/200 [00:00<00:02, 66.66 examples/s]Converting format of dataset (num_proc=16): 100%|██████████| 200/200 [00:00<00:00, 652.70 examples/s]
+Running tokenizer on dataset (num_proc=16):   0%|          | 0/200 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=16):   6%|▋         | 13/200 [00:00<00:13, 14.27 examples/s]Running tokenizer on dataset (num_proc=16):  20%|█▉        | 39/200 [00:01<00:03, 45.70 examples/s]Running tokenizer on dataset (num_proc=16):  32%|███▎      | 65/200 [00:01<00:01, 75.96 examples/s]Running tokenizer on dataset (num_proc=16):  46%|████▌     | 91/200 [00:01<00:01, 81.68 examples/s]Running tokenizer on dataset (num_proc=16):  58%|█████▊    | 116/200 [00:01<00:01, 78.61 examples/s]Running tokenizer on dataset (num_proc=16):  64%|██████▍   | 128/200 [00:01<00:00, 83.37 examples/s]Running tokenizer on dataset (num_proc=16):  70%|███████   | 140/200 [00:02<00:00, 84.61 examples/s]Running tokenizer on dataset (num_proc=16):  82%|████████▏ | 164/200 [00:02<00:00, 101.03 examples/s]Running tokenizer on dataset (num_proc=16):  88%|████████▊ | 176/200 [00:02<00:00, 95.26 examples/s] Running tokenizer on dataset (num_proc=16):  94%|█████████▍| 188/200 [00:02<00:00, 97.09 examples/s]Running tokenizer on dataset (num_proc=16): 100%|██████████| 200/200 [00:02<00:00, 100.48 examples/s]Running tokenizer on dataset (num_proc=16): 100%|██████████| 200/200 [00:02<00:00, 75.39 examples/s] 
+training example:
+input_ids:
+[128000, 128006, 882, 128007, 271, 28487, 6944, 311, 3780, 264, 502, 13260, 323, 706, 2380, 2671, 25, 38930, 10343, 11, 42392, 13020, 11, 323, 15535, 20381, 13, 9062, 3637, 706, 2204, 7729, 369, 279, 13260, 11, 32635, 11, 323, 5409, 13, 2468, 38930, 10343, 11, 279, 13260, 7194, 400, 5154, 11, 279, 32635, 374, 400, 914, 11, 323, 279, 5409, 374, 400, 972, 13, 2468, 42392, 13020, 11, 279, 13260, 374, 400, 8610, 11, 279, 32635, 374, 400, 966, 11, 323, 279, 5409, 374, 400, 508, 13, 2468, 15535, 20381, 11, 279, 13260, 374, 400, 9870, 11, 279, 32635, 374, 400, 1313, 11, 323, 279, 5409, 374, 400, 868, 13, 2650, 1790, 1053, 8683, 8493, 520, 279, 43149, 3637, 30, 128009, 128006, 78191, 128007, 271, 1271, 1505, 279, 43149, 3637, 11, 584, 1205, 311, 11294, 279, 2860, 2853, 315, 279, 13260, 11, 32635, 11, 323, 5409, 520, 1855, 3637, 382, 1688, 38930, 10343, 11, 279, 2860, 2853, 374, 400, 5154, 489, 400, 914, 489, 400, 972, 284, 400, 17313, 382, 1688, 42392, 13020, 11, 279, 2860, 2853, 374, 400, 8610, 489, 400, 966, 489, 400, 508, 284, 400, 10914, 382, 1688, 15535, 20381, 11, 279, 2860, 2853, 374, 400, 9870, 489, 400, 1313, 489, 400, 868, 284, 400, 16567, 382, 17561, 287, 279, 2860, 7194, 11, 584, 649, 1518, 430, 15535, 20381, 374, 279, 43149, 3637, 382, 4516, 11, 8683, 1053, 8493, 1144, 80175, 90, 16567, 92, 11441, 520, 279, 43149, 3637, 13, 128009]
+inputs:
+<|begin_of_text|><|start_header_id|>user<|end_header_id|>
+
+Alex wants to buy a new bike and has three options: BikeWorld, CycleCity, and SpeedShop. Each store has different prices for the bike, helmet, and lock. At BikeWorld, the bike costs $250, the helmet is $25, and the lock is $18. At CycleCity, the bike is $220, the helmet is $30, and the lock is $20. At SpeedShop, the bike is $230, the helmet is $22, and the lock is $15. How much would Alex spend at the cheapest store?<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+To find the cheapest store, we need to calculate the total cost of the bike, helmet, and lock at each store.
+
+At BikeWorld, the total cost is $250 + $25 + $18 = $293.
+
+At CycleCity, the total cost is $220 + $30 + $20 = $270.
+
+At SpeedShop, the total cost is $230 + $22 + $15 = $267.
+
+Comparing the total costs, we can see that SpeedShop is the cheapest store.
+
+So, Alex would spend \boxed{267} dollars at the cheapest store.<|eot_id|>
+label_ids:
+[-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 1271, 1505, 279, 43149, 3637, 11, 584, 1205, 311, 11294, 279, 2860, 2853, 315, 279, 13260, 11, 32635, 11, 323, 5409, 520, 1855, 3637, 382, 1688, 38930, 10343, 11, 279, 2860, 2853, 374, 400, 5154, 489, 400, 914, 489, 400, 972, 284, 400, 17313, 382, 1688, 42392, 13020, 11, 279, 2860, 2853, 374, 400, 8610, 489, 400, 966, 489, 400, 508, 284, 400, 10914, 382, 1688, 15535, 20381, 11, 279, 2860, 2853, 374, 400, 9870, 489, 400, 1313, 489, 400, 868, 284, 400, 16567, 382, 17561, 287, 279, 2860, 7194, 11, 584, 649, 1518, 430, 15535, 20381, 374, 279, 43149, 3637, 382, 4516, 11, 8683, 1053, 8493, 1144, 80175, 90, 16567, 92, 11441, 520, 279, 43149, 3637, 13, 128009]
+labels:
+To find the cheapest store, we need to calculate the total cost of the bike, helmet, and lock at each store.
+
+At BikeWorld, the total cost is $250 + $25 + $18 = $293.
+
+At CycleCity, the total cost is $220 + $30 + $20 = $270.
+
+At SpeedShop, the total cost is $230 + $22 + $15 = $267.
+
+Comparing the total costs, we can see that SpeedShop is the cheapest store.
+
+So, Alex would spend \boxed{267} dollars at the cheapest store.<|eot_id|>
+[INFO|configuration_utils.py:691] 2025-11-02 22:24:09,563 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/config.json
+[INFO|configuration_utils.py:765] 2025-11-02 22:24:09,564 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 3072,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 32.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.1",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+[INFO|2025-11-02 22:24:09] llamafactory.model.model_utils.kv_cache:143 >> KV cache is disabled during training.
+[INFO|modeling_utils.py:1121] 2025-11-02 22:24:11,856 >> loading weights file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/model.safetensors.index.json
+[INFO|modeling_utils.py:2167] 2025-11-02 22:24:11,873 >> Instantiating LlamaForCausalLM model under default dtype torch.bfloat16.
+[INFO|configuration_utils.py:1142] 2025-11-02 22:24:11,876 >> Generate config GenerationConfig {
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "use_cache": false
+}
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:18<01:18, 78.50s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:18<01:18, 78.83s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:18<01:18, 78.84s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:18<01:18, 78.83s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:18<01:18, 78.85s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:18<01:18, 78.85s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:28<00:00, 38.28s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:28<00:00, 44.31s/it]
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.16.HIO_A_Attn', 'model.layers.16.HIO_A_MLP', 'model.layers.16.HIO_B_Attn', 'model.layers.16.HIO_B_MLP', 'model.layers.16.mlp.HIO_A_down_proj', 'model.layers.16.mlp.HIO_B_down_proj', 'model.layers.16.mlp.HSM_mask_proxy', 'model.layers.17.HIO_A_Attn', 'model.layers.17.HIO_A_MLP', 'model.layers.17.HIO_B_Attn', 'model.layers.17.HIO_B_MLP', 'model.layers.17.mlp.HIO_A_down_proj', 'model.layers.17.mlp.HIO_B_down_proj', 'model.layers.17.mlp.HSM_mask_proxy', 'model.layers.18.HIO_A_Attn', 'model.layers.18.HIO_A_MLP', 'model.layers.18.HIO_B_Attn', 'model.layers.18.HIO_B_MLP', 'model.layers.18.mlp.HIO_A_down_proj', 'model.layers.18.mlp.HIO_B_down_proj', 'model.layers.18.mlp.HSM_mask_proxy', 'model.layers.19.HIO_A_Attn', 'model.layers.19.HIO_A_MLP', 'model.layers.19.HIO_B_Attn', 'model.layers.19.HIO_B_MLP', 'model.layers.19.mlp.HIO_A_down_proj', 'model.layers.19.mlp.HIO_B_down_proj', 'model.layers.19.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.20.HIO_A_Attn', 'model.layers.20.HIO_A_MLP', 'model.layers.20.HIO_B_Attn', 'model.layers.20.HIO_B_MLP', 'model.layers.20.mlp.HIO_A_down_proj', 'model.layers.20.mlp.HIO_B_down_proj', 'model.layers.20.mlp.HSM_mask_proxy', 'model.layers.21.HIO_A_Attn', 'model.layers.21.HIO_A_MLP', 'model.layers.21.HIO_B_Attn', 'model.layers.21.HIO_B_MLP', 'model.layers.21.mlp.HIO_A_down_proj', 'model.layers.21.mlp.HIO_B_down_proj', 'model.layers.21.mlp.HSM_mask_proxy', 'model.layers.22.HIO_A_Attn', 'model.layers.22.HIO_A_MLP', 'model.layers.22.HIO_B_Attn', 'model.layers.22.HIO_B_MLP', 'model.layers.22.mlp.HIO_A_down_proj', 'model.layers.22.mlp.HIO_B_down_proj', 'model.layers.22.mlp.HSM_mask_proxy', 'model.layers.23.HIO_A_Attn', 'model.layers.23.HIO_A_MLP', 'model.layers.23.HIO_B_Attn', 'model.layers.23.HIO_B_MLP', 'model.layers.23.mlp.HIO_A_down_proj', 'model.layers.23.mlp.HIO_B_down_proj', 'model.layers.23.mlp.HSM_mask_proxy', 'model.layers.24.HIO_A_Attn', 'model.layers.24.HIO_A_MLP', 'model.layers.24.HIO_B_Attn', 'model.layers.24.HIO_B_MLP', 'model.layers.24.mlp.HIO_A_down_proj', 'model.layers.24.mlp.HIO_B_down_proj', 'model.layers.24.mlp.HSM_mask_proxy', 'model.layers.25.HIO_A_Attn', 'model.layers.25.HIO_A_MLP', 'model.layers.25.HIO_B_Attn', 'model.layers.25.HIO_B_MLP', 'model.layers.25.mlp.HIO_A_down_proj', 'model.layers.25.mlp.HIO_B_down_proj', 'model.layers.25.mlp.HSM_mask_proxy', 'model.layers.26.HIO_A_Attn', 'model.layers.26.HIO_A_MLP', 'model.layers.26.HIO_B_Attn', 'model.layers.26.HIO_B_MLP', 'model.layers.26.mlp.HIO_A_down_proj', 'model.layers.26.mlp.HIO_B_down_proj', 'model.layers.26.mlp.HSM_mask_proxy', 'model.layers.27.HIO_A_Attn', 'model.layers.27.HIO_A_MLP', 'model.layers.27.HIO_B_Attn', 'model.layers.27.HIO_B_MLP', 'model.layers.27.mlp.HIO_A_down_proj', 'model.layers.27.mlp.HIO_B_down_proj', 'model.layers.27.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards: 100%|██████████| 2/2 [01:28<00:00, 38.27s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:28<00:00, 44.35s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:28<00:00, 38.28s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [01:28<00:00, 38.27s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:28<00:00, 44.36s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [01:28<00:00, 44.35s/it]
+[INFO|modeling_utils.py:4930] 2025-11-02 22:25:42,190 >> All model checkpoint weights were used when initializing LlamaForCausalLM.
+
+[WARNING|modeling_utils.py:4932] 2025-11-02 22:25:42,191 >> Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.16.HIO_A_Attn', 'model.layers.16.HIO_A_MLP', 'model.layers.16.HIO_B_Attn', 'model.layers.16.HIO_B_MLP', 'model.layers.16.mlp.HIO_A_down_proj', 'model.layers.16.mlp.HIO_B_down_proj', 'model.layers.16.mlp.HSM_mask_proxy', 'model.layers.17.HIO_A_Attn', 'model.layers.17.HIO_A_MLP', 'model.layers.17.HIO_B_Attn', 'model.layers.17.HIO_B_MLP', 'model.layers.17.mlp.HIO_A_down_proj', 'model.layers.17.mlp.HIO_B_down_proj', 'model.layers.17.mlp.HSM_mask_proxy', 'model.layers.18.HIO_A_Attn', 'model.layers.18.HIO_A_MLP', 'model.layers.18.HIO_B_Attn', 'model.layers.18.HIO_B_MLP', 'model.layers.18.mlp.HIO_A_down_proj', 'model.layers.18.mlp.HIO_B_down_proj', 'model.layers.18.mlp.HSM_mask_proxy', 'model.layers.19.HIO_A_Attn', 'model.layers.19.HIO_A_MLP', 'model.layers.19.HIO_B_Attn', 'model.layers.19.HIO_B_MLP', 'model.layers.19.mlp.HIO_A_down_proj', 'model.layers.19.mlp.HIO_B_down_proj', 'model.layers.19.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.20.HIO_A_Attn', 'model.layers.20.HIO_A_MLP', 'model.layers.20.HIO_B_Attn', 'model.layers.20.HIO_B_MLP', 'model.layers.20.mlp.HIO_A_down_proj', 'model.layers.20.mlp.HIO_B_down_proj', 'model.layers.20.mlp.HSM_mask_proxy', 'model.layers.21.HIO_A_Attn', 'model.layers.21.HIO_A_MLP', 'model.layers.21.HIO_B_Attn', 'model.layers.21.HIO_B_MLP', 'model.layers.21.mlp.HIO_A_down_proj', 'model.layers.21.mlp.HIO_B_down_proj', 'model.layers.21.mlp.HSM_mask_proxy', 'model.layers.22.HIO_A_Attn', 'model.layers.22.HIO_A_MLP', 'model.layers.22.HIO_B_Attn', 'model.layers.22.HIO_B_MLP', 'model.layers.22.mlp.HIO_A_down_proj', 'model.layers.22.mlp.HIO_B_down_proj', 'model.layers.22.mlp.HSM_mask_proxy', 'model.layers.23.HIO_A_Attn', 'model.layers.23.HIO_A_MLP', 'model.layers.23.HIO_B_Attn', 'model.layers.23.HIO_B_MLP', 'model.layers.23.mlp.HIO_A_down_proj', 'model.layers.23.mlp.HIO_B_down_proj', 'model.layers.23.mlp.HSM_mask_proxy', 'model.layers.24.HIO_A_Attn', 'model.layers.24.HIO_A_MLP', 'model.layers.24.HIO_B_Attn', 'model.layers.24.HIO_B_MLP', 'model.layers.24.mlp.HIO_A_down_proj', 'model.layers.24.mlp.HIO_B_down_proj', 'model.layers.24.mlp.HSM_mask_proxy', 'model.layers.25.HIO_A_Attn', 'model.layers.25.HIO_A_MLP', 'model.layers.25.HIO_B_Attn', 'model.layers.25.HIO_B_MLP', 'model.layers.25.mlp.HIO_A_down_proj', 'model.layers.25.mlp.HIO_B_down_proj', 'model.layers.25.mlp.HSM_mask_proxy', 'model.layers.26.HIO_A_Attn', 'model.layers.26.HIO_A_MLP', 'model.layers.26.HIO_B_Attn', 'model.layers.26.HIO_B_MLP', 'model.layers.26.mlp.HIO_A_down_proj', 'model.layers.26.mlp.HIO_B_down_proj', 'model.layers.26.mlp.HSM_mask_proxy', 'model.layers.27.HIO_A_Attn', 'model.layers.27.HIO_A_MLP', 'model.layers.27.HIO_B_Attn', 'model.layers.27.HIO_B_MLP', 'model.layers.27.mlp.HIO_A_down_proj', 'model.layers.27.mlp.HIO_B_down_proj', 'model.layers.27.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards: 100%|██████████| 2/2 [01:28<00:00, 38.28s/it]Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.16.HIO_A_Attn', 'model.layers.16.HIO_A_MLP', 'model.layers.16.HIO_B_Attn', 'model.layers.16.HIO_B_MLP', 'model.layers.16.mlp.HIO_A_down_proj', 'model.layers.16.mlp.HIO_B_down_proj', 'model.layers.16.mlp.HSM_mask_proxy', 'model.layers.17.HIO_A_Attn', 'model.layers.17.HIO_A_MLP', 'model.layers.17.HIO_B_Attn', 'model.layers.17.HIO_B_MLP', 'model.layers.17.mlp.HIO_A_down_proj', 'model.layers.17.mlp.HIO_B_down_proj', 'model.layers.17.mlp.HSM_mask_proxy', 'model.layers.18.HIO_A_Attn', 'model.layers.18.HIO_A_MLP', 'model.layers.18.HIO_B_Attn', 'model.layers.18.HIO_B_MLP', 'model.layers.18.mlp.HIO_A_down_proj', 'model.layers.18.mlp.HIO_B_down_proj', 'model.layers.18.mlp.HSM_mask_proxy', 'model.layers.19.HIO_A_Attn', 'model.layers.19.HIO_A_MLP', 'model.layers.19.HIO_B_Attn', 'model.layers.19.HIO_B_MLP', 'model.layers.19.mlp.HIO_A_down_proj', 'model.layers.19.mlp.HIO_B_down_proj', 'model.layers.19.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.20.HIO_A_Attn', 'model.layers.20.HIO_A_MLP', 'model.layers.20.HIO_B_Attn', 'model.layers.20.HIO_B_MLP', 'model.layers.20.mlp.HIO_A_down_proj', 'model.layers.20.mlp.HIO_B_down_proj', 'model.layers.20.mlp.HSM_mask_proxy', 'model.layers.21.HIO_A_Attn', 'model.layers.21.HIO_A_MLP', 'model.layers.21.HIO_B_Attn', 'model.layers.21.HIO_B_MLP', 'model.layers.21.mlp.HIO_A_down_proj', 'model.layers.21.mlp.HIO_B_down_proj', 'model.layers.21.mlp.HSM_mask_proxy', 'model.layers.22.HIO_A_Attn', 'model.layers.22.HIO_A_MLP', 'model.layers.22.HIO_B_Attn', 'model.layers.22.HIO_B_MLP', 'model.layers.22.mlp.HIO_A_down_proj', 'model.layers.22.mlp.HIO_B_down_proj', 'model.layers.22.mlp.HSM_mask_proxy', 'model.layers.23.HIO_A_Attn', 'model.layers.23.HIO_A_MLP', 'model.layers.23.HIO_B_Attn', 'model.layers.23.HIO_B_MLP', 'model.layers.23.mlp.HIO_A_down_proj', 'model.layers.23.mlp.HIO_B_down_proj', 'model.layers.23.mlp.HSM_mask_proxy', 'model.layers.24.HIO_A_Attn', 'model.layers.24.HIO_A_MLP', 'model.layers.24.HIO_B_Attn', 'model.layers.24.HIO_B_MLP', 'model.layers.24.mlp.HIO_A_down_proj', 'model.layers.24.mlp.HIO_B_down_proj', 'model.layers.24.mlp.HSM_mask_proxy', 'model.layers.25.HIO_A_Attn', 'model.layers.25.HIO_A_MLP', 'model.layers.25.HIO_B_Attn', 'model.layers.25.HIO_B_MLP', 'model.layers.25.mlp.HIO_A_down_proj', 'model.layers.25.mlp.HIO_B_down_proj', 'model.layers.25.mlp.HSM_mask_proxy', 'model.layers.26.HIO_A_Attn', 'model.layers.26.HIO_A_MLP', 'model.layers.26.HIO_B_Attn', 'model.layers.26.HIO_B_MLP', 'model.layers.26.mlp.HIO_A_down_proj', 'model.layers.26.mlp.HIO_B_down_proj', 'model.layers.26.mlp.HSM_mask_proxy', 'model.layers.27.HIO_A_Attn', 'model.layers.27.HIO_A_MLP', 'model.layers.27.HIO_B_Attn', 'model.layers.27.HIO_B_MLP', 'model.layers.27.mlp.HIO_A_down_proj', 'model.layers.27.mlp.HIO_B_down_proj', 'model.layers.27.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.16.HIO_A_Attn', 'model.layers.16.HIO_A_MLP', 'model.layers.16.HIO_B_Attn', 'model.layers.16.HIO_B_MLP', 'model.layers.16.mlp.HIO_A_down_proj', 'model.layers.16.mlp.HIO_B_down_proj', 'model.layers.16.mlp.HSM_mask_proxy', 'model.layers.17.HIO_A_Attn', 'model.layers.17.HIO_A_MLP', 'model.layers.17.HIO_B_Attn', 'model.layers.17.HIO_B_MLP', 'model.layers.17.mlp.HIO_A_down_proj', 'model.layers.17.mlp.HIO_B_down_proj', 'model.layers.17.mlp.HSM_mask_proxy', 'model.layers.18.HIO_A_Attn', 'model.layers.18.HIO_A_MLP', 'model.layers.18.HIO_B_Attn', 'model.layers.18.HIO_B_MLP', 'model.layers.18.mlp.HIO_A_down_proj', 'model.layers.18.mlp.HIO_B_down_proj', 'model.layers.18.mlp.HSM_mask_proxy', 'model.layers.19.HIO_A_Attn', 'model.layers.19.HIO_A_MLP', 'model.layers.19.HIO_B_Attn', 'model.layers.19.HIO_B_MLP', 'model.layers.19.mlp.HIO_A_down_proj', 'model.layers.19.mlp.HIO_B_down_proj', 'model.layers.19.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.20.HIO_A_Attn', 'model.layers.20.HIO_A_MLP', 'model.layers.20.HIO_B_Attn', 'model.layers.20.HIO_B_MLP', 'model.layers.20.mlp.HIO_A_down_proj', 'model.layers.20.mlp.HIO_B_down_proj', 'model.layers.20.mlp.HSM_mask_proxy', 'model.layers.21.HIO_A_Attn', 'model.layers.21.HIO_A_MLP', 'model.layers.21.HIO_B_Attn', 'model.layers.21.HIO_B_MLP', 'model.layers.21.mlp.HIO_A_down_proj', 'model.layers.21.mlp.HIO_B_down_proj', 'model.layers.21.mlp.HSM_mask_proxy', 'model.layers.22.HIO_A_Attn', 'model.layers.22.HIO_A_MLP', 'model.layers.22.HIO_B_Attn', 'model.layers.22.HIO_B_MLP', 'model.layers.22.mlp.HIO_A_down_proj', 'model.layers.22.mlp.HIO_B_down_proj', 'model.layers.22.mlp.HSM_mask_proxy', 'model.layers.23.HIO_A_Attn', 'model.layers.23.HIO_A_MLP', 'model.layers.23.HIO_B_Attn', 'model.layers.23.HIO_B_MLP', 'model.layers.23.mlp.HIO_A_down_proj', 'model.layers.23.mlp.HIO_B_down_proj', 'model.layers.23.mlp.HSM_mask_proxy', 'model.layers.24.HIO_A_Attn', 'model.layers.24.HIO_A_MLP', 'model.layers.24.HIO_B_Attn', 'model.layers.24.HIO_B_MLP', 'model.layers.24.mlp.HIO_A_down_proj', 'model.layers.24.mlp.HIO_B_down_proj', 'model.layers.24.mlp.HSM_mask_proxy', 'model.layers.25.HIO_A_Attn', 'model.layers.25.HIO_A_MLP', 'model.layers.25.HIO_B_Attn', 'model.layers.25.HIO_B_MLP', 'model.layers.25.mlp.HIO_A_down_proj', 'model.layers.25.mlp.HIO_B_down_proj', 'model.layers.25.mlp.HSM_mask_proxy', 'model.layers.26.HIO_A_Attn', 'model.layers.26.HIO_A_MLP', 'model.layers.26.HIO_B_Attn', 'model.layers.26.HIO_B_MLP', 'model.layers.26.mlp.HIO_A_down_proj', 'model.layers.26.mlp.HIO_B_down_proj', 'model.layers.26.mlp.HSM_mask_proxy', 'model.layers.27.HIO_A_Attn', 'model.layers.27.HIO_A_MLP', 'model.layers.27.HIO_B_Attn', 'model.layers.27.HIO_B_MLP', 'model.layers.27.mlp.HIO_A_down_proj', 'model.layers.27.mlp.HIO_B_down_proj', 'model.layers.27.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards: 100%|██████████| 2/2 [01:28<00:00, 44.36s/it]
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.16.HIO_A_Attn', 'model.layers.16.HIO_A_MLP', 'model.layers.16.HIO_B_Attn', 'model.layers.16.HIO_B_MLP', 'model.layers.16.mlp.HIO_A_down_proj', 'model.layers.16.mlp.HIO_B_down_proj', 'model.layers.16.mlp.HSM_mask_proxy', 'model.layers.17.HIO_A_Attn', 'model.layers.17.HIO_A_MLP', 'model.layers.17.HIO_B_Attn', 'model.layers.17.HIO_B_MLP', 'model.layers.17.mlp.HIO_A_down_proj', 'model.layers.17.mlp.HIO_B_down_proj', 'model.layers.17.mlp.HSM_mask_proxy', 'model.layers.18.HIO_A_Attn', 'model.layers.18.HIO_A_MLP', 'model.layers.18.HIO_B_Attn', 'model.layers.18.HIO_B_MLP', 'model.layers.18.mlp.HIO_A_down_proj', 'model.layers.18.mlp.HIO_B_down_proj', 'model.layers.18.mlp.HSM_mask_proxy', 'model.layers.19.HIO_A_Attn', 'model.layers.19.HIO_A_MLP', 'model.layers.19.HIO_B_Attn', 'model.layers.19.HIO_B_MLP', 'model.layers.19.mlp.HIO_A_down_proj', 'model.layers.19.mlp.HIO_B_down_proj', 'model.layers.19.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.20.HIO_A_Attn', 'model.layers.20.HIO_A_MLP', 'model.layers.20.HIO_B_Attn', 'model.layers.20.HIO_B_MLP', 'model.layers.20.mlp.HIO_A_down_proj', 'model.layers.20.mlp.HIO_B_down_proj', 'model.layers.20.mlp.HSM_mask_proxy', 'model.layers.21.HIO_A_Attn', 'model.layers.21.HIO_A_MLP', 'model.layers.21.HIO_B_Attn', 'model.layers.21.HIO_B_MLP', 'model.layers.21.mlp.HIO_A_down_proj', 'model.layers.21.mlp.HIO_B_down_proj', 'model.layers.21.mlp.HSM_mask_proxy', 'model.layers.22.HIO_A_Attn', 'model.layers.22.HIO_A_MLP', 'model.layers.22.HIO_B_Attn', 'model.layers.22.HIO_B_MLP', 'model.layers.22.mlp.HIO_A_down_proj', 'model.layers.22.mlp.HIO_B_down_proj', 'model.layers.22.mlp.HSM_mask_proxy', 'model.layers.23.HIO_A_Attn', 'model.layers.23.HIO_A_MLP', 'model.layers.23.HIO_B_Attn', 'model.layers.23.HIO_B_MLP', 'model.layers.23.mlp.HIO_A_down_proj', 'model.layers.23.mlp.HIO_B_down_proj', 'model.layers.23.mlp.HSM_mask_proxy', 'model.layers.24.HIO_A_Attn', 'model.layers.24.HIO_A_MLP', 'model.layers.24.HIO_B_Attn', 'model.layers.24.HIO_B_MLP', 'model.layers.24.mlp.HIO_A_down_proj', 'model.layers.24.mlp.HIO_B_down_proj', 'model.layers.24.mlp.HSM_mask_proxy', 'model.layers.25.HIO_A_Attn', 'model.layers.25.HIO_A_MLP', 'model.layers.25.HIO_B_Attn', 'model.layers.25.HIO_B_MLP', 'model.layers.25.mlp.HIO_A_down_proj', 'model.layers.25.mlp.HIO_B_down_proj', 'model.layers.25.mlp.HSM_mask_proxy', 'model.layers.26.HIO_A_Attn', 'model.layers.26.HIO_A_MLP', 'model.layers.26.HIO_B_Attn', 'model.layers.26.HIO_B_MLP', 'model.layers.26.mlp.HIO_A_down_proj', 'model.layers.26.mlp.HIO_B_down_proj', 'model.layers.26.mlp.HSM_mask_proxy', 'model.layers.27.HIO_A_Attn', 'model.layers.27.HIO_A_MLP', 'model.layers.27.HIO_B_Attn', 'model.layers.27.HIO_B_MLP', 'model.layers.27.mlp.HIO_A_down_proj', 'model.layers.27.mlp.HIO_B_down_proj', 'model.layers.27.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards: 100%|██████████| 2/2 [01:28<00:00, 38.28s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:28<00:00, 44.36s/it]
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B and are newly initialized: ['model.HIO_A_Emb', 'model.HIO_B_Emb', 'model.HSM_mask_proxy', 'model.layers.0.HIO_A_Attn', 'model.layers.0.HIO_A_MLP', 'model.layers.0.HIO_B_Attn', 'model.layers.0.HIO_B_MLP', 'model.layers.0.mlp.HIO_A_down_proj', 'model.layers.0.mlp.HIO_B_down_proj', 'model.layers.0.mlp.HSM_mask_proxy', 'model.layers.1.HIO_A_Attn', 'model.layers.1.HIO_A_MLP', 'model.layers.1.HIO_B_Attn', 'model.layers.1.HIO_B_MLP', 'model.layers.1.mlp.HIO_A_down_proj', 'model.layers.1.mlp.HIO_B_down_proj', 'model.layers.1.mlp.HSM_mask_proxy', 'model.layers.10.HIO_A_Attn', 'model.layers.10.HIO_A_MLP', 'model.layers.10.HIO_B_Attn', 'model.layers.10.HIO_B_MLP', 'model.layers.10.mlp.HIO_A_down_proj', 'model.layers.10.mlp.HIO_B_down_proj', 'model.layers.10.mlp.HSM_mask_proxy', 'model.layers.11.HIO_A_Attn', 'model.layers.11.HIO_A_MLP', 'model.layers.11.HIO_B_Attn', 'model.layers.11.HIO_B_MLP', 'model.layers.11.mlp.HIO_A_down_proj', 'model.layers.11.mlp.HIO_B_down_proj', 'model.layers.11.mlp.HSM_mask_proxy', 'model.layers.12.HIO_A_Attn', 'model.layers.12.HIO_A_MLP', 'model.layers.12.HIO_B_Attn', 'model.layers.12.HIO_B_MLP', 'model.layers.12.mlp.HIO_A_down_proj', 'model.layers.12.mlp.HIO_B_down_proj', 'model.layers.12.mlp.HSM_mask_proxy', 'model.layers.13.HIO_A_Attn', 'model.layers.13.HIO_A_MLP', 'model.layers.13.HIO_B_Attn', 'model.layers.13.HIO_B_MLP', 'model.layers.13.mlp.HIO_A_down_proj', 'model.layers.13.mlp.HIO_B_down_proj', 'model.layers.13.mlp.HSM_mask_proxy', 'model.layers.14.HIO_A_Attn', 'model.layers.14.HIO_A_MLP', 'model.layers.14.HIO_B_Attn', 'model.layers.14.HIO_B_MLP', 'model.layers.14.mlp.HIO_A_down_proj', 'model.layers.14.mlp.HIO_B_down_proj', 'model.layers.14.mlp.HSM_mask_proxy', 'model.layers.15.HIO_A_Attn', 'model.layers.15.HIO_A_MLP', 'model.layers.15.HIO_B_Attn', 'model.layers.15.HIO_B_MLP', 'model.layers.15.mlp.HIO_A_down_proj', 'model.layers.15.mlp.HIO_B_down_proj', 'model.layers.15.mlp.HSM_mask_proxy', 'model.layers.16.HIO_A_Attn', 'model.layers.16.HIO_A_MLP', 'model.layers.16.HIO_B_Attn', 'model.layers.16.HIO_B_MLP', 'model.layers.16.mlp.HIO_A_down_proj', 'model.layers.16.mlp.HIO_B_down_proj', 'model.layers.16.mlp.HSM_mask_proxy', 'model.layers.17.HIO_A_Attn', 'model.layers.17.HIO_A_MLP', 'model.layers.17.HIO_B_Attn', 'model.layers.17.HIO_B_MLP', 'model.layers.17.mlp.HIO_A_down_proj', 'model.layers.17.mlp.HIO_B_down_proj', 'model.layers.17.mlp.HSM_mask_proxy', 'model.layers.18.HIO_A_Attn', 'model.layers.18.HIO_A_MLP', 'model.layers.18.HIO_B_Attn', 'model.layers.18.HIO_B_MLP', 'model.layers.18.mlp.HIO_A_down_proj', 'model.layers.18.mlp.HIO_B_down_proj', 'model.layers.18.mlp.HSM_mask_proxy', 'model.layers.19.HIO_A_Attn', 'model.layers.19.HIO_A_MLP', 'model.layers.19.HIO_B_Attn', 'model.layers.19.HIO_B_MLP', 'model.layers.19.mlp.HIO_A_down_proj', 'model.layers.19.mlp.HIO_B_down_proj', 'model.layers.19.mlp.HSM_mask_proxy', 'model.layers.2.HIO_A_Attn', 'model.layers.2.HIO_A_MLP', 'model.layers.2.HIO_B_Attn', 'model.layers.2.HIO_B_MLP', 'model.layers.2.mlp.HIO_A_down_proj', 'model.layers.2.mlp.HIO_B_down_proj', 'model.layers.2.mlp.HSM_mask_proxy', 'model.layers.20.HIO_A_Attn', 'model.layers.20.HIO_A_MLP', 'model.layers.20.HIO_B_Attn', 'model.layers.20.HIO_B_MLP', 'model.layers.20.mlp.HIO_A_down_proj', 'model.layers.20.mlp.HIO_B_down_proj', 'model.layers.20.mlp.HSM_mask_proxy', 'model.layers.21.HIO_A_Attn', 'model.layers.21.HIO_A_MLP', 'model.layers.21.HIO_B_Attn', 'model.layers.21.HIO_B_MLP', 'model.layers.21.mlp.HIO_A_down_proj', 'model.layers.21.mlp.HIO_B_down_proj', 'model.layers.21.mlp.HSM_mask_proxy', 'model.layers.22.HIO_A_Attn', 'model.layers.22.HIO_A_MLP', 'model.layers.22.HIO_B_Attn', 'model.layers.22.HIO_B_MLP', 'model.layers.22.mlp.HIO_A_down_proj', 'model.layers.22.mlp.HIO_B_down_proj', 'model.layers.22.mlp.HSM_mask_proxy', 'model.layers.23.HIO_A_Attn', 'model.layers.23.HIO_A_MLP', 'model.layers.23.HIO_B_Attn', 'model.layers.23.HIO_B_MLP', 'model.layers.23.mlp.HIO_A_down_proj', 'model.layers.23.mlp.HIO_B_down_proj', 'model.layers.23.mlp.HSM_mask_proxy', 'model.layers.24.HIO_A_Attn', 'model.layers.24.HIO_A_MLP', 'model.layers.24.HIO_B_Attn', 'model.layers.24.HIO_B_MLP', 'model.layers.24.mlp.HIO_A_down_proj', 'model.layers.24.mlp.HIO_B_down_proj', 'model.layers.24.mlp.HSM_mask_proxy', 'model.layers.25.HIO_A_Attn', 'model.layers.25.HIO_A_MLP', 'model.layers.25.HIO_B_Attn', 'model.layers.25.HIO_B_MLP', 'model.layers.25.mlp.HIO_A_down_proj', 'model.layers.25.mlp.HIO_B_down_proj', 'model.layers.25.mlp.HSM_mask_proxy', 'model.layers.26.HIO_A_Attn', 'model.layers.26.HIO_A_MLP', 'model.layers.26.HIO_B_Attn', 'model.layers.26.HIO_B_MLP', 'model.layers.26.mlp.HIO_A_down_proj', 'model.layers.26.mlp.HIO_B_down_proj', 'model.layers.26.mlp.HSM_mask_proxy', 'model.layers.27.HIO_A_Attn', 'model.layers.27.HIO_A_MLP', 'model.layers.27.HIO_B_Attn', 'model.layers.27.HIO_B_MLP', 'model.layers.27.mlp.HIO_A_down_proj', 'model.layers.27.mlp.HIO_B_down_proj', 'model.layers.27.mlp.HSM_mask_proxy', 'model.layers.3.HIO_A_Attn', 'model.layers.3.HIO_A_MLP', 'model.layers.3.HIO_B_Attn', 'model.layers.3.HIO_B_MLP', 'model.layers.3.mlp.HIO_A_down_proj', 'model.layers.3.mlp.HIO_B_down_proj', 'model.layers.3.mlp.HSM_mask_proxy', 'model.layers.4.HIO_A_Attn', 'model.layers.4.HIO_A_MLP', 'model.layers.4.HIO_B_Attn', 'model.layers.4.HIO_B_MLP', 'model.layers.4.mlp.HIO_A_down_proj', 'model.layers.4.mlp.HIO_B_down_proj', 'model.layers.4.mlp.HSM_mask_proxy', 'model.layers.5.HIO_A_Attn', 'model.layers.5.HIO_A_MLP', 'model.layers.5.HIO_B_Attn', 'model.layers.5.HIO_B_MLP', 'model.layers.5.mlp.HIO_A_down_proj', 'model.layers.5.mlp.HIO_B_down_proj', 'model.layers.5.mlp.HSM_mask_proxy', 'model.layers.6.HIO_A_Attn', 'model.layers.6.HIO_A_MLP', 'model.layers.6.HIO_B_Attn', 'model.layers.6.HIO_B_MLP', 'model.layers.6.mlp.HIO_A_down_proj', 'model.layers.6.mlp.HIO_B_down_proj', 'model.layers.6.mlp.HSM_mask_proxy', 'model.layers.7.HIO_A_Attn', 'model.layers.7.HIO_A_MLP', 'model.layers.7.HIO_B_Attn', 'model.layers.7.HIO_B_MLP', 'model.layers.7.mlp.HIO_A_down_proj', 'model.layers.7.mlp.HIO_B_down_proj', 'model.layers.7.mlp.HSM_mask_proxy', 'model.layers.8.HIO_A_Attn', 'model.layers.8.HIO_A_MLP', 'model.layers.8.HIO_B_Attn', 'model.layers.8.HIO_B_MLP', 'model.layers.8.mlp.HIO_A_down_proj', 'model.layers.8.mlp.HIO_B_down_proj', 'model.layers.8.mlp.HSM_mask_proxy', 'model.layers.9.HIO_A_Attn', 'model.layers.9.HIO_A_MLP', 'model.layers.9.HIO_B_Attn', 'model.layers.9.HIO_B_MLP', 'model.layers.9.mlp.HIO_A_down_proj', 'model.layers.9.mlp.HIO_B_down_proj', 'model.layers.9.mlp.HSM_mask_proxy']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[INFO|configuration_utils.py:1095] 2025-11-02 22:25:42,194 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/generation_config.json
+[INFO|configuration_utils.py:1142] 2025-11-02 22:25:42,194 >> Generate config GenerationConfig {
+  "bos_token_id": 128000,
+  "do_sample": true,
+  "eos_token_id": 128001,
+  "temperature": 0.6,
+  "top_p": 0.9
+}
+
+[INFO|2025-11-02 22:25:42] llamafactory.model.model_utils.checkpointing:143 >> Gradient checkpointing enabled.
+[INFO|2025-11-02 22:25:42] llamafactory.model.model_utils.attention:143 >> Using FlashAttention-2 for faster training and inference.
+[INFO|2025-11-02 22:25:42] llamafactory.model.adapter:143 >> Upcasting trainable params to float32.
+[INFO|2025-11-02 22:25:42] llamafactory.model.adapter:143 >> Fine-tuning method: LoRA
+[INFO|2025-11-02 22:25:42] llamafactory.model.model_utils.misc:143 >> Found linear modules: gate_proj,v_proj,up_proj,down_proj,q_proj,o_proj,k_proj
+[INFO|2025-11-02 22:25:43] llamafactory.model.loader:143 >> trainable params: 463,047,680 || all params: 3,675,797,504 || trainable%: 12.5972
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO|trainer.py:751] 2025-11-02 22:25:46,066 >> Using auto half precision backend
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+[WARNING|trainer.py:786] 2025-11-02 22:25:46,067 >> No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+[WARNING|2025-11-02 22:25:46] llamafactory.train.callbacks:154 >> Previous trainer log in this folder will be deleted.
+[INFO|configuration_utils.py:691] 2025-11-02 22:25:46,069 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/config.json
+[INFO|configuration_utils.py:765] 2025-11-02 22:25:46,070 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 3072,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 32.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.1",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+[INFO|modeling_utils.py:1121] 2025-11-02 22:25:46,070 >> loading weights file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/model.safetensors.index.json
+[INFO|modeling_utils.py:2167] 2025-11-02 22:25:46,070 >> Instantiating LlamaForCausalLM model under default dtype torch.float16.
+[INFO|configuration_utils.py:1142] 2025-11-02 22:25:46,072 >> Generate config GenerationConfig {
+  "bos_token_id": 128000,
+  "eos_token_id": 128001
+}
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.24s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.45s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.56s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.63s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.71s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.83s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  3.47s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  4.04s/it]
+正在从 '/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq' 加载离线dummy数据集...
+离线dummy数据集加载完成，包含 600000 条样本，已准备好流式加载。
+Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  3.87s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  4.41s/it]
+[INFO|modeling_utils.py:4930] 2025-11-02 22:25:54,952 >> All model checkpoint weights were used when initializing LlamaForCausalLM.
+
+[INFO|modeling_utils.py:4938] 2025-11-02 22:25:54,952 >> All the weights of LlamaForCausalLM were initialized from the model checkpoint at /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use LlamaForCausalLM for predictions without further training.
+[INFO|configuration_utils.py:1095] 2025-11-02 22:25:54,955 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/generation_config.json
+[INFO|configuration_utils.py:1142] 2025-11-02 22:25:54,956 >> Generate config GenerationConfig {
+  "bos_token_id": 128000,
+  "do_sample": true,
+  "eos_token_id": 128001,
+  "temperature": 0.6,
+  "top_p": 0.9
+}
+
+正在从 '/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq' 加载离线dummy数据集...
+离线dummy数据集加载完成，包含 600000 条样本，已准备好流式加载。
+[INFO|trainer.py:2829] 2025-11-02 22:25:54,978 >> Loading model from /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/checkpoint-16.
+Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  3.96s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  4.50s/it]
+正在从 '/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq' 加载离线dummy数据集...
+离线dummy数据集加载完成，包含 600000 条样本，已准备好流式加载。
+Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.00s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.54s/it]
+正在从 '/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq' 加载离线dummy数据集...
+Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  3.99s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.55s/it]
+正在从 '/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq' 加载离线dummy数据集...
+离线dummy数据集加载完成，包含 600000 条样本，已准备好流式加载。
+离线dummy数据集加载完成，包含 600000 条样本，已准备好流式加载。
+Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.02s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.60s/it]
+正在从 '/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/generative_dummy_dataset_real_freq' 加载离线dummy数据集...
+离线dummy数据集加载完成，包含 600000 条样本，已准备好流式加载。
+[INFO|trainer.py:2420] 2025-11-02 22:26:36,363 >> ***** Running training *****
+[INFO|trainer.py:2421] 2025-11-02 22:26:36,363 >>   Num examples = 200
+[INFO|trainer.py:2422] 2025-11-02 22:26:36,363 >>   Num Epochs = 2
+[INFO|trainer.py:2423] 2025-11-02 22:26:36,363 >>   Instantaneous batch size per device = 1
+[INFO|trainer.py:2426] 2025-11-02 22:26:36,363 >>   Total train batch size (w. parallel, distributed & accumulation) = 24
+[INFO|trainer.py:2427] 2025-11-02 22:26:36,363 >>   Gradient Accumulation steps = 4
+[INFO|trainer.py:2428] 2025-11-02 22:26:36,363 >>   Total optimization steps = 16
+[INFO|trainer.py:2429] 2025-11-02 22:26:36,370 >>   Number of trainable parameters = 463,047,680
+[INFO|trainer.py:2451] 2025-11-02 22:26:36,371 >>   Continuing training from checkpoint, will skip to saved global_step
+[INFO|trainer.py:2452] 2025-11-02 22:26:36,371 >>   Continuing training from epoch 2
+[INFO|trainer.py:2453] 2025-11-02 22:26:36,371 >>   Continuing training from global step 16
+[INFO|trainer.py:2455] 2025-11-02 22:26:36,371 >>   Will skip the first 2 epochs then the first 0 batches in the first epoch.
+  0%|          | 0/16 [00:00<?, ?it/s][INFO|trainer.py:2697] 2025-11-02 22:26:36,383 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+                                      {'train_runtime': 0.0236, 'train_samples_per_second': 16919.85, 'train_steps_per_second': 676.794, 'train_loss': 0.0, 'epoch': 1.82}
+  0%|          | 0/16 [00:00<?, ?it/s]  0%|          | 0/16 [00:00<?, ?it/s]
+[INFO|trainer.py:3999] 2025-11-02 22:26:36,651 >> Saving model checkpoint to /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test
+[INFO|configuration_utils.py:691] 2025-11-02 22:26:36,684 >> loading configuration file /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/models/Llama-3.2-3B/config.json
+[INFO|configuration_utils.py:765] 2025-11-02 22:26:36,684 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128001,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 3072,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 24,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 32.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.1",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+[INFO|tokenization_utils_base.py:2510] 2025-11-02 22:26:38,467 >> tokenizer config file saved in /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2519] 2025-11-02 22:26:38,468 >> Special tokens file saved in /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/special_tokens_map.json
+***** train metrics *****
+  epoch                    =     1.8235
+  total_flos               =  2843634GF
+  train_loss               =        0.0
+  train_runtime            = 0:00:00.02
+  train_samples_per_second =   16919.85
+  train_steps_per_second   =    676.794
+Figure saved at: /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves/meta-llama__Llama-3.2-3B-tap0.9-learnable-interm/test/training_loss.png
+[WARNING|2025-11-02 22:26:39] llamafactory.extras.ploting:148 >> No metric eval_loss to plot.
+[WARNING|2025-11-02 22:26:39] llamafactory.extras.ploting:148 >> No metric eval_accuracy to plot.
+[INFO|modelcard.py:450] 2025-11-02 22:26:39,262 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Causal Language Modeling', 'type': 'text-generation'}}
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@gpu10>
+Subject: Job 4455: <test-pat> in cluster <lsf_cluster_0> Done
+
+Job <test-pat> was submitted from host <node01> by user <duyuanProfV2> in cluster <lsf_cluster_0> at Sun Nov  2 22:21:40 2025
+Job was executed on host(s) <6*gpu10>, in queue <GPU_A800>, as user <duyuanProfV2> in cluster <lsf_cluster_0> at Sun Nov  2 22:21:40 2025
+</data/home/duyuanProfV2> was used as the home directory.
+</data/home/duyuanProfV2/workspace/qianxuzhen/gen/test_Pruning/LLaMA-Factory> was used as the working directory.
+Started at Sun Nov  2 22:21:40 2025
+Terminated at Sun Nov  2 22:26:50 2025
+Results reported at Sun Nov  2 22:26:50 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -q "GPU_A800" 
+#BSUB -J "test-pat" 
+#BSUB -outdir /data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/output_log
+#BSUB -o output.log 
+#BSUB -e output.log 
+#BSUB -cwd /data/home/duyuanProfV2/workspace/qianxuzhen/gen/test_Pruning/LLaMA-Factory
+#BSUB -n 6
+#BSUB -gpu "num=6"
+
+source ~/.bashrc
+setproxy
+
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate test-pat
+bash train_pat.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   277.17 sec.
+    Max Memory :                                 11642 MB
+    Average Memory :                             3779.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              29
+    Max Threads :                                281
+    Run time :                                   311 sec.
+    Turnaround time :                            310 sec.
+
+The output (if any) is above this job summary.
+

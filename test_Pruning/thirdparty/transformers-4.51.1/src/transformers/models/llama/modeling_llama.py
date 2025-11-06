@@ -1175,7 +1175,6 @@ class LlamaForCausalLM(LlamaPreTrainedModel, GenerationMixin):
        
         loss = None
         loss = torch.tensor(0.0)
-        # print("ATTENNNNN",**kwargs)
         if labels is not None:
             loss = self.loss_function(logits=logits, labels=labels, vocab_size=self.config.vocab_size, **kwargs)
         # my_modify shift_tab here
@@ -1208,7 +1207,6 @@ class LlamaForCausalLM(LlamaPreTrainedModel, GenerationMixin):
             # pure_loss = loss.item()
             # loss = loss + pruning_loss
             loss = pruning_loss
-            print("QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ")
             if self.model.layers[0].update_step % 10 == 0:
                 try:
                     logger.info_rank0(f"pruning_loss: {pruning_loss:.3f}, gt0: {(self.model.HSM_mask_proxy>0.0).sum()}/{self.model.HSM_mask_proxy.shape[-1]}, pruning_l2_loss: {pruning_l2_loss:.3f}, pruning_l1_loss: {pruning_l1_loss:.3f}, pruning_interm_loss: {pruning_interm_loss:.3f}")

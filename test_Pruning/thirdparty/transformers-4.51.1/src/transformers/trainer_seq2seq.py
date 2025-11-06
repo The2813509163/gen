@@ -48,12 +48,18 @@ if TYPE_CHECKING:
     from .trainer_utils import EvalPrediction, PredictionOutput
     from .training_args import TrainingArguments
 
-
 logger = logging.get_logger(__name__)
 
+import os
+TrainerMap = {
+    "CustomTrainer":CustomTrainer,
+    "Super2Trainer":Super2Trainer,
+}
 
+trainer_name = os.getenv("TRAINER")
+SelectedTrainer = TrainerMap[trainer_name]
 # class Seq2SeqTrainer(Trainer): my_modify
-class Seq2SeqTrainer(Super2Trainer):
+class Seq2SeqTrainer(SelectedTrainer):
     @deprecate_kwarg("tokenizer", new_name="processing_class", version="5.0.0", raise_if_both_names=True)
     def __init__(
         self,
