@@ -43,7 +43,7 @@ BASE_SAVE_DIR="/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves"
 # 当前脚本目录
 CURRENT_DIR=$(pwd)
 # 设置您的.yaml模版文件的绝对路径
-TEMPLATE_YAML_PATH="${CURRENT_DIR}/examples/train_lora/test.yaml"
+TEMPLATE_YAML_PATH="${CURRENT_DIR}/examples/train_lora/llama3.2-3b-base_lora_sft.yaml"
 # 设置llama-factory项目中 'examples/train_lora' 目录的路径
 LLAMA_FACTORY_TRAIN_DIR="${CURRENT_DIR}/examples/train_lora"
 

@@ -57,7 +57,7 @@ lr_scheduler_type: cosine
 warmup_ratio: 0.0
 bf16: true
 ddp_timeout: 180000000
-resume_from_checkpoint: null
+resume_from_checkpoint: true
 
 ### eval
 # eval_dataset: alpaca_en_demo
