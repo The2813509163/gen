@@ -9,7 +9,7 @@ set -e
 # 第零步：请在此处配置您的实验参数
 ################################################################################
 
-CUDA_DEVICES="7"
+CUDA_DEVICES="0,1,2,3,4,5,6,7"
 
 # 从命令行参数获取配置
 if [ "$#" -ne 7 ]; then
@@ -161,8 +161,8 @@ echo "开始运行评估脚本..."
 # conda activate opencompass-pat # <--- 新增
 echo # <--- 新增
 EVAL_CONDA_ENV="opencompass-pat"
-# conda run -n "${EVAL_CONDA_ENV}" --no-capture-output --cwd . \
-#         bash "$EVAL_SCRIPT_PATH"
+conda run -n "${EVAL_CONDA_ENV}" --no-capture-output --cwd . \
+        bash "$EVAL_SCRIPT_PATH"
 # bash "$EVAL_SCRIPT_PATH"
 
 echo ">>> 所有步骤已成功完成！ <<<"
