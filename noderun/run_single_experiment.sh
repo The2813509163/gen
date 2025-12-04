@@ -36,7 +36,7 @@ TRAINER_CLASS="$7"
 # 新增：设置所有实验结果的根目录 (请使用绝对路径)
 # 例如：/data/my_llm_experiments
 # 模型路径
-MODEL_PATH="/data/kris/shared_data/models/Llama-3.2-3B"
+MODEL_PATH="/data/kris/shared_data/models/Llama-3.1-8B"
 BASE_SAVE_DIR="/data/kris/qianxuzhen/Pruning-LLMs/LLaMA-Factory/saves"
 
 
