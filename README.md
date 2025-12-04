@@ -76,9 +76,10 @@ pip install -e thirdparty/peft-0.15.1
 <img width="1047" height="115" alt="屏幕截图 2025-11-06 232109" src="https://github.com/user-attachments/assets/5fc37111-e2a0-4bd7-bcc8-24f6b9b0f350" />
 
 
-5../noderun/run_all_experiments.sh设置两个绝对路径，第一个设置成Pruning-LLMs/LLaMA-Factory，另一个设置成test_Pruning/LLaMA-Factory
+5../noderun/run_sbatch_experiment.sh设置三个路径，分别是./noderun、./Pruning-LLMs/LLaMA-Factory、./test_Pruning/LLaMA-Factory
 
-<img width="1270" height="105" alt="屏幕截图 2025-11-06 232439" src="https://github.com/user-attachments/assets/f30c85a3-08e9-44f1-9c2c-a9e6d73bd44b" />
+<img width="1180" height="351" alt="image" src="https://github.com/user-attachments/assets/6fa15d59-c73b-465c-955c-05ec4c9b9b3b" />
+
 
 
 
@@ -86,10 +87,11 @@ pip install -e thirdparty/peft-0.15.1
 
 1.打开./noderun/experiments.conf进行实验设置，目前的Trainer类有三种，分别是“Trainer”、“Super2Trainer”、“CustomTrainer”,其中"Trainer"是最原始的方法
 
-<img width="1168" height="385" alt="屏幕截图 2025-11-06 233645" src="https://github.com/user-attachments/assets/1e0b6dcf-2a18-4a20-b6bb-ebbda341c296" />
+<img width="851" height="213" alt="image" src="https://github.com/user-attachments/assets/39c80385-4806-441e-802e-435ecfcd763f" />
 
 
-2.在./noderun/run_single_experiment.sh中进行gpu、基础模型的设置等
+
+2.在./noderun/run_single_experiment.sh中进行gpu、基础模型、结果保存路径的设置等
 
 <img width="1047" height="115" alt="屏幕截图 2025-11-06 232109" src="https://github.com/user-attachments/assets/3b82fd77-5c97-4592-af6c-a6599de85463" />
 
@@ -98,6 +100,6 @@ pip install -e thirdparty/peft-0.15.1
 
 ```
 cd ./noderun
-./run_all_experiments.sh
+./master.sh
 ```
 
