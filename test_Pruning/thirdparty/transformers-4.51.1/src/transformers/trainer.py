@@ -5816,11 +5816,11 @@ class Super2Trainer(Trainer):
     """
     def __init__(
         self,
-        alpha=0.0001,
+        alpha=0,
         temperature=4.0,
         # +++ 新增参数，用于指定dummy数据集路径 +++
         dummy_dataset_path="/data/kris/qianxuzhen/generative_dummy_dataset_real_freq",
-        dummy_batch_size=2, # 您原来代码中使用的batch_size
+        dummy_batch_size=1, # 您原来代码中使用的batch_size
         *args,
         **kwargs,
     ):
@@ -5957,13 +5957,13 @@ class Super2Trainer(Trainer):
         update_step = true_model.base_model.model.model.layers[0].update_step
         tap_stop_at_steps = true_model.base_model.model.model.layers[0].tap_stop_at_steps
         if update_step > 1.2 * tap_stop_at_steps:
-            self.alpha = 0.001
+            self.alpha = 0.0005
         if update_step > 2 * tap_stop_at_steps:
-            self.alpha = 0.05
+            self.alpha = 0.001
         if update_step > 2.5 * tap_stop_at_steps:
-            self.alpha = 0.1
+            self.alpha = 0.01
         if update_step > 3 * tap_stop_at_steps:
-            self.alpha = 0.3
+            self.alpha = 0
         print("alpha=",self.alpha)
         
         # 合并损失

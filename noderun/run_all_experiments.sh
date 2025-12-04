@@ -55,7 +55,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
         echo "--------------------------------------------------"
         echo "识别到 DUMMY 实验 (Trainer: ${trainer_class}): [${exp_name}]"
         remote_workdir="$DUMMY_REMOTE_WORKDIR"
-        CONDA_ENV_NAME="try"
+        CONDA_ENV_NAME="test-pat"
     fi
 
     echo "准备在机器 [${node}] 上启动"
