@@ -5843,7 +5843,6 @@ class Super2Trainer(Trainer):
 
         # ### +++ ADDED +++ ###
         # 在初始化时加载离线数据集，并创建一个无限循环的迭代器
-        print(f"正在从 '{dummy_dataset_path}' 加载离线dummy数据集...")
         self.dummy_dataset = load_from_disk(self.custom_args.dummy_dataset_path)
         
         # 确保tokenizer有pad_token，这对于后续padding至关重要
