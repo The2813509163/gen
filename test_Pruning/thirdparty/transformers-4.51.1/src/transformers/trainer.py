@@ -5816,11 +5816,8 @@ class Super2Trainer(Trainer):
     """
     def __init__(
         self,
-        alpha=0,
+        custom_args,
         temperature=4.0,
-        # +++ 新增参数，用于指定dummy数据集路径 +++
-        dummy_dataset_path="/data/kris/qianxuzhen/generative_dummy_dataset_real_freq",
-        dummy_batch_size=1, # 您原来代码中使用的batch_size
         *args,
         **kwargs,
     ):
@@ -5828,18 +5825,17 @@ class Super2Trainer(Trainer):
         初始化CustomTrainer。
         """
         super().__init__(*args, **kwargs)
-
+        self.custom_args=custom_args
         self.teacher_model = BaseLlamaForCausalLM.from_pretrained(
-            modelpath,
+            self.custom_args.teacher_model_path,
             torch_dtype=torch.float16,
             device_map=self.args.device,
             attn_implementation="flash_attention_2"
         )
         self.teacher_model.eval()
 
-        self.alpha = alpha
         self.temperature = temperature
-        self.dummy_batch_size = dummy_batch_size
+        self.dummy_batch_size = self.custom_args.dummy_batch_size
 
         # 初始化损失函数
         self.loss_fn_distill = nn.KLDivLoss(reduction='batchmean')
@@ -5848,7 +5844,7 @@ class Super2Trainer(Trainer):
         # ### +++ ADDED +++ ###
         # 在初始化时加载离线数据集，并创建一个无限循环的迭代器
         print(f"正在从 '{dummy_dataset_path}' 加载离线dummy数据集...")
-        self.dummy_dataset = load_from_disk(dummy_dataset_path)
+        self.dummy_dataset = load_from_disk(self.custom_args.dummy_dataset_path)
         
         # 确保tokenizer有pad_token，这对于后续padding至关重要
         # if self.tokenizer.pad_token is None:
@@ -5956,14 +5952,19 @@ class Super2Trainer(Trainer):
         # 更新alpha的逻辑保持不变
         update_step = true_model.base_model.model.model.layers[0].update_step
         tap_stop_at_steps = true_model.base_model.model.model.layers[0].tap_stop_at_steps
-        if update_step > 1.2 * tap_stop_at_steps:
-            self.alpha = 0.0005
-        if update_step > 2 * tap_stop_at_steps:
-            self.alpha = 0.001
-        if update_step > 2.5 * tap_stop_at_steps:
-            self.alpha = 0.01
-        if update_step > 3 * tap_stop_at_steps:
-            self.alpha = 0
+        new_alpha=0
+        if self.custom_args.alpha_schedule:
+            # 按照 step_multiplier 排序，确保逻辑的健壮性和正确性
+            sorted_schedule = sorted(self.custom_args.alpha_schedule)
+
+            # 遍历计划来找到当前 step 对应的 alpha 值
+            for step_multiplier, alpha_value in sorted_schedule:
+                # 如果当前步数超过了计划中的阈值
+                if update_step > step_multiplier * tap_stop_at_steps:
+                    # 更新 alpha 值。因为是循环，后面的阶段会自动覆盖前面的阶段
+                    new_alpha = alpha_value
+
+        self.alpha = new_alpha
         print("alpha=",self.alpha)
         
         # 合并损失

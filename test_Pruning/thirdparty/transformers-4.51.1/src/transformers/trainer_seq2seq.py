@@ -52,6 +52,7 @@ logger = logging.get_logger(__name__)
 
 import os
 TrainerMap = {
+    "Trainer":Trainer,
     "CustomTrainer":CustomTrainer,
     "Super2Trainer":Super2Trainer,
 }
@@ -77,6 +78,7 @@ class Seq2SeqTrainer(SelectedTrainer):
         callbacks: Optional[list["TrainerCallback"]] = None,
         optimizers: tuple[torch.optim.Optimizer, torch.optim.lr_scheduler.LambdaLR] = (None, None),
         preprocess_logits_for_metrics: Optional[Callable[[torch.Tensor, torch.Tensor], torch.Tensor]] = None,
+        **kwargs,
     ):
         super().__init__(
             model=model,
@@ -91,6 +93,7 @@ class Seq2SeqTrainer(SelectedTrainer):
             callbacks=callbacks,
             optimizers=optimizers,
             preprocess_logits_for_metrics=preprocess_logits_for_metrics,
+            **kwargs,
         )
 
         # Override self.model.generation_config if a GenerationConfig is specified in args.

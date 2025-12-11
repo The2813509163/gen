@@ -43,6 +43,7 @@ def run_sft(
     training_args: "Seq2SeqTrainingArguments",
     finetuning_args: "FinetuningArguments",
     generating_args: "GeneratingArguments",
+    custom_args:"CustomArguments",
     callbacks: Optional[list["TrainerCallback"]] = None,
     tap_args: Optional[dict] = None,
 ):
@@ -97,6 +98,7 @@ def run_sft(
         data_collator=data_collator,
         callbacks=callbacks,
         gen_kwargs=gen_kwargs,
+        custom_args=custom_args,
         **dataset_module,
         **tokenizer_module,
         **metric_module,
