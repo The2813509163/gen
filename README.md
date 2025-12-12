@@ -15,21 +15,6 @@ pip install tensorboard
 pip install -e LLaMA-Factory
 ```
 
-## factory-pat（更新）
-
-```
-cd ./Pruning-LLMs
-conda create -n factory-pat python=3.10 -y
-conda activate factory-pat
-pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/cu121
-pip install "flash-attn==2.5.5" --no-build-isolation
-conda install -c conda-forge pyarrow sentencepiece 
-pip install -e thirdparty/transformers-4.51.1
-pip install -e thirdparty/peft-0.15.1
-pip install tensorboard
-pip install -e LLaMA-Factory
-```
-
 
 
 ## opencompass-pat
@@ -50,7 +35,7 @@ pip install -e thirdparty/peft-0.15.1
 
 # 训练步骤
 
-## 路径修改
+## 训练及评估数据集路径修改
 
 1.test_Pruning/LLaMA-Factory/data/dataset_info.json文件中的修改nvidia__OpenMathInstruct中的hf_hub_url
 
@@ -59,47 +44,45 @@ pip install -e thirdparty/peft-0.15.1
 <img width="849" height="297" alt="屏幕截图 2025-11-01 212559" src="https://github.com/user-attachments/assets/d360db7e-9b07-4645-bee5-ba5bc5f7dbcb" />
 
 
-2.test_Pruning/thirdparty/transformers-4.51.1/src/transformers/trainer.py中的路径（红色下划线），改dummy数据集就行了，基础模型路径已更新成modelpath参数传参
-
-<img width="1312" height="896" alt="屏幕截图 2025-11-01 212040" src="https://github.com/user-attachments/assets/9ac65444-94bf-4349-ab3c-485cae36f886" />
-
-
-
-#### 3.miniconda3/envs/opencompass-/lib/python3.10/site-packages/opencompass/utils/datasets.py中DEFAULT_DATA_FOLDER,直接设置成本地opencompass数据集路径
+2.miniconda3/envs/opencompass-/lib/python3.10/site-packages/opencompass/utils/datasets.py中DEFAULT_DATA_FOLDER,直接设置成本地opencompass数据集路径
 
 <img width="1020" height="111" alt="image" src="https://github.com/user-attachments/assets/96123121-f638-4290-9e7c-76443136257a" />
 
 
-4../noderun/run_single_experiment.sh设置基础模型路径和实验结果保存路径(该目录下将会存放peft路径和eva路径)
-
-
-<img width="1047" height="115" alt="屏幕截图 2025-11-06 232109" src="https://github.com/user-attachments/assets/5fc37111-e2a0-4bd7-bcc8-24f6b9b0f350" />
-
-
-5../noderun/run_sbatch_experiment.sh设置三个路径，分别是./noderun、./Pruning-LLMs/LLaMA-Factory、./test_Pruning/LLaMA-Factory
-
-<img width="1180" height="351" alt="image" src="https://github.com/user-attachments/assets/6fa15d59-c73b-465c-955c-05ec4c9b9b3b" />
-
-
-
 
 ## 实验设置
+实验设置在yaml文件里完成，yaml文件需放在./test_Pruning/LLaMA-Factory/example/train_lora下
 
-1.打开./noderun/experiments.conf进行实验设置，目前的Trainer类有三种，分别是“Trainer”、“Super2Trainer”、“CustomTrainer”,其中"Trainer"是最原始的方法
+yaml文件中的主要实验设置如下，可参考./test_Pruning/LLaMA-Factory/example/train_lora/llama3.1-8b-base_lora_sft.yaml
 
-<img width="851" height="213" alt="image" src="https://github.com/user-attachments/assets/39c80385-4806-441e-802e-435ecfcd763f" />
+| 参数名                      | 内容                                                 |
+| --------------------------- | ---------------------------------------------------- |
+| model_name_or_path          | 基础模型路径                                         |
+| output_dir                  | 结果保存路径                                         |
+| tap_stop_at_steps           | 剪枝停止步数                                         |
+| tap_remain_ratio            | 剪枝保留率                                           |
+| max_samples                 | 训练样本条数                                         |
+| num_train_epochs            | 训练轮数                                             |
+| dataset                     | sft训练数据集                                        |
+| save_steps                  | 保存步数间隔                                         |
+| per_device_train_batch_size | sft数据批大小                                        |
+| resume_from_checkpoint      | 恢复训练开关                                         |
+| dummy_batch_size            | dummy数据批大小                                      |
+| teacher_model_path          | 教师模型路径（一般就是基础模型）                     |
+| dummy_dataset_path          | dummy数据集路径                                      |
+| alpha_schedule              | 列表，每一行两个数分别是step_multiplier和alpha_value |
 
+选择Trainer通过设置环境变量TRAINER来实现，可设置成Trainer或者Super2Trainer
 
-
-2.在./noderun/run_single_experiment.sh中进行gpu、基础模型、结果保存路径的设置等
-
-<img width="1047" height="115" alt="屏幕截图 2025-11-06 232109" src="https://github.com/user-attachments/assets/3b82fd77-5c97-4592-af6c-a6599de85463" />
-
-
-3.一键运行，即可完成训练+评估一套连招
+训练脚本可参考./test_Pruning/LLaMA-Factory/train_pat.sh
 
 ```
-cd ./noderun
-./master.sh
+#!/bin/bash
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+export TRAINER="Super2Trainer"
+llamafactory-cli train examples/train_lora/llama3.1-8b-base_lora_sft.yaml
 ```
+
+
+
 
