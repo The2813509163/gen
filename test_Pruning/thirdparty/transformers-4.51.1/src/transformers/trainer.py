@@ -5979,3 +5979,38 @@ class Super2Trainer(Trainer):
             })
             
         return (total_loss, outputs) if return_outputs else total_loss
+
+
+class PruningTrainer(Trainer):
+    def __init__(
+        self,
+        *args,
+        **kwargs,
+    ):
+        super().__init__(*args, **kwargs)
+
+
+    def compute_loss(self, model, inputs, return_outputs=False, num_items_in_batch=None):
+        """
+        重写compute_loss方法。
+        """
+        finetune_inputs = inputs
+        finetune_labels = finetune_inputs["labels"]
+
+        pruning_loss, outputs = super().compute_loss(model, finetune_inputs, return_outputs=True)
+        
+        logits_finetune = outputs.logits
+
+        true_model = getattr(model, 'module', model)
+        # 计算微调损失
+        loss = true_model.base_model.model.loss_function(logits=logits_finetune, labels=finetune_labels, vocab_size=true_model.base_model.model.config.vocab_size)
+        total_loss = loss + pruning_loss
+        
+        # 日志记录 (保持不变)
+        if self.is_in_train:
+            self.log({
+                'pure_loss': loss.item(),
+                'total_loss': total_loss.item(),
+            })
+            
+        return (total_loss, outputs) if return_outputs else total_loss
