@@ -12,6 +12,7 @@ conda install -c conda-forge pyarrow sentencepiece
 pip install -e thirdparty/transformers-4.51.1
 pip install -e thirdparty/peft-0.15.1
 pip install tensorboard
+pip install wandb
 pip install -e LLaMA-Factory
 ```
 
@@ -53,7 +54,7 @@ pip install -e thirdparty/peft-0.15.1
 ## 实验设置
 实验设置在yaml文件里完成，yaml文件需放在./test_Pruning/LLaMA-Factory/example/train_lora下
 
-yaml文件中的主要实验设置如下，可参考./test_Pruning/LLaMA-Factory/example/train_lora/llama3.1-8b-base_lora_sft.yaml
+yaml文件中的主要实验设置如下，
 
 | 参数名                      | 内容                                                 |
 | --------------------------- | ---------------------------------------------------- |
@@ -65,6 +66,7 @@ yaml文件中的主要实验设置如下，可参考./test_Pruning/LLaMA-Factory
 | num_train_epochs            | 训练轮数                                             |
 | dataset                     | sft训练数据集                                        |
 | save_steps                  | 保存步数间隔                                         |
+| report_to                   | wandb                                                |
 | per_device_train_batch_size | sft数据批大小                                        |
 | resume_from_checkpoint      | 恢复训练开关                                         |
 | dummy_batch_size            | dummy数据批大小                                      |
@@ -80,8 +82,12 @@ yaml文件中的主要实验设置如下，可参考./test_Pruning/LLaMA-Factory
 #!/bin/bash
 export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
 export TRAINER="Super2Trainer"
+export WANDB_PROJECT="Llama3-Experiment"
+export WANDB_RUN_NAME="1214-test-pruning"
 llamafactory-cli train examples/train_lora/llama3.1-8b-base_lora_sft.yaml
 ```
+
+
 
 
 
