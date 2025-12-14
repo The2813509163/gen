@@ -5807,7 +5807,7 @@ class SuperTrainer(Trainer):
             
         return (total_loss, outputs) if return_outputs else total_loss
 
-
+from typing import Dict, List
 class Super2Trainer(Trainer):
     """
     一个自定义的Trainer, 用于实现知识蒸馏。
@@ -5843,9 +5843,10 @@ class Super2Trainer(Trainer):
 
         # ### +++ ADDED +++ ###
         # 在初始化时加载离线数据集，并创建一个无限循环的迭代器
+        print(f"正在从 '{self.custom_args.dummy_dataset_path}' 加载离线dummy数据集...")
         self.dummy_dataset = load_from_disk(self.custom_args.dummy_dataset_path)
         
-        # 确保tokenizer有pad_token，这对于后续padding至关重要
+        # 确保tokenizer有pad_token，这对于后续padding至关重要  
         # if self.tokenizer.pad_token is None:
         #     self.tokenizer.pad_token = self.tokenizer.eos_token
         # 确保处理器(tokenizer)有pad_token，这对于后续padding至关重要  
@@ -5876,6 +5877,7 @@ class Super2Trainer(Trainer):
             
         self.dummy_iterator = iter(iterable_dataset)
         print(f"离线dummy数据集加载完成，包含 {len(self.dummy_dataset)} 条样本，已准备好流式加载。")
+        self._custom_log_buffer: List[Dict[str, float]] = []
 
     def compute_loss(self, model, inputs, return_outputs=False, num_items_in_batch=None):
         """
@@ -5970,24 +5972,50 @@ class Super2Trainer(Trainer):
         total_loss = (1 - self.alpha) * loss_finetune + self.alpha * loss_distill
         
         # 日志记录 (保持不变)
+        
         if self.is_in_train:
-            self.log({
-                'loss_total': total_loss.item(),
-                'pure_loss': loss.item(),
-                'loss_finetune': loss_finetune.item(),
-                'loss_distill': loss_distill.item(),
-            })
-            
+            # 将需要记录的值（分离计算图后）存入缓冲区
+            log_data = {
+                "loss_total": total_loss.detach(),
+                "pure_loss": loss.detach(),
+                "loss_finetune": loss_finetune.detach(),
+                "loss_distill": loss_distill.detach(),
+            }
+            self._custom_log_buffer.append(log_data)
+
         return (total_loss, outputs) if return_outputs else total_loss
 
+
+    def log(self, logs: Dict[str, float], start_time: Optional[float] = None) -> None:
+        # 仅在训练时处理
+        if self.is_in_train and self._custom_log_buffer:
+            # 计算缓冲区中所有指标的平均值
+            num_logs = len(self._custom_log_buffer)
+            accumulated_logs = {}
+            for log_item in self._custom_log_buffer:
+                for key, value in log_item.items():
+                    accumulated_logs[key] = accumulated_logs.get(key, 0.0) + value.item()
+            
+            averaged_logs = {key: value / num_logs for key, value in accumulated_logs.items()}
+            
+            # 将平均后的自定义指标加入到 Trainer 的主日志中
+            logs.update(averaged_logs)
+            
+            # 清空缓冲区
+            self._custom_log_buffer.clear()
+
+        # 调用父类方法，完成最终的日志推送
+        super().log(logs,start_time)
 
 class PruningTrainer(Trainer):
     def __init__(
         self,
+        custom_args,
         *args,
         **kwargs,
     ):
         super().__init__(*args, **kwargs)
+        self._custom_log_buffer: List[Dict[str, float]] = []
 
 
     def compute_loss(self, model, inputs, return_outputs=False, num_items_in_batch=None):
@@ -6008,9 +6036,35 @@ class PruningTrainer(Trainer):
         
         # 日志记录 (保持不变)
         if self.is_in_train:
-            self.log({
-                'pure_loss': loss.item(),
-                'total_loss': total_loss.item(),
-            })
+            # 将需要记录的值（分离计算图后）存入缓冲区
+            log_data = {
+                "loss_total": total_loss.detach(),
+                "pure_loss": loss.detach(),
+                "pruning_loss": pruning_loss.detach(),
+            }
+            self._custom_log_buffer.append(log_data)
             
         return (total_loss, outputs) if return_outputs else total_loss
+    
+    def log(self, logs: Dict[str, float], start_time: Optional[float] = None) -> None:
+        # 仅在训练时处理
+        if self.is_in_train and self._custom_log_buffer:
+            # 计算缓冲区中所有指标的平均值
+            num_logs = len(self._custom_log_buffer)
+            accumulated_logs = {}
+            for log_item in self._custom_log_buffer:
+                for key, value in log_item.items():
+                    accumulated_logs[key] = accumulated_logs.get(key, 0.0) + value.item()
+            
+            averaged_logs = {key: value / num_logs for key, value in accumulated_logs.items()}
+            
+            # 将平均后的自定义指标加入到 Trainer 的主日志中
+            logs.update(averaged_logs)
+            
+            # 清空缓冲区
+            self._custom_log_buffer.clear()
+
+        # 调用父类方法，完成最终的日志推送
+        super().log(logs,start_time)
+
+
