@@ -9,6 +9,15 @@
     },
     "split": "train_5M"
   },
+  "nvidia__OpenCodeInstruct":{
+    "hf_hub_url": "/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/datasets/NLP/nvidia___open_code_instruct/train/0.0.0/8f3ba5bafe4d6e8db46082cf7ae6741bc370604d",
+    "formatting": "alpaca",
+    "columns":{
+      "prompt": "input",
+      "query": null,
+      "response": "output"  
+    }
+  },
   "nvidia__OpenMathInstruct":{
     "hf_hub_url": "/data/home/duyuanProfV2/workspace/qianxuzhen/data/kris/shared_data/datasets/NLP/nvidia",
     "formatting": "alpaca",
