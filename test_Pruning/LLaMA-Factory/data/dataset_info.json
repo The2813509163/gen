@@ -27,6 +27,14 @@
       "response": "generated_solution"  
     }
   },
+  "lamini_sft": {
+    "file_name": "lamini_instruction.jsonl",
+    "format": "json",
+    "columns": {
+      "prompt": "instruction",  
+      "response": "response"
+    }
+  },
   "identity": {
     "file_name": "identity.json"
   },
