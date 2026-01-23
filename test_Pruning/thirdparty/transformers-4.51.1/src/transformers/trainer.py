@@ -6068,3 +6068,200 @@ class PruningTrainer(Trainer):
         super().log(logs,start_time)
 
 
+class Super3Trainer(Trainer):
+    """
+    一个自定义的Trainer, 用于实现知识蒸馏。
+    它同时计算标准的微调损失和与教师模型的KL散度损失。
+    【新版本】：从离线数据集中流式加载dummy数据。
+    """
+    def __init__(
+        self,
+        custom_args,
+        temperature=4.0,
+        *args,
+        **kwargs,
+    ):
+        """
+        初始化CustomTrainer。
+        """
+        super().__init__(*args, **kwargs)
+        self.custom_args=custom_args
+        self.teacher_model = BaseLlamaForCausalLM.from_pretrained(
+            self.custom_args.teacher_model_path,
+            torch_dtype=torch.float16,
+            device_map=self.args.device,
+            attn_implementation="flash_attention_2"
+        )
+        self.teacher_model.eval()
+
+        self.temperature = temperature
+        self.dummy_batch_size = self.custom_args.dummy_batch_size
+
+        # 初始化损失函数
+        self.loss_fn_distill = nn.KLDivLoss(reduction='batchmean')
+
+
+        # ### +++ ADDED +++ ###
+        # 在初始化时加载离线数据集，并创建一个无限循环的迭代器
+        print(f"正在从 '{self.custom_args.dummy_dataset_path}' 加载离线dummy数据集...")
+        self.dummy_dataset = load_from_disk(self.custom_args.dummy_dataset_path)
+        
+        # 确保tokenizer有pad_token，这对于后续padding至关重要  
+        # if self.tokenizer.pad_token is None:
+        #     self.tokenizer.pad_token = self.tokenizer.eos_token
+        # 确保处理器(tokenizer)有pad_token，这对于后续padding至关重要  
+        if self.processing_class.pad_token is None:
+            # 对于文本任务, self.processor 就是 tokenizer
+            self.processing_class.pad_token = self.processing_class.eos_token
+        # 创建一个可以无限循环提供数据的生成器
+        def _infinite_loader():
+            while True:
+                for sample in self.dummy_dataset:
+                    yield sample
+                    
+        iterable_dataset = IterableDataset.from_generator(_infinite_loader)
+        
+        if self.args.resume_from_checkpoint:
+            resume_from_checkpoint = get_last_checkpoint(self.args.output_dir)
+            if resume_from_checkpoint != None:
+                state_path = os.path.join(resume_from_checkpoint, "trainer_state.json")
+                if os.path.exists(state_path):
+                    with open(state_path, "r") as f:
+                        state = json.load(f)
+                    
+                    resumed_global_step = state["global_step"]
+                    num_samples_to_skip = resumed_global_step * (self.dummy_batch_size * self.args.world_size * self.args.gradient_accumulation_steps)
+
+                    print(f"检测到断点续训，使用 IterableDataset.skip() 跳过 {num_samples_to_skip} 个样本。")
+                    iterable_dataset = iterable_dataset.skip(num_samples_to_skip)
+            
+        self.dummy_iterator = iter(iterable_dataset)
+        print(f"离线dummy数据集加载完成，包含 {len(self.dummy_dataset)} 条样本，已准备好流式加载。")
+        self._custom_log_buffer: List[Dict[str, float]] = []
+
+    def compute_loss(self, model, inputs, return_outputs=False, num_items_in_batch=None):
+        """
+        重写compute_loss方法。
+        'inputs'只包含微调数据。dummy数据将通过流式加载获得。
+        """
+        # === 第一部分：计算标准微调损失 (L_finetune) ===
+        # 这部分和您原来的代码完全一样
+        finetune_inputs = inputs
+        finetune_batch_size = finetune_inputs["input_ids"].shape[0]
+        finetune_labels = finetune_inputs["labels"]
+
+        # ### +++ ADDED +++ ###
+        # 从迭代器中流式加载dummy数据，并动态调整其长度
+        target_sequence_length = finetune_inputs["input_ids"].shape[1]
+        
+        # 1. 从迭代器获取原始dummy样本
+        dummy_samples = [next(self.dummy_iterator) for _ in range(self.dummy_batch_size)]
+        raw_dummy_ids = [sample['input_ids'] for sample in dummy_samples]
+
+        # 2. 动态调整序列长度以匹配当前SFT batch
+        processed_dummy_ids = []
+        for ids in raw_dummy_ids:
+            if len(ids) > target_sequence_length:
+                # 如果dummy数据更长，则截断
+                processed_dummy_ids.append(ids[:target_sequence_length])
+            else:
+                # 如果dummy数据更短，则用pad_token填充
+                padding_needed = target_sequence_length - len(ids)
+                processed_dummy_ids.append(ids + [self.processing_class.pad_token_id] * padding_needed)
+        
+        # 3. 创建dummy数据的tensor
+        dummy_input_ids = torch.tensor(processed_dummy_ids, dtype=torch.long, device=self.args.device)
+        dummy_attention_mask = (dummy_input_ids != self.processing_class.pad_token_id).long()
+
+        dummy_inputs = {
+            "input_ids": dummy_input_ids,
+            "attention_mask": dummy_attention_mask
+        }
+        # --- dummy数据准备完毕 ---
+
+        # 结合finetune的输入和dummy的输入
+        combined_input_ids = torch.cat([finetune_inputs["input_ids"], dummy_inputs["input_ids"]], dim=0)
+        combined_attention_mask = torch.cat([finetune_inputs["attention_mask"], dummy_inputs["attention_mask"]], dim=0)
+
+        combined_inputs = {
+            "input_ids": combined_input_ids,
+            "attention_mask": combined_attention_mask
+        }
+
+        with torch.no_grad():
+            outputs_teacher_dummy = self.teacher_model(**combined_inputs)
+            logits_teacher = outputs_teacher_dummy.logits
+
+        # 调用父类compute_loss来获取logits和可能的剪枝损失
+        pruning_loss, outputs = super().compute_loss(model, combined_inputs, return_outputs=True)
+        
+        logits_finetune = outputs.logits[:finetune_batch_size]
+        logits_student = outputs.logits
+
+        true_model = getattr(model, 'module', model)
+        # 计算微调损失
+        loss = true_model.base_model.model.loss_function(logits=logits_finetune, labels=finetune_labels, vocab_size=true_model.base_model.model.config.vocab_size)
+        loss_finetune = loss + pruning_loss
+        
+        # 计算蒸馏损失
+        loss_distill = self.loss_fn_distill(
+            F.log_softmax(logits_student / self.temperature, dim=-1),
+            F.softmax(logits_teacher / self.temperature, dim=-1)
+        ) * (self.temperature ** 2)
+
+        # 更新alpha的逻辑保持不变
+        update_step = true_model.base_model.model.model.layers[0].update_step
+        tap_stop_at_steps = true_model.base_model.model.model.layers[0].tap_stop_at_steps
+        new_alpha=0
+        if self.custom_args.alpha_schedule:
+            # 按照 step_multiplier 排序，确保逻辑的健壮性和正确性
+            sorted_schedule = sorted(self.custom_args.alpha_schedule)
+
+            # 遍历计划来找到当前 step 对应的 alpha 值
+            for step_multiplier, alpha_value in sorted_schedule:
+                # 如果当前步数超过了计划中的阈值
+                if update_step > step_multiplier * tap_stop_at_steps:
+                    # 更新 alpha 值。因为是循环，后面的阶段会自动覆盖前面的阶段
+                    new_alpha = alpha_value
+
+        self.alpha = new_alpha
+        print("alpha=",self.alpha)
+        
+        # 合并损失
+        total_loss = (1 - self.alpha) * loss_finetune + self.alpha * loss_distill
+        
+        # 日志记录 (保持不变)
+        
+        if self.is_in_train:
+            # 将需要记录的值（分离计算图后）存入缓冲区
+            log_data = {
+                "loss_total": total_loss.detach(),
+                "pure_loss": loss.detach(),
+                "loss_finetune": loss_finetune.detach(),
+                "loss_distill": loss_distill.detach(),
+            }
+            self._custom_log_buffer.append(log_data)
+
+        return (total_loss, outputs) if return_outputs else total_loss
+
+
+    def log(self, logs: Dict[str, float], start_time: Optional[float] = None) -> None:
+        # 仅在训练时处理
+        if self.is_in_train and self._custom_log_buffer:
+            # 计算缓冲区中所有指标的平均值
+            num_logs = len(self._custom_log_buffer)
+            accumulated_logs = {}
+            for log_item in self._custom_log_buffer:
+                for key, value in log_item.items():
+                    accumulated_logs[key] = accumulated_logs.get(key, 0.0) + value.item()
+            
+            averaged_logs = {key: value / num_logs for key, value in accumulated_logs.items()}
+            
+            # 将平均后的自定义指标加入到 Trainer 的主日志中
+            logs.update(averaged_logs)
+            
+            # 清空缓冲区
+            self._custom_log_buffer.clear()
+
+        # 调用父类方法，完成最终的日志推送
+        super().log(logs,start_time)
