@@ -55,7 +55,7 @@ TrainerMap = {
     "Trainer":PruningTrainer,
     "CustomTrainer":CustomTrainer,
     "Super2Trainer":Super2Trainer,
-    "Super3Trainer":Super2Trainer,
+    "Super3Trainer":Super3Trainer,
 }
 
 trainer_name = os.getenv("TRAINER")
